@@ -7,7 +7,7 @@ explaination
 Geoinformatics
 GIS
 Guercke
-hough
+Hough
 Huertas
 Kshitij
 kshitijrajsharma

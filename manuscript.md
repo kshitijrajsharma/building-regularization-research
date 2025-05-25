@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-05-25" />
   <meta name="citation_publication_date" content="2025-05-25" />
   <meta property="article:published_time" content="2025-05-25" />
-  <meta name="dc.modified" content="2025-05-25T17:07:47+00:00" />
-  <meta property="article:modified_time" content="2025-05-25T17:07:47+00:00" />
+  <meta name="dc.modified" content="2025-05-25T17:10:52+00:00" />
+  <meta property="article:modified_time" content="2025-05-25T17:10:52+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/91c8fb7652e078f36d82a7fb2a3984d7903a77cf/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/91c8fb7652e078f36d82a7fb2a3984d7903a77cf/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/91c8fb7652e078f36d82a7fb2a3984d7903a77cf/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/3bba092041bb0e6fd14a44a5a50f6c2bf66b0fd9/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/3bba092041bb0e6fd14a44a5a50f6c2bf66b0fd9/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/3bba092041bb0e6fd14a44a5a50f6c2bf66b0fd9/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -63,9 +63,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/91c8fb7652e078f36d82a7fb2a3984d7903a77cf/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/3bba092041bb0e6fd14a44a5a50f6c2bf66b0fd9/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@91c8fb7](https://github.com/kshitijrajsharma/building-regularization-research/tree/91c8fb7652e078f36d82a7fb2a3984d7903a77cf)
+from [kshitijrajsharma/building-regularization-research@3bba092](https://github.com/kshitijrajsharma/building-regularization-research/tree/3bba092041bb0e6fd14a44a5a50f6c2bf66b0fd9)
 on May 25, 2025.
 </em></small>
 
@@ -121,18 +121,19 @@ professionals.
 
 ## Geometric and Heuristic Methods ( 1990s - 2000s )
  
-**Edge Detection and Line Fitting**: Early building extraction in the 1990s relied on low-level image processing and geometric heuristics. For example, Huertas and Nevatia (1988) developed a system to detect buildings in aerial images by finding rectangular clusters of edges (lines) and using shadow cues to distinguish buildings from other structures [@doi:10.3390/ijgi8040191] . Building polygons often consist of jagged lines. Guercke and Sester [@url:https://scholar.google.com/scholar_lookup?title=Building+Footprint+Simplification+Based+on+Hough+Transform+and+Least+Squares+Adjustment&conference=Proceedings+of+the+14th+Workshop+of+the+ICA+Commission+on+Generalisation+and+Multiple+Representation&author=Guercke,+R.&author=Sester,+M.&publication_year=2011] use Hough-Transformation to refine such polygons.
-![Initial hough transofrmation line segment explained by Guercke and Sester (2011)](https://github.com/user-attachments/assets/505773d4-2f24-4c82-8a09-7a87297e5d06)
-
+**Edge Detection and Line Fitting**: Early building extraction in the 1990s relied on low-level image processing and geometric heuristics. For example, Huertas and Nevatia (1988) developed a system to detect buildings in aerial images by finding rectangular clusters of edges (lines) and using shadow cues to distinguish buildings from other structures [@doi:10.3390/ijgi8040191] . Building polygons often consist of jagged lines. Guercke and Sester [@guercke2011] use Hough-Transformation to refine such polygons.
 
 Those approach and similar ones could identify simple rectangular building footprints, but often produced polygons with jagged (bearing in mind they don't take into account the building shape itself rather the outline), noisy outlines. To clean such outlines, researchers applied line simplification algorithms from cartography, notably the Ramer–Douglas–Peucker algorithm : to remove small zig-zags and reduce vertex count while approximating the shape (which is still used to the date) [@url:https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/].
 
-The Douglas–Peucker algorithm (originally from 1973) became a common post-processing step to “compress” or simplify building polygon geometry.
+The Douglas–Peucker algorithm (originally from 1973) [@douglas1973] became a common post-processing step to “compress” or simplify building polygon geometry.
 ![A simple illustration of Douglas-Peucker algorithm](https://github.com/user-attachments/assets/d8a3f362-6fd0-4dfb-84e8-a686275c82c5){#fig:douglas-peucker}
 Overall, early methods were largely rule-based: edges and corners were detected via image filters, and building shapes were assembled by connecting these primitives under geometric constraints defined by human experts.
 
 **Regularization via Hough Transform**: By the 2000s, more sophisticated heuristics were introduced to enforce regularity in building outlines. A prominent tool was the Hough Transform for line detection. Hough transform is a feature extraction method used in image analysis. Hough transform can be used to isolate features of any regular curve like lines, circles, ellipses, etc. Hough transform in its simplest from can be used to detect straight lines in an image.[@url:https://medium.com/@st1739/hough-transform-287b2dac0c70]
 For instance, Guercke and Sester (2011) proposed a footprint simplification method that takes an initial digitized outline (which might be jagged) and uses a Hough Transform to identify the dominant line orientations; close-to-collinear segments are merged and adjusted by least-squares to align with those dominant directions [@url:https://www.mdpi.com/2220-9964/8/4/191].
+
+![Initial hough transofrmation line segment explained by Guercke and Sester (2011)](https://github.com/user-attachments/assets/505773d4-2f24-4c82-8a09-7a87297e5d06){#fig:hough-transformation-line}
+
 
 The result is a cleaner, rectilinear footprint where spurious bends are straightened and most angles are ~90° or 180° [@doi:10.5194/isprs-annals-X-2-2024-217-2024]. Shiyong Cui et al. (2012) similarly applied the Hough transform to grouping line segments into two perpendicular families corresponding to a building’s principal directions . They constructed an initial graph of line segments, pruned edges that lacked image contrast (assuming they were false boundaries), and then detected closed cycles in the graph to form building polygons [@doi:10.5194/isprs-annals-X-2-2024-217-2024].
 
