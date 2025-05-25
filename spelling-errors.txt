@@ -1,4 +1,9 @@
 cartographically
+collinear
+Cui
+Cui’s
+dac
+explaination
 Geoinformatics
 GIS
 Guercke
@@ -12,11 +17,16 @@ misalignments
 Nevatia
 Peucker
 planimetric
+postprocessing
 Raj
 Ramer
+Reinartz
 Salzburg
 Sester
 Sharma
+Shiyong
+Tian
+transofrmation
 vectorization
 zags
 zig
