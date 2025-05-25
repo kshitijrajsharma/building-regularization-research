@@ -1,22 +1,65 @@
 [
-{
-  "id": "url:https://github.com/manubot/rootstock",
-  "type": "webpage",
-  "URL": "https://github.com/manubot/rootstock",
-  "title": "manubot/rootstock GitHub repository",
-  "container-title": "GitHub",
-  "issued": {
-    "date-parts": [
-      [
-        2019
+  {
+    "id": "url:https://github.com/manubot/rootstock",
+    "type": "webpage",
+    "URL": "https://github.com/manubot/rootstock",
+    "title": "manubot/rootstock GitHub repository",
+    "container-title": "GitHub",
+    "issued": {
+      "date-parts": [
+        [2019]
       ]
+    },
+    "author": [
+      {
+        "given": "Daniel",
+        "family": "Himmelstein"
+      }
     ]
   },
-  "author": [
-    {
-      "given": "Daniel",
-      "family": "Himmelstein"
-    }
-  ]
-}
+  {
+    "id": "douglas1973",
+    "type": "article-journal",
+    "title": "Algorithms for the reduction of the number of points required to represent a digitized line or its caricature",
+    "container-title": "The Canadian Cartographer",
+    "volume": "10",
+    "issue": "2",
+    "issued": {
+      "date-parts": [
+        [1973]
+      ]
+    },
+    "author": [
+      {
+        "given": "David H.",
+        "family": "Douglas"
+      },
+      {
+        "given": "Thomas K.",
+        "family": "Peucker"
+      }
+    ]
+  },
+  {
+    "id": "guercke2011",
+    "type": "paper-conference",
+    "title": "Building Footprint Simplification Based on Hough Transform and Least Squares Adjustment",
+    "container-title": "Proceedings of the 14th Workshop of the ICA Commission on Generalisation and Multiple Representation",
+    "event-place": "Paris, France",
+    "issued": {
+      "date-parts": [
+        [2011, 7]
+      ]
+    },
+    "author": [
+      {
+        "given": "Richard",
+        "family": "Guercke"
+      },
+      {
+        "given": "Monika",
+        "family": "Sester"
+      }
+    ]
+  }
 ]
