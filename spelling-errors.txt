@@ -15,8 +15,9 @@ GIS
 Guercke
 Gur
 Hatamizadehet
-Hough
+hough
 Huertas
+interpretable
 Kshitij
 kshitijrajsharma
 LiDAR
@@ -27,9 +28,11 @@ Peucker
 planimetric
 postprocessing
 Poz
+pre
 Raj
 Ramer
 Reinartz
+retuning
 Salzburg
 Sester
 Sharma
@@ -37,6 +40,7 @@ Shiyong
 Tian
 transofrmation
 vectorization
+zag
 zags
 Zebedin
 Zhao

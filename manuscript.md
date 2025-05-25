@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-05-25" />
   <meta name="citation_publication_date" content="2025-05-25" />
   <meta property="article:published_time" content="2025-05-25" />
-  <meta name="dc.modified" content="2025-05-25T18:01:53+00:00" />
-  <meta property="article:modified_time" content="2025-05-25T18:01:53+00:00" />
+  <meta name="dc.modified" content="2025-05-25T18:09:24+00:00" />
+  <meta property="article:modified_time" content="2025-05-25T18:09:24+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/049de25bde469ef25e5b9491bd5c01e14bc50767/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/049de25bde469ef25e5b9491bd5c01e14bc50767/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/049de25bde469ef25e5b9491bd5c01e14bc50767/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/f7f4f38499ff96b252cb3306992e4ee6dcc074b2/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/f7f4f38499ff96b252cb3306992e4ee6dcc074b2/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/f7f4f38499ff96b252cb3306992e4ee6dcc074b2/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -63,9 +63,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/049de25bde469ef25e5b9491bd5c01e14bc50767/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/f7f4f38499ff96b252cb3306992e4ee6dcc074b2/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@049de25](https://github.com/kshitijrajsharma/building-regularization-research/tree/049de25bde469ef25e5b9491bd5c01e14bc50767)
+from [kshitijrajsharma/building-regularization-research@f7f4f38](https://github.com/kshitijrajsharma/building-regularization-research/tree/f7f4f38499ff96b252cb3306992e4ee6dcc074b2)
 on May 25, 2025.
 </em></small>
 
@@ -146,6 +146,12 @@ Energy Formulation : ( Basically way to formulate errors on those lines detected
 ![Workflow of building regularization using energy formulation by Albers (2016)](https://github.com/user-attachments/assets/10242f9e-9a77-4433-95d7-9ed0337936fa){#fig:energy-formulation height="3in"}
 
 These model-fitting approaches introduced the idea of globally optimizing a footprint shape (e.g., via dynamic programming or least-squares) to satisfy regularity constraints.
+
+**Strengths and Limitations**: Traditional methods were mostly computationally lightweight and interpretable. They often ran in a couple of sequential steps (edge detection, line grouping, polygon formation) and could be tuned by adjusting thresholds (for line length, angle tolerance, etc.) When assumptions held e.g., a building was clearly rectangular and image data was clean ,these methods produced very clean footprints. For instance, a study by Guercke & Sester showed that applying Hough-based regularization removed minor zig-zag artifacts and yielded impressively straight building edges.
+
+However, these approaches struggled as building shapes grew more complex or data quality worsened. Irregular or curved buildings (round towers, L- or T-shaped footprints, etc.) did not fit neatly into a two-orientation assumption or a single rectangle model. Many algorithms were fragile: failing to detect a single key edge could cause entire sides of a polygon to be missed. They were also scenario-specific often tailored to isolated buildings with simple roofs and would require retuning for different environments or data sources. It is often said that while such classical methods work in some cases, they are “not applicable to many complex building structures” and they rely heavily on human-engineered features and parameters [@doi:10.3390/ijgi8040191].
+
+In summary, the pre-2010s state-of-the-art could produce “regular” building outlines under favorable conditions, but lacked the robustness and generality needed for broad, automated mapping tasks. These limitations set the stage for machine learning, which promised to learn building shape patterns directly from data and reduce the need for ad hoc rules.
 
 
 

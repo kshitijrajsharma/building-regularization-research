@@ -67,3 +67,11 @@ content/02.journal.md:37:Poz
 content/02.journal.md:39:LiDAR
 content/02.journal.md:39:Peucker
 content/02.journal.md:44:Albers
+content/02.journal.md:48:Guercke
+content/02.journal.md:48:Hough
+content/02.journal.md:48:interpretable
+content/02.journal.md:48:Sester
+content/02.journal.md:48:zag
+content/02.journal.md:48:zig
+content/02.journal.md:50:retuning
+content/02.journal.md:52:pre
