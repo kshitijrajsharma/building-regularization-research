@@ -53,8 +53,8 @@
   <meta name="dc.date" content="2025-05-25" />
   <meta name="citation_publication_date" content="2025-05-25" />
   <meta property="article:published_time" content="2025-05-25" />
-  <meta name="dc.modified" content="2025-05-25T15:22:00+00:00" />
-  <meta property="article:modified_time" content="2025-05-25T15:22:00+00:00" />
+  <meta name="dc.modified" content="2025-05-25T17:07:24+00:00" />
+  <meta property="article:modified_time" content="2025-05-25T17:07:24+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -70,9 +70,9 @@
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/d0fc54544a3b967f55796b1aa50502a1fdc9d7b8/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/d0fc54544a3b967f55796b1aa50502a1fdc9d7b8/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/d0fc54544a3b967f55796b1aa50502a1fdc9d7b8/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/69114dfe70726537fdd098853ff8df4065d62d52/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/69114dfe70726537fdd098853ff8df4065d62d52/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/69114dfe70726537fdd098853ff8df4065d62d52/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -89,9 +89,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://kshitijrajsharma.github.io/building-regularization-research/v/d0fc54544a3b967f55796b1aa50502a1fdc9d7b8/">permalink</a>)
+(<a href="https://kshitijrajsharma.github.io/building-regularization-research/v/69114dfe70726537fdd098853ff8df4065d62d52/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/kshitijrajsharma/building-regularization-research/tree/d0fc54544a3b967f55796b1aa50502a1fdc9d7b8">kshitijrajsharma/building-regularization-research@d0fc545</a>
+from <a href="https://github.com/kshitijrajsharma/building-regularization-research/tree/69114dfe70726537fdd098853ff8df4065d62d52">kshitijrajsharma/building-regularization-research@69114df</a>
 on May 25, 2025.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -131,11 +131,24 @@ workflows. The review draws on peer-reviewed research and real-world implementat
 source tools and commercial pipelines) to provide a comprehensive perspective for remote sensing and GIS
 professionals.</p>
 <h2 id="geometric-and-heuristic-methods-1990s---2000s">Geometric and Heuristic Methods ( 1990s - 2000s )</h2>
-<p><strong>Edge Detection and Line Fitting</strong>: Early building extraction in the 1990s relied on low-level image processing and geometric heuristics. For example, Huertas and Nevatia (1988) developed a system to detect buildings in aerial images by finding rectangular clusters of edges (lines) and using shadow cues to distinguish buildings from other structures <span class="citation" data-cites="WGnpWHap">[<a href="#ref-WGnpWHap" role="doc-biblioref">2</a>]</span> . Building polygons often consist of jagged lines. Guercke and Sester <span class="citation" data-cites="1EX2yPj3b">[<a href="#ref-1EX2yPj3b" role="doc-biblioref">3</a>, =Building+Footprint+Simplification+Based+on+Hough+Transform+and+Least+Squares+Adjustment&amp;conference=Proceedings+of+the+14th+Workshop+of+the+ICA+Commission+on+Generalisation+and+Multiple+Representation&amp;author=Guercke,+R.&amp;author=Sester,+M.&amp;publication_year=2011]</span> use Hough-Transformation to refine such polygons.</p>
+<p><strong>Edge Detection and Line Fitting</strong>: Early building extraction in the 1990s relied on low-level image processing and geometric heuristics. For example, Huertas and Nevatia (1988) developed a system to detect buildings in aerial images by finding rectangular clusters of edges (lines) and using shadow cues to distinguish buildings from other structures <span class="citation" data-cites="WGnpWHap">[<a href="#ref-WGnpWHap" role="doc-biblioref">2</a>]</span> . Building polygons often consist of jagged lines. Guercke and Sester <span class="citation" data-cites="1EX2yPj3b">[<a href="#ref-1EX2yPj3b" role="doc-biblioref">3</a>, =Building+Footprint+Simplification+Based+on+Hough+Transform+and+Least+Squares+Adjustment&amp;conference=Proceedings+of+the+14th+Workshop+of+the+ICA+Commission+on+Generalisation+and+Multiple+Representation&amp;author=Guercke,+R.&amp;author=Sester,+M.&amp;publication_year=2011]</span> use Hough-Transformation to refine such polygons.
+<img src="https://github.com/user-attachments/assets/505773d4-2f24-4c82-8a09-7a87297e5d06" alt="Initial hough transofrmation line segment explained by Guercke and Sester (2011)" /></p>
 <p>Those approach and similar ones could identify simple rectangular building footprints, but often produced polygons with jagged (bearing in mind they don’t take into account the building shape itself rather the outline), noisy outlines. To clean such outlines, researchers applied line simplification algorithms from cartography, notably the Ramer–Douglas–Peucker algorithm : to remove small zig-zags and reduce vertex count while approximating the shape (which is still used to the date) <span class="citation" data-cites="eYYCP7Ll">[<a href="#ref-eYYCP7Ll" role="doc-biblioref">4</a>/]</span>.</p>
 <p>The Douglas–Peucker algorithm (originally from 1973) became a common post-processing step to “compress” or simplify building polygon geometry.
 <img src="https://github.com/user-attachments/assets/d8a3f362-6fd0-4dfb-84e8-a686275c82c5" id="fig:douglas-peucker" alt="A simple illustration of Douglas-Peucker algorithm" />
 Overall, early methods were largely rule-based: edges and corners were detected via image filters, and building shapes were assembled by connecting these primitives under geometric constraints defined by human experts.</p>
+<p><strong>Regularization via Hough Transform</strong>: By the 2000s, more sophisticated heuristics were introduced to enforce regularity in building outlines. A prominent tool was the Hough Transform for line detection. Hough transform is a feature extraction method used in image analysis. Hough transform can be used to isolate features of any regular curve like lines, circles, ellipses, etc. Hough transform in its simplest from can be used to detect straight lines in an image.<span class="citation" data-cites="QrqmHvlC">[<a href="#ref-st1739/hough-transform-287b2dac0c70" role="doc-biblioref"><strong>st1739/hough-transform-287b2dac0c70?</strong></a>]</span>
+For instance, Guercke and Sester (2011) proposed a footprint simplification method that takes an initial digitized outline (which might be jagged) and uses a Hough Transform to identify the dominant line orientations; close-to-collinear segments are merged and adjusted by least-squares to align with those dominant directions <span class="citation" data-cites="X6DTVqiT">[<a href="#ref-X6DTVqiT" role="doc-biblioref">6</a>]</span>.</p>
+<p>The result is a cleaner, rectilinear footprint where spurious bends are straightened and most angles are ~90° or 180° <span class="citation" data-cites="14nvFtl2Y">[<a href="#ref-14nvFtl2Y" role="doc-biblioref">7</a>]</span>. Shiyong Cui et al. (2012) similarly applied the Hough transform to grouping line segments into two perpendicular families corresponding to a building’s principal directions . They constructed an initial graph of line segments, pruned edges that lacked image contrast (assuming they were false boundaries), and then detected closed cycles in the graph to form building polygons <span class="citation" data-cites="14nvFtl2Y">[<a href="#ref-14nvFtl2Y" role="doc-biblioref">7</a>]</span>.</p>
+<p>This yielded neatly rectangular footprints for buildings aligned to the two main axes, although the method was inherently limited to rectilinear structures. Tian and Reinartz (2013) extended the idea to allow two arbitrary dominant orientations (not necessarily parallel/perpendicular to the image axes), enabling footprints with an oblique alignment (e.g. buildings rotated on the ground) <span class="citation" data-cites="14nvFtl2Y">[<a href="#ref-14nvFtl2Y" role="doc-biblioref">7</a>]</span>.</p>
+<p>These Hough-based methods exemplify how prior knowledge of building shape (e.g. most buildings have parallel opposite walls and right-angle corners) was hard-coded into algorithms well before machine learning became common. The advantage was that the output polygons were regular by design : straight lines, right or consistent angles; making them immediately usable for mapping. However, the success of these methods depended on reliable low-level edge detection. In practice, missing or spurious line segments could cause incomplete or incorrect polygons.
+Methods like Cui’s required a clear dominance of two perpendicular directions; complex or curved buildings, or those with more than two prevailing orientations, fell outside their scope. Hough transform is considered as a computational complex in terms of algorithm itself &amp; often require postprocessing techniques like snapping/merging lines or form cycles to create valid polygons<span class="citation" data-cites="QrqmHvlC">[<a href="#ref-st1739/hough-transform-287b2dac0c70" role="doc-biblioref"><strong>st1739/hough-transform-287b2dac0c70?</strong></a>]</span></p>
+<div id="fig:hough-transformation" class="fignos">
+<figure>
+<img src="https://github.com/user-attachments/assets/358c6451-8978-4cba-9e81-697431ac72c4" alt="Figure 1: A simple Hough transformation explaination" />
+<figcaption aria-hidden="true"><span>Figure 1:</span> A simple Hough transformation explaination</figcaption>
+</figure>
+</div>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
@@ -150,6 +163,15 @@ Overall, early methods were largely rule-based: edges and corners were detected 
 </div>
 <div id="ref-eYYCP7Ll" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>Automated Building Footprint Extraction (Part 3): Model Architectures • Element 84</strong> (2022-11-09) <a href="https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/">https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/</a></div>
+</div>
+<div id="ref-QrqmHvlC" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline"><strong>Medium: Read and write stories.</strong> <div class="csl-block">Medium</div> <a href="https://medium.com">https://medium.com</a></div>
+</div>
+<div id="ref-X6DTVqiT" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline"><a href="https://www.mdpi.com/2220-9964/8/4/191">https://www.mdpi.com/2220-9964/8/4/191</a></div>
+</div>
+<div id="ref-14nvFtl2Y" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>Rectilinear Building Footprint Regularization Using Deep Learning</strong> <div class="csl-block">Philipp Schuegraf, Zhixin Li, Jiaojiao Tian, Jie Shan, Ksenia Bittner</div> <em>ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences</em> (2024-06-10) <a href="https://doi.org/g9k82r">https://doi.org/g9k82r</a> <div class="csl-block">DOI: <a href="https://doi.org/10.5194/isprs-annals-x-2-2024-217-2024">10.5194/isprs-annals-x-2-2024-217-2024</a></div></div>
 </div>
 </div>
 <!-- default theme -->
