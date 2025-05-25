@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-05-25" />
   <meta name="citation_publication_date" content="2025-05-25" />
   <meta property="article:published_time" content="2025-05-25" />
-  <meta name="dc.modified" content="2025-05-25T18:09:24+00:00" />
-  <meta property="article:modified_time" content="2025-05-25T18:09:24+00:00" />
+  <meta name="dc.modified" content="2025-05-25T18:45:53+00:00" />
+  <meta property="article:modified_time" content="2025-05-25T18:45:53+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,11 +39,13 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/f7f4f38499ff96b252cb3306992e4ee6dcc074b2/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/f7f4f38499ff96b252cb3306992e4ee6dcc074b2/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/f7f4f38499ff96b252cb3306992e4ee6dcc074b2/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/97dddb711c2d3bd078d5ebb2eb131ce0ba5fa662/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/97dddb711c2d3bd078d5ebb2eb131ce0ba5fa662/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/97dddb711c2d3bd078d5ebb2eb131ce0ba5fa662/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
+  <meta property="twitter:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
   <link rel="mask-icon" href="https://manubot.org/safari-pinned-tab.svg" color="#ad1457" />
   <meta name="theme-color" content="#ad1457" />
@@ -63,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/f7f4f38499ff96b252cb3306992e4ee6dcc074b2/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/97dddb711c2d3bd078d5ebb2eb131ce0ba5fa662/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@f7f4f38](https://github.com/kshitijrajsharma/building-regularization-research/tree/f7f4f38499ff96b252cb3306992e4ee6dcc074b2)
+from [kshitijrajsharma/building-regularization-research@97dddb7](https://github.com/kshitijrajsharma/building-regularization-research/tree/97dddb711c2d3bd078d5ebb2eb131ce0ba5fa662)
 on May 25, 2025.
 </em></small>
 
