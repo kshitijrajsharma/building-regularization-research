@@ -15,7 +15,7 @@ GIS
 Guercke
 Gur
 Hatamizadehet
-hough
+Hough
 Huertas
 interpretable
 Kshitij
