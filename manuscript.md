@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-05-25" />
   <meta name="citation_publication_date" content="2025-05-25" />
   <meta property="article:published_time" content="2025-05-25" />
-  <meta name="dc.modified" content="2025-05-25T14:40:55+00:00" />
-  <meta property="article:modified_time" content="2025-05-25T14:40:55+00:00" />
+  <meta name="dc.modified" content="2025-05-25T15:22:00+00:00" />
+  <meta property="article:modified_time" content="2025-05-25T15:22:00+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/0cad058848e4105ed6ca1a9421aab42b71f6c8e8/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/0cad058848e4105ed6ca1a9421aab42b71f6c8e8/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/0cad058848e4105ed6ca1a9421aab42b71f6c8e8/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/d0fc54544a3b967f55796b1aa50502a1fdc9d7b8/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/d0fc54544a3b967f55796b1aa50502a1fdc9d7b8/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/d0fc54544a3b967f55796b1aa50502a1fdc9d7b8/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -63,9 +63,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/0cad058848e4105ed6ca1a9421aab42b71f6c8e8/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/d0fc54544a3b967f55796b1aa50502a1fdc9d7b8/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@0cad058](https://github.com/kshitijrajsharma/building-regularization-research/tree/0cad058848e4105ed6ca1a9421aab42b71f6c8e8)
+from [kshitijrajsharma/building-regularization-research@d0fc545](https://github.com/kshitijrajsharma/building-regularization-research/tree/d0fc54544a3b967f55796b1aa50502a1fdc9d7b8)
 on May 25, 2025.
 </em></small>
 
@@ -101,7 +101,7 @@ on May 25, 2025.
 
 
 Geographic information systems (GIS) and cartographic applications typically require building footprints as
-precise vector polygons, rather than raster masks [@url:https://openaccess.thecvf.com/content/CVPR2022/html/Zorzi_PolyWorld_Polygonal_Building_Extraction_With_Graph_Neural_Networks_in_Satellite_CVPR_2022_paper.html#:~:text=While%20most%20state,and%20polygonal%20angle%20difference%20loss]. Building footprint regularization refers to the process
+precise vector polygons, rather than raster masks [@url:https://openaccess.thecvf.com/content/CVPR2022/html/Zorzi_PolyWorld_Polygonal_Building_Extraction_With_Graph_Neural_Networks_in_Satellite_CVPR_2022_paper.html]. Building footprint regularization refers to the process
 of refining raw building outlines (e.g. from remotely sensed imagery or LiDAR) into clean polygon shapes that conform to
 expected geometric constraints (such as orthogonal corners or aligned edges). The goal is to eliminate
 irregular artifacts (noisy jags, misalignments) while preserving the true shape, so that the footprints are
@@ -121,6 +121,15 @@ professionals.
 
 ## Geometric and Heuristic Methods ( 1990s - 2000s )
  
+**Edge Detection and Line Fitting**: Early building extraction in the 1990s relied on low-level image processing and geometric heuristics. For example, Huertas and Nevatia (1988) developed a system to detect buildings in aerial images by finding rectangular clusters of edges (lines) and using shadow cues to distinguish buildings from other structures [@doi:10.3390/ijgi8040191] . Building polygons often consist of jagged lines. Guercke and Sester [@url:https://scholar.google.com/scholar_lookup?title=Building+Footprint+Simplification+Based+on+Hough+Transform+and+Least+Squares+Adjustment&conference=Proceedings+of+the+14th+Workshop+of+the+ICA+Commission+on+Generalisation+and+Multiple+Representation&author=Guercke,+R.&author=Sester,+M.&publication_year=2011] use Hough-Transformation to refine such polygons.
+
+Those approach and similar ones could identify simple rectangular building footprints, but often produced polygons with jagged (bearing in mind they don't take into account the building shape itself rather the outline), noisy outlines. To clean such outlines, researchers applied line simplification algorithms from cartography, notably the Ramer–Douglas–Peucker algorithm : to remove small zig-zags and reduce vertex count while approximating the shape (which is still used to the date) [@url:https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/].
+
+The Douglas–Peucker algorithm (originally from 1973) became a common post-processing step to “compress” or simplify building polygon geometry.
+![A simple illustration of Douglas-Peucker algorithm](https://github.com/user-attachments/assets/d8a3f362-6fd0-4dfb-84e8-a686275c82c5){#fig:douglas-peucker}
+Overall, early methods were largely rule-based: edges and corners were detected via image filters, and building shapes were assembled by connecting these primitives under geometric constraints defined by human experts.
+
+
 
 
 ## References {.page_break_before}
