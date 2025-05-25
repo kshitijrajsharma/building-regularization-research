@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-05-25" />
   <meta name="citation_publication_date" content="2025-05-25" />
   <meta property="article:published_time" content="2025-05-25" />
-  <meta name="dc.modified" content="2025-05-25T17:21:34+00:00" />
-  <meta property="article:modified_time" content="2025-05-25T17:21:34+00:00" />
+  <meta name="dc.modified" content="2025-05-25T18:01:53+00:00" />
+  <meta property="article:modified_time" content="2025-05-25T18:01:53+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/05a28c6ce7c1df80037fabd95c66863522072173/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/05a28c6ce7c1df80037fabd95c66863522072173/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/05a28c6ce7c1df80037fabd95c66863522072173/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/049de25bde469ef25e5b9491bd5c01e14bc50767/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/049de25bde469ef25e5b9491bd5c01e14bc50767/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/049de25bde469ef25e5b9491bd5c01e14bc50767/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -63,9 +63,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/05a28c6ce7c1df80037fabd95c66863522072173/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/049de25bde469ef25e5b9491bd5c01e14bc50767/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@05a28c6](https://github.com/kshitijrajsharma/building-regularization-research/tree/05a28c6ce7c1df80037fabd95c66863522072173)
+from [kshitijrajsharma/building-regularization-research@049de25](https://github.com/kshitijrajsharma/building-regularization-research/tree/049de25bde469ef25e5b9491bd5c01e14bc50767)
 on May 25, 2025.
 </em></small>
 
@@ -100,28 +100,14 @@ on May 25, 2025.
 
 
 
-Geographic information systems (GIS) and cartographic applications typically require building footprints as
-precise vector polygons, rather than raster masks [@url:https://openaccess.thecvf.com/content/CVPR2022/html/Zorzi_PolyWorld_Polygonal_Building_Extraction_With_Graph_Neural_Networks_in_Satellite_CVPR_2022_paper.html]. Building footprint regularization refers to the process
-of refining raw building outlines (e.g. from remotely sensed imagery or LiDAR) into clean polygon shapes that conform to
-expected geometric constraints (such as orthogonal corners or aligned edges). The goal is to eliminate
-irregular artifacts (noisy jags, misalignments) while preserving the true shape, so that the footprints are
-cartographically suitable for maps
-In many cases, regularization assumes buildings are rectilinear structures with predominantly 90° corners : an assumption that, while not universally true, holds for
-most residential and industrial buildings. This review traces the evolution of footprint regularization
-methods from early vectorization algorithms in the 1990s through modern deep learning approaches in the
-2020s.
-
-We focus on 2D footprint outline techniques (planimetric building outlines) and exclude full 3D
-building reconstruction or roof modeling. Key developments and representative methods are discussed for
-each era, highlighting their algorithms, use cases, strengths, and limitations. We then compare traditional
-versus deep learning-based methods in terms of performance, flexibility, accuracy, and integration into GIS
-workflows. The review draws on peer-reviewed research and real-world implementations (including open-
-source tools and commercial pipelines) to provide a comprehensive perspective for remote sensing and GIS
-professionals.
+Geographic information systems (GIS) and cartographic applications typically require building footprints as precise vector polygons, rather than raster masks [@url:https://openaccess.thecvf.com/content/CVPR2022/html/Zorzi_PolyWorld_Polygonal_Building_Extraction_With_Graph_Neural_Networks_in_Satellite_CVPR_2022_paper.html]. Building footprint regularization refers to the process of refining raw building outlines (e.g. from remotely sensed imagery or LiDAR) into clean polygon shapes that conform to expected geometric constraints (such as orthogonal corners or aligned edges). The goal is to eliminate irregular artifacts (noisy jags, misalignments) while preserving the true shape, so that the footprints are cartographically suitable for maps.
+A robust approach to obtain buildings in vector format is to first predict raster buildings using a neural network and then applying postprocessing that outputs polygons. The results achieved by conventional methods are either limited in terms of generalization
+capacity (Zebedin et al., 2008; Cui et al., 2012; Tian and Reinartz, 2013) or are not restricted sufficiently to prior knowledge of regularity (Marcos et al., 2018; Gur et al., 2019; Hatamizadehet al., 2020; Zhao et al., 2021; Zorzi and Fraundorfer, 2023)[@doi:10.5194/isprs-annals-X-2-2024-217-2024].This review traces the evolution of footprint regularization methods from early vectorization algorithms in the 1990s through modern deep learning approaches in the 2020s.
+We focus on 2D footprint outline techniques (planimetric building outlines) and exclude full 3D building reconstruction or roof modeling. Key developments and representative methods are discussed for each era, highlighting their algorithms, use cases, strengths, and limitations. We then compare traditional versus deep learning-based methods in terms of performance, flexibility, accuracy, and integration into GIS workflows. The review draws on peer-reviewed research and real-world implementations (including open-source tools and commercial pipelines) to provide a comprehensive perspective for remote sensing and GIS professionals.
 
 ## Geometric and Heuristic Methods ( 1990s - 2000s )
  
-**Edge Detection and Line Fitting**: Early building extraction in the 1990s relied on low-level image processing and geometric heuristics. For example, Huertas and Nevatia (1988) developed a system to detect buildings in aerial images by finding rectangular clusters of edges (lines) and using shadow cues to distinguish buildings from other structures [@doi:10.3390/ijgi8040191] . Building polygons often consist of jagged lines. Guercke and Sester [@guercke2011] use Hough-Transformation to refine such polygons.
+**Edge Detection and Line Fitting**: Early building extraction in the 1990s relied on low-level image processing and geometric heuristics. For example, Huertas and Nevatia (1988) developed a system to detect buildings in aerial images by finding rectangular clusters of edges (lines) and using shadow cues to distinguish buildings from other structures [@doi:10.3390/ijgi8040191] . Building polygons often consist of jagged lines. Guercke and Sester [@guercke2011] use Hough-Transformation ( Mathematically formalized by Duda, R.O., & Hart, P.E. (1972)) to refine such polygons.
 
 Those approach and similar ones could identify simple rectangular building footprints, but often produced polygons with jagged (bearing in mind they don't take into account the building shape itself rather the outline), noisy outlines. To clean such outlines, researchers applied line simplification algorithms from cartography, notably the Ramer–Douglas–Peucker algorithm : to remove small zig-zags and reduce vertex count while approximating the shape (which is still used to the date) [@url:https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/].
 
@@ -145,6 +131,22 @@ These Hough-based methods exemplify how prior knowledge of building shape (e.g. 
 Methods like Cui’s required a clear dominance of two perpendicular directions; complex or curved buildings, or those with more than two prevailing orientations, fell outside their scope. Hough transform is considered as a computational complex in terms of algorithm itself & often require postprocessing techniques like snapping/merging lines or form cycles to create valid polygons[@url:https://medium.com/@st1739/hough-transform-287b2dac0c70]
 
 ![A simple Hough transformation explaination](https://github.com/user-attachments/assets/358c6451-8978-4cba-9e81-697431ac72c4?sanitize=true){#fig:hough-transformation width="5in"}
+
+**Model-Based Fitting and Constraints**: Beyond Hough transforms, researchers explored explicit shape fitting. Zebedin et al. (2008) introduced an approach to reconstruct building footprints by first detecting numerous line segments and then filtering and clustering these lines by orientation. Here initial lines are filtered by forming a histogram of orientation and then removing outliers. The filtered line directions are used to reconstruct the building with regular appearance. This approach is flexible, as it is not restricted to 90° angles.[@doi:10.5194/isprs-annals-X-2-2024-217-2024].
+
+This flexibility to allow non-90° angles was a strength like the footprint could, in principle, follow a building that isn’t perfectly orthogonal but it still assumed buildings have a limited set of principal directions (which may not hold for very irregular architectures).
+
+Other methods employed *snakes/active contours* and energy minimization to refine building shapes. For example, Fazan and Dal Poz (2013) applied an active contour model (snakes) to building roof images, optimizing an energy that favored straight edges and right-angle corners. While this improved initial detections, A drawback of the proposed method is that the weighting functions favor right angles and therefore only work for buildings with simple rectangular shapes [@doi:10.5194/isprs-archives-XLI-B3-555-2016].
+
+He et al. (2014) combined data-driven edge detection with a global regularization step: they used an alpha shape algorithm to get an initial footprint from LiDAR point data, then a variant of Douglas–Peucker that was formulated as an energy minimization focusing on polygon complexity (number of vertices). The output was further processed in two modes one maximizing geometric accuracy, another maximizing topological simplicity to balance detail vs. regularity[@doi:10.5194/isprs-archives-XLI-B3-555-2016].
+
+Energy Formulation : ( Basically way to formulate errors on those lines detected )
+𝐸 = 𝛼𝐸𝑑𝑖𝑠𝑡 + 𝛽𝐸𝑎𝑛𝑔𝑙𝑒 + 𝛾𝐸𝑙𝑒𝑛𝑔𝑡ℎ 
+
+![Workflow of building regularization using energy formulation by Albers (2016)](https://github.com/user-attachments/assets/10242f9e-9a77-4433-95d7-9ed0337936fa){#fig:energy-formulation height="3in"}
+
+These model-fitting approaches introduced the idea of globally optimizing a footprint shape (e.g., via dynamic programming or least-squares) to satisfy regularity constraints.
+
 
 
 

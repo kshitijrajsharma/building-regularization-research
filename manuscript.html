@@ -53,8 +53,8 @@
   <meta name="dc.date" content="2025-05-25" />
   <meta name="citation_publication_date" content="2025-05-25" />
   <meta property="article:published_time" content="2025-05-25" />
-  <meta name="dc.modified" content="2025-05-25T17:21:34+00:00" />
-  <meta property="article:modified_time" content="2025-05-25T17:21:34+00:00" />
+  <meta name="dc.modified" content="2025-05-25T18:01:53+00:00" />
+  <meta property="article:modified_time" content="2025-05-25T18:01:53+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -70,9 +70,9 @@
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/05a28c6ce7c1df80037fabd95c66863522072173/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/05a28c6ce7c1df80037fabd95c66863522072173/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/05a28c6ce7c1df80037fabd95c66863522072173/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/049de25bde469ef25e5b9491bd5c01e14bc50767/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/049de25bde469ef25e5b9491bd5c01e14bc50767/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/049de25bde469ef25e5b9491bd5c01e14bc50767/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -89,9 +89,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://kshitijrajsharma.github.io/building-regularization-research/v/05a28c6ce7c1df80037fabd95c66863522072173/">permalink</a>)
+(<a href="https://kshitijrajsharma.github.io/building-regularization-research/v/049de25bde469ef25e5b9491bd5c01e14bc50767/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/kshitijrajsharma/building-regularization-research/tree/05a28c6ce7c1df80037fabd95c66863522072173">kshitijrajsharma/building-regularization-research@05a28c6</a>
+from <a href="https://github.com/kshitijrajsharma/building-regularization-research/tree/049de25bde469ef25e5b9491bd5c01e14bc50767">kshitijrajsharma/building-regularization-research@049de25</a>
 on May 25, 2025.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -113,27 +113,14 @@ Department of Geoinformatics, Paris Lodron University, Salzburg, Austria
 <p>✉ — Correspondence possible via <a href="https://github.com/kshitijrajsharma/building-regularization-research/issues">GitHub Issues</a></p>
 </div>
 <h2 class="page_break_before" id="abstract">Abstract</h2>
-<p>Geographic information systems (GIS) and cartographic applications typically require building footprints as
-precise vector polygons, rather than raster masks <span class="citation" data-cites="EAqDvrRp">[<a href="#ref-EAqDvrRp" role="doc-biblioref">1</a>]</span>. Building footprint regularization refers to the process
-of refining raw building outlines (e.g. from remotely sensed imagery or LiDAR) into clean polygon shapes that conform to
-expected geometric constraints (such as orthogonal corners or aligned edges). The goal is to eliminate
-irregular artifacts (noisy jags, misalignments) while preserving the true shape, so that the footprints are
-cartographically suitable for maps
-In many cases, regularization assumes buildings are rectilinear structures with predominantly 90° corners : an assumption that, while not universally true, holds for
-most residential and industrial buildings. This review traces the evolution of footprint regularization
-methods from early vectorization algorithms in the 1990s through modern deep learning approaches in the
-2020s.</p>
-<p>We focus on 2D footprint outline techniques (planimetric building outlines) and exclude full 3D
-building reconstruction or roof modeling. Key developments and representative methods are discussed for
-each era, highlighting their algorithms, use cases, strengths, and limitations. We then compare traditional
-versus deep learning-based methods in terms of performance, flexibility, accuracy, and integration into GIS
-workflows. The review draws on peer-reviewed research and real-world implementations (including open-
-source tools and commercial pipelines) to provide a comprehensive perspective for remote sensing and GIS
-professionals.</p>
+<p>Geographic information systems (GIS) and cartographic applications typically require building footprints as precise vector polygons, rather than raster masks <span class="citation" data-cites="EAqDvrRp">[<a href="#ref-EAqDvrRp" role="doc-biblioref">1</a>]</span>. Building footprint regularization refers to the process of refining raw building outlines (e.g. from remotely sensed imagery or LiDAR) into clean polygon shapes that conform to expected geometric constraints (such as orthogonal corners or aligned edges). The goal is to eliminate irregular artifacts (noisy jags, misalignments) while preserving the true shape, so that the footprints are cartographically suitable for maps.
+A robust approach to obtain buildings in vector format is to first predict raster buildings using a neural network and then applying postprocessing that outputs polygons. The results achieved by conventional methods are either limited in terms of generalization
+capacity (Zebedin et al., 2008; Cui et al., 2012; Tian and Reinartz, 2013) or are not restricted sufficiently to prior knowledge of regularity (Marcos et al., 2018; Gur et al., 2019; Hatamizadehet al., 2020; Zhao et al., 2021; Zorzi and Fraundorfer, 2023)<span class="citation" data-cites="14nvFtl2Y">[<a href="#ref-14nvFtl2Y" role="doc-biblioref">2</a>]</span>.This review traces the evolution of footprint regularization methods from early vectorization algorithms in the 1990s through modern deep learning approaches in the 2020s.
+We focus on 2D footprint outline techniques (planimetric building outlines) and exclude full 3D building reconstruction or roof modeling. Key developments and representative methods are discussed for each era, highlighting their algorithms, use cases, strengths, and limitations. We then compare traditional versus deep learning-based methods in terms of performance, flexibility, accuracy, and integration into GIS workflows. The review draws on peer-reviewed research and real-world implementations (including open-source tools and commercial pipelines) to provide a comprehensive perspective for remote sensing and GIS professionals.</p>
 <h2 id="geometric-and-heuristic-methods-1990s---2000s">Geometric and Heuristic Methods ( 1990s - 2000s )</h2>
-<p><strong>Edge Detection and Line Fitting</strong>: Early building extraction in the 1990s relied on low-level image processing and geometric heuristics. For example, Huertas and Nevatia (1988) developed a system to detect buildings in aerial images by finding rectangular clusters of edges (lines) and using shadow cues to distinguish buildings from other structures <span class="citation" data-cites="WGnpWHap">[<a href="#ref-WGnpWHap" role="doc-biblioref">2</a>]</span> . Building polygons often consist of jagged lines. Guercke and Sester <span class="citation" data-cites="htslqIyY">[<a href="#ref-htslqIyY" role="doc-biblioref">3</a>]</span> use Hough-Transformation to refine such polygons.</p>
-<p>Those approach and similar ones could identify simple rectangular building footprints, but often produced polygons with jagged (bearing in mind they don’t take into account the building shape itself rather the outline), noisy outlines. To clean such outlines, researchers applied line simplification algorithms from cartography, notably the Ramer–Douglas–Peucker algorithm : to remove small zig-zags and reduce vertex count while approximating the shape (which is still used to the date) <span class="citation" data-cites="eYYCP7Ll">[<a href="#ref-eYYCP7Ll" role="doc-biblioref">4</a>/]</span>.</p>
-<p>The Douglas–Peucker algorithm (originally from 1973) <span class="citation" data-cites="10NIfLLFS">[<a href="#ref-10NIfLLFS" role="doc-biblioref">5</a>]</span> became a common post-processing step to “compress” or simplify building polygon geometry.</p>
+<p><strong>Edge Detection and Line Fitting</strong>: Early building extraction in the 1990s relied on low-level image processing and geometric heuristics. For example, Huertas and Nevatia (1988) developed a system to detect buildings in aerial images by finding rectangular clusters of edges (lines) and using shadow cues to distinguish buildings from other structures <span class="citation" data-cites="WGnpWHap">[<a href="#ref-WGnpWHap" role="doc-biblioref">3</a>]</span> . Building polygons often consist of jagged lines. Guercke and Sester <span class="citation" data-cites="htslqIyY">[<a href="#ref-htslqIyY" role="doc-biblioref">4</a>]</span> use Hough-Transformation ( Mathematically formalized by Duda, R.O., &amp; Hart, P.E. (1972)) to refine such polygons.</p>
+<p>Those approach and similar ones could identify simple rectangular building footprints, but often produced polygons with jagged (bearing in mind they don’t take into account the building shape itself rather the outline), noisy outlines. To clean such outlines, researchers applied line simplification algorithms from cartography, notably the Ramer–Douglas–Peucker algorithm : to remove small zig-zags and reduce vertex count while approximating the shape (which is still used to the date) <span class="citation" data-cites="eYYCP7Ll">[<a href="#ref-eYYCP7Ll" role="doc-biblioref">5</a>/]</span>.</p>
+<p>The Douglas–Peucker algorithm (originally from 1973) <span class="citation" data-cites="10NIfLLFS">[<a href="#ref-10NIfLLFS" role="doc-biblioref">6</a>]</span> became a common post-processing step to “compress” or simplify building polygon geometry.</p>
 <div id="fig:douglas-peucker" class="fignos">
 <figure>
 <img src="https://github.com/user-attachments/assets/d8a3f362-6fd0-4dfb-84e8-a686275c82c5?sanitize=true" style="width:5in" alt="Figure 1: A simple illustration of Douglas-Peucker algorithm" />
@@ -142,15 +129,15 @@ professionals.</p>
 </div>
 <p>Overall, early methods were largely rule-based: edges and corners were detected via image filters, and building shapes were assembled by connecting these primitives under geometric constraints defined by human experts.</p>
 <p><strong>Regularization via Hough Transform</strong>: By the 2000s, more sophisticated heuristics were introduced to enforce regularity in building outlines. A prominent tool was the Hough Transform for line detection. Hough transform is a feature extraction method used in image analysis. Hough transform can be used to isolate features of any regular curve like lines, circles, ellipses, etc. Hough transform in its simplest from can be used to detect straight lines in an image.<span class="citation" data-cites="QrqmHvlC">[<a href="#ref-st1739/hough-transform-287b2dac0c70" role="doc-biblioref"><strong>st1739/hough-transform-287b2dac0c70?</strong></a>]</span>
-For instance, Guercke and Sester (2011) proposed a footprint simplification method that takes an initial digitized outline (which might be jagged) and uses a Hough Transform to identify the dominant line orientations; close-to-collinear segments are merged and adjusted by least-squares to align with those dominant directions <span class="citation" data-cites="X6DTVqiT">[<a href="#ref-X6DTVqiT" role="doc-biblioref">7</a>]</span>.</p>
+For instance, Guercke and Sester (2011) proposed a footprint simplification method that takes an initial digitized outline (which might be jagged) and uses a Hough Transform to identify the dominant line orientations; close-to-collinear segments are merged and adjusted by least-squares to align with those dominant directions <span class="citation" data-cites="X6DTVqiT">[<a href="#ref-X6DTVqiT" role="doc-biblioref">8</a>]</span>.</p>
 <div id="fig:hough-transformation-line" class="fignos">
 <figure>
 <img src="https://github.com/user-attachments/assets/505773d4-2f24-4c82-8a09-7a87297e5d06?sanitize=true" style="height:2in" alt="Figure 2: Initial hough transofrmation line segment explained by Guercke and Sester (2011)" />
 <figcaption aria-hidden="true"><span>Figure 2:</span> Initial hough transofrmation line segment explained by Guercke and Sester (2011)</figcaption>
 </figure>
 </div>
-<p>The result is a cleaner, rectilinear footprint where spurious bends are straightened and most angles are ~90° or 180° <span class="citation" data-cites="14nvFtl2Y">[<a href="#ref-14nvFtl2Y" role="doc-biblioref">8</a>]</span>. Shiyong Cui et al. (2012) similarly applied the Hough transform to grouping line segments into two perpendicular families corresponding to a building’s principal directions . They constructed an initial graph of line segments, pruned edges that lacked image contrast (assuming they were false boundaries), and then detected closed cycles in the graph to form building polygons <span class="citation" data-cites="14nvFtl2Y">[<a href="#ref-14nvFtl2Y" role="doc-biblioref">8</a>]</span>.</p>
-<p>This yielded neatly rectangular footprints for buildings aligned to the two main axes, although the method was inherently limited to rectilinear structures. Tian and Reinartz (2013) extended the idea to allow two arbitrary dominant orientations (not necessarily parallel/perpendicular to the image axes), enabling footprints with an oblique alignment (e.g. buildings rotated on the ground) <span class="citation" data-cites="14nvFtl2Y">[<a href="#ref-14nvFtl2Y" role="doc-biblioref">8</a>]</span>.</p>
+<p>The result is a cleaner, rectilinear footprint where spurious bends are straightened and most angles are ~90° or 180° <span class="citation" data-cites="14nvFtl2Y">[<a href="#ref-14nvFtl2Y" role="doc-biblioref">2</a>]</span>. Shiyong Cui et al. (2012) similarly applied the Hough transform to grouping line segments into two perpendicular families corresponding to a building’s principal directions . They constructed an initial graph of line segments, pruned edges that lacked image contrast (assuming they were false boundaries), and then detected closed cycles in the graph to form building polygons <span class="citation" data-cites="14nvFtl2Y">[<a href="#ref-14nvFtl2Y" role="doc-biblioref">2</a>]</span>.</p>
+<p>This yielded neatly rectangular footprints for buildings aligned to the two main axes, although the method was inherently limited to rectilinear structures. Tian and Reinartz (2013) extended the idea to allow two arbitrary dominant orientations (not necessarily parallel/perpendicular to the image axes), enabling footprints with an oblique alignment (e.g. buildings rotated on the ground) <span class="citation" data-cites="14nvFtl2Y">[<a href="#ref-14nvFtl2Y" role="doc-biblioref">2</a>]</span>.</p>
 <p>These Hough-based methods exemplify how prior knowledge of building shape (e.g. most buildings have parallel opposite walls and right-angle corners) was hard-coded into algorithms well before machine learning became common. The advantage was that the output polygons were regular by design : straight lines, right or consistent angles; making them immediately usable for mapping. However, the success of these methods depended on reliable low-level edge detection. In practice, missing or spurious line segments could cause incomplete or incorrect polygons.
 Methods like Cui’s required a clear dominance of two perpendicular directions; complex or curved buildings, or those with more than two prevailing orientations, fell outside their scope. Hough transform is considered as a computational complex in terms of algorithm itself &amp; often require postprocessing techniques like snapping/merging lines or form cycles to create valid polygons<span class="citation" data-cites="QrqmHvlC">[<a href="#ref-st1739/hough-transform-287b2dac0c70" role="doc-biblioref"><strong>st1739/hough-transform-287b2dac0c70?</strong></a>]</span></p>
 <div id="fig:hough-transformation" class="fignos">
@@ -159,32 +146,48 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 <figcaption aria-hidden="true"><span>Figure 3:</span> A simple Hough transformation explaination</figcaption>
 </figure>
 </div>
+<p><strong>Model-Based Fitting and Constraints</strong>: Beyond Hough transforms, researchers explored explicit shape fitting. Zebedin et al. (2008) introduced an approach to reconstruct building footprints by first detecting numerous line segments and then filtering and clustering these lines by orientation. Here initial lines are filtered by forming a histogram of orientation and then removing outliers. The filtered line directions are used to reconstruct the building with regular appearance. This approach is flexible, as it is not restricted to 90° angles.<span class="citation" data-cites="14nvFtl2Y">[<a href="#ref-14nvFtl2Y" role="doc-biblioref">2</a>]</span>.</p>
+<p>This flexibility to allow non-90° angles was a strength like the footprint could, in principle, follow a building that isn’t perfectly orthogonal but it still assumed buildings have a limited set of principal directions (which may not hold for very irregular architectures).</p>
+<p>Other methods employed <em>snakes/active contours</em> and energy minimization to refine building shapes. For example, Fazan and Dal Poz (2013) applied an active contour model (snakes) to building roof images, optimizing an energy that favored straight edges and right-angle corners. While this improved initial detections, A drawback of the proposed method is that the weighting functions favor right angles and therefore only work for buildings with simple rectangular shapes <span class="citation" data-cites="Owk5rl8n">[<a href="#ref-Owk5rl8n" role="doc-biblioref">9</a>]</span>.</p>
+<p>He et al. (2014) combined data-driven edge detection with a global regularization step: they used an alpha shape algorithm to get an initial footprint from LiDAR point data, then a variant of Douglas–Peucker that was formulated as an energy minimization focusing on polygon complexity (number of vertices). The output was further processed in two modes one maximizing geometric accuracy, another maximizing topological simplicity to balance detail vs. regularity<span class="citation" data-cites="Owk5rl8n">[<a href="#ref-Owk5rl8n" role="doc-biblioref">9</a>]</span>.</p>
+<p>Energy Formulation : ( Basically way to formulate errors on those lines detected )
+𝐸 = 𝛼𝐸𝑑𝑖𝑠𝑡 + 𝛽𝐸𝑎𝑛𝑔𝑙𝑒 + 𝛾𝐸𝑙𝑒𝑛𝑔𝑡ℎ</p>
+<div id="fig:energy-formulation" class="fignos">
+<figure>
+<img src="https://github.com/user-attachments/assets/10242f9e-9a77-4433-95d7-9ed0337936fa" style="height:3in" alt="Figure 4: Workflow of building regularization using energy formulation by Albers (2016)" />
+<figcaption aria-hidden="true"><span>Figure 4:</span> Workflow of building regularization using energy formulation by Albers (2016)</figcaption>
+</figure>
+</div>
+<p>These model-fitting approaches introduced the idea of globally optimizing a footprint shape (e.g., via dynamic programming or least-squares) to satisfy regularity constraints.</p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
 <div id="ref-EAqDvrRp" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">1. </div><div class="csl-right-inline"><strong>PolyWorld: Polygonal Building Extraction With Graph Neural Networks in Satellite Images</strong> <div class="csl-block">Stefano Zorzi, Shabab Bazrafkan, Stefan Habenschuss, Friedrich Fraundorfer</div> (2022) <a href="https://openaccess.thecvf.com/content/CVPR2022/html/Zorzi_PolyWorld_Polygonal_Building_Extraction_With_Graph_Neural_Networks_in_Satellite_CVPR_2022_paper.html">https://openaccess.thecvf.com/content/CVPR2022/html/Zorzi_PolyWorld_Polygonal_Building_Extraction_With_Graph_Neural_Networks_in_Satellite_CVPR_2022_paper.html</a></div>
 </div>
+<div id="ref-14nvFtl2Y" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>Rectilinear Building Footprint Regularization Using Deep Learning</strong> <div class="csl-block">Philipp Schuegraf, Zhixin Li, Jiaojiao Tian, Jie Shan, Ksenia Bittner</div> <em>ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences</em> (2024-06-10) <a href="https://doi.org/g9k82r">https://doi.org/g9k82r</a> <div class="csl-block">DOI: <a href="https://doi.org/10.5194/isprs-annals-x-2-2024-217-2024">10.5194/isprs-annals-x-2-2024-217-2024</a></div></div>
+</div>
 <div id="ref-WGnpWHap" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>Automatic Building Footprint Extraction from Multi-Resolution Remote Sensing Images Using a Hybrid FCN</strong> <div class="csl-block">Philipp Schuegraf, Ksenia Bittner</div> <em>ISPRS International Journal of Geo-Information</em> (2019-04-12) <a href="https://doi.org/ggwr8s">https://doi.org/ggwr8s</a> <div class="csl-block">DOI: <a href="https://doi.org/10.3390/ijgi8040191">10.3390/ijgi8040191</a></div></div>
+<div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>Automatic Building Footprint Extraction from Multi-Resolution Remote Sensing Images Using a Hybrid FCN</strong> <div class="csl-block">Philipp Schuegraf, Ksenia Bittner</div> <em>ISPRS International Journal of Geo-Information</em> (2019-04-12) <a href="https://doi.org/ggwr8s">https://doi.org/ggwr8s</a> <div class="csl-block">DOI: <a href="https://doi.org/10.3390/ijgi8040191">10.3390/ijgi8040191</a></div></div>
 </div>
 <div id="ref-htslqIyY" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>Building Footprint Simplification Based on Hough Transform and Least Squares Adjustment</strong> <div class="csl-block">Richard Guercke, Monika Sester</div> <em>Proceedings of the 14th Workshop of the ICA Commission on Generalisation and Multiple Representation</em> (2011-07)</div>
+<div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>Building Footprint Simplification Based on Hough Transform and Least Squares Adjustment</strong> <div class="csl-block">Richard Guercke, Monika Sester</div> <em>Proceedings of the 14th Workshop of the ICA Commission on Generalisation and Multiple Representation</em> (2011-07)</div>
 </div>
 <div id="ref-eYYCP7Ll" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>Automated Building Footprint Extraction (Part 3): Model Architectures • Element 84</strong> (2022-11-09) <a href="https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/">https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/</a></div>
+<div class="csl-left-margin">5. </div><div class="csl-right-inline"><strong>Automated Building Footprint Extraction (Part 3): Model Architectures • Element 84</strong> (2022-11-09) <a href="https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/">https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/</a></div>
 </div>
 <div id="ref-10NIfLLFS" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">5. </div><div class="csl-right-inline"><strong>Algorithms for the reduction of the number of points required to represent a digitized line or its caricature</strong> <div class="csl-block">David H Douglas, Thomas K Peucker</div> <em>The Canadian Cartographer</em> (1973)</div>
+<div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>Algorithms for the reduction of the number of points required to represent a digitized line or its caricature</strong> <div class="csl-block">David H Douglas, Thomas K Peucker</div> <em>The Canadian Cartographer</em> (1973)</div>
 </div>
 <div id="ref-QrqmHvlC" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline"><strong>Medium: Read and write stories.</strong> <div class="csl-block">Medium</div> <a href="https://medium.com">https://medium.com</a></div>
+<div class="csl-left-margin">7. </div><div class="csl-right-inline"><strong>Medium: Read and write stories.</strong> <div class="csl-block">Medium</div> <a href="https://medium.com">https://medium.com</a></div>
 </div>
 <div id="ref-X6DTVqiT" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline"><a href="https://www.mdpi.com/2220-9964/8/4/191">https://www.mdpi.com/2220-9964/8/4/191</a></div>
+<div class="csl-left-margin">8. </div><div class="csl-right-inline"><a href="https://www.mdpi.com/2220-9964/8/4/191">https://www.mdpi.com/2220-9964/8/4/191</a></div>
 </div>
-<div id="ref-14nvFtl2Y" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline"><strong>Rectilinear Building Footprint Regularization Using Deep Learning</strong> <div class="csl-block">Philipp Schuegraf, Zhixin Li, Jiaojiao Tian, Jie Shan, Ksenia Bittner</div> <em>ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences</em> (2024-06-10) <a href="https://doi.org/g9k82r">https://doi.org/g9k82r</a> <div class="csl-block">DOI: <a href="https://doi.org/10.5194/isprs-annals-x-2-2024-217-2024">10.5194/isprs-annals-x-2-2024-217-2024</a></div></div>
+<div id="ref-Owk5rl8n" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline"><strong>AUTOMATIC EXTRACTION AND REGULARIZATION OF BUILDING OUTLINES FROM AIRBORNE LIDAR POINT CLOUDS</strong> <div class="csl-block">Bastian Albers, Martin Kada, Andreas Wichmann</div> <em>The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences</em> (2016-06-09) <a href="https://doi.org/gcc7nx">https://doi.org/gcc7nx</a> <div class="csl-block">DOI: <a href="https://doi.org/10.5194/isprs-archives-xli-b3-555-2016">10.5194/isprs-archives-xli-b3-555-2016</a></div></div>
 </div>
 </div>
 <!-- default theme -->
