@@ -1,7 +1,13 @@
+cartographically
 Geoinformatics
+GIS
 Kshitij
 kshitijrajsharma
+LiDAR
 Lodron
+misalignments
+planimetric
 Raj
 Salzburg
 Sharma
+vectorization

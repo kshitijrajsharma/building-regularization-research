@@ -1,0 +1,8 @@
+content/02.journal.md:1:GIS
+content/02.journal.md:3:LiDAR
+content/02.journal.md:5:misalignments
+content/02.journal.md:6:cartographically
+content/02.journal.md:9:vectorization
+content/02.journal.md:12:planimetric
+content/02.journal.md:15:GIS
+content/02.journal.md:17:GIS
