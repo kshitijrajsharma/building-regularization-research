@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-05-30" />
   <meta name="citation_publication_date" content="2025-05-30" />
   <meta property="article:published_time" content="2025-05-30" />
-  <meta name="dc.modified" content="2025-05-30T12:52:11+00:00" />
-  <meta property="article:modified_time" content="2025-05-30T12:52:11+00:00" />
+  <meta name="dc.modified" content="2025-05-30T13:10:48+00:00" />
+  <meta property="article:modified_time" content="2025-05-30T13:10:48+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/ecd2835c9c5575ce04cb4d63b4c593cb74b0a6a1/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/ecd2835c9c5575ce04cb4d63b4c593cb74b0a6a1/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/ecd2835c9c5575ce04cb4d63b4c593cb74b0a6a1/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/c22b52a11915ece9c415bbb962a7a212c56451ff/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/c22b52a11915ece9c415bbb962a7a212c56451ff/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/c22b52a11915ece9c415bbb962a7a212c56451ff/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/ecd2835c9c5575ce04cb4d63b4c593cb74b0a6a1/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/c22b52a11915ece9c415bbb962a7a212c56451ff/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@ecd2835](https://github.com/kshitijrajsharma/building-regularization-research/tree/ecd2835c9c5575ce04cb4d63b4c593cb74b0a6a1)
+from [kshitijrajsharma/building-regularization-research@c22b52a](https://github.com/kshitijrajsharma/building-regularization-research/tree/c22b52a11915ece9c415bbb962a7a212c56451ff)
 on May 30, 2025.
 </em></small>
 
@@ -246,6 +246,17 @@ Figure represents MS COCO results on the CrowdAI test dataset for all the buildi
 | **AR50 / AR75**   | AR at IoU thresholds 0.5 and 0.75.                                                                    |
 | **ARS / ARM / ARL** | AR for **small**, **medium**, and **large** objects, respectively.                                |
 
+## Re:PolyWorld 
+
+Following PolyWorld, Zorzi and Fraundorfer (2023)[@doi:10.1109/iccv51070.2023.01537] introduced Re:PolyWorld, an improved multi-stage version of the framework . Re:PolyWorld added a second refinement stage where an initial polygon prediction is further optimized and made even more regular by an additional GNN module. 
+
+![Re:PolyWorld Methodology](https://github.com/user-attachments/assets/1eee50f6-d6fe-459c-b44c-a199cd1484ec){#fig:re-poly-world width="5in"}
+
+With these enhancements, Re:PolyWorld achieved new state-of-the-art scores on the CrowdAI dataset, improving both the precision and the shape quality of footprints. For example, it improved the mean intersection-over-union (IoU) and corner angle error metrics beyond what PolyWorld and a strong frame-field baseline had achieved. 
+
+![Benchmark dataset of Re:PolyWorld](https://github.com/user-attachments/assets/850bd0eb-4c73-49b6-8d4f-9de49fd9e1ac){#fig:re-poly-world-benchmarks width="5in"}
+
+he continued success of these GNN-based methods demonstrates the value of treating polygon formation as a graph problem (where deep networks ensure the graph forms nice cycles with desired properties) rather than a pixel-by-pixel segmentation problem
 
 
 ## References {.page_break_before}

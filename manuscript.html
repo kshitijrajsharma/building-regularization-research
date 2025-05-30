@@ -53,8 +53,8 @@
   <meta name="dc.date" content="2025-05-30" />
   <meta name="citation_publication_date" content="2025-05-30" />
   <meta property="article:published_time" content="2025-05-30" />
-  <meta name="dc.modified" content="2025-05-30T12:52:11+00:00" />
-  <meta property="article:modified_time" content="2025-05-30T12:52:11+00:00" />
+  <meta name="dc.modified" content="2025-05-30T13:10:48+00:00" />
+  <meta property="article:modified_time" content="2025-05-30T13:10:48+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -70,9 +70,9 @@
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/ecd2835c9c5575ce04cb4d63b4c593cb74b0a6a1/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/ecd2835c9c5575ce04cb4d63b4c593cb74b0a6a1/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/ecd2835c9c5575ce04cb4d63b4c593cb74b0a6a1/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/c22b52a11915ece9c415bbb962a7a212c56451ff/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/c22b52a11915ece9c415bbb962a7a212c56451ff/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/c22b52a11915ece9c415bbb962a7a212c56451ff/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -91,9 +91,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://kshitijrajsharma.github.io/building-regularization-research/v/ecd2835c9c5575ce04cb4d63b4c593cb74b0a6a1/">permalink</a>)
+(<a href="https://kshitijrajsharma.github.io/building-regularization-research/v/c22b52a11915ece9c415bbb962a7a212c56451ff/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/kshitijrajsharma/building-regularization-research/tree/ecd2835c9c5575ce04cb4d63b4c593cb74b0a6a1">kshitijrajsharma/building-regularization-research@ecd2835</a>
+from <a href="https://github.com/kshitijrajsharma/building-regularization-research/tree/c22b52a11915ece9c415bbb962a7a212c56451ff">kshitijrajsharma/building-regularization-research@c22b52a</a>
 on May 30, 2025.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -285,6 +285,22 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 </tr>
 </tbody>
 </table>
+<h2 id="repolyworld">Re:PolyWorld</h2>
+<p>Following PolyWorld, Zorzi and Fraundorfer (2023)<span class="citation" data-cites="1FEnUJGfB">[<a href="#ref-1FEnUJGfB" role="doc-biblioref">12</a>]</span> introduced Re:PolyWorld, an improved multi-stage version of the framework . Re:PolyWorld added a second refinement stage where an initial polygon prediction is further optimized and made even more regular by an additional GNN module.</p>
+<div id="fig:re-poly-world" class="fignos">
+<figure>
+<img src="https://github.com/user-attachments/assets/1eee50f6-d6fe-459c-b44c-a199cd1484ec" style="width:5in" alt="Figure 12: Re:PolyWorld Methodology" />
+<figcaption aria-hidden="true"><span>Figure 12:</span> Re:PolyWorld Methodology</figcaption>
+</figure>
+</div>
+<p>With these enhancements, Re:PolyWorld achieved new state-of-the-art scores on the CrowdAI dataset, improving both the precision and the shape quality of footprints. For example, it improved the mean intersection-over-union (IoU) and corner angle error metrics beyond what PolyWorld and a strong frame-field baseline had achieved.</p>
+<div id="fig:re-poly-world-benchmarks" class="fignos">
+<figure>
+<img src="https://github.com/user-attachments/assets/850bd0eb-4c73-49b6-8d4f-9de49fd9e1ac" style="width:5in" alt="Figure 13: Benchmark dataset of Re:PolyWorld" />
+<figcaption aria-hidden="true"><span>Figure 13:</span> Benchmark dataset of Re:PolyWorld</figcaption>
+</figure>
+</div>
+<p>he continued success of these GNN-based methods demonstrates the value of treating polygon formation as a graph problem (where deep networks ensure the graph forms nice cycles with desired properties) rather than a pixel-by-pixel segmentation problem</p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
@@ -320,6 +336,9 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 </div>
 <div id="ref-NF3gvseN" class="csl-entry" role="doc-biblioentry">
 <div class="csl-left-margin">11. </div><div class="csl-right-inline"><strong>PolyWorld: Polygonal Building Extraction with Graph Neural Networks in Satellite Images</strong> <div class="csl-block">Stefano Zorzi, Shabab Bazrafkan, Stefan Habenschuss, Friedrich Fraundorfer</div> <em>2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</em> (2022-06) <a href="https://doi.org/gtmwjv">https://doi.org/gtmwjv</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1109/cvpr52688.2022.00189">10.1109/cvpr52688.2022.00189</a></div></div>
+</div>
+<div id="ref-1FEnUJGfB" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline"><strong>Re:PolyWorld - A Graph Neural Network for Polygonal Scene Parsing</strong> <div class="csl-block">Stefano Zorzi, Friedrich Fraundorfer</div> <em>2023 IEEE/CVF International Conference on Computer Vision (ICCV)</em> (2023-10-01) <a href="https://doi.org/g9mrpk">https://doi.org/g9mrpk</a> <div class="csl-block">DOI: <a href="https://doi.org/10.1109/iccv51070.2023.01537">10.1109/iccv51070.2023.01537</a></div></div>
 </div>
 </div>
 <!-- default theme -->
