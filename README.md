@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/kshitijrajsharma/building-regularization-research/tree/gh-pages) branch hosts the contents of this directory at <https://kshitijrajsharma.github.io/building-regularization-research/>.
-The permalink for this webpage version is <https://kshitijrajsharma.github.io/building-regularization-research/v/22e15830a408c66ad0e874bc11ca5e40fa5ab7b4/>.
+The permalink for this webpage version is <https://kshitijrajsharma.github.io/building-regularization-research/v/f7e703da08876f91e1cff9f1978869eb33dd619f/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://kshitijrajsharma.github.io/building-regularization-research/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`22e15830a408c66ad0e874bc11ca5e40fa5ab7b4`](https://github.com/kshitijrajsharma/building-regularization-research/commit/22e15830a408c66ad0e874bc11ca5e40fa5ab7b4).
+[`f7e703da08876f91e1cff9f1978869eb33dd619f`](https://github.com/kshitijrajsharma/building-regularization-research/commit/f7e703da08876f91e1cff9f1978869eb33dd619f).
