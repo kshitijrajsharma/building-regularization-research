@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-06-03" />
   <meta name="citation_publication_date" content="2025-06-03" />
   <meta property="article:published_time" content="2025-06-03" />
-  <meta name="dc.modified" content="2025-06-03T08:42:30+00:00" />
-  <meta property="article:modified_time" content="2025-06-03T08:42:30+00:00" />
+  <meta name="dc.modified" content="2025-06-03T08:56:38+00:00" />
+  <meta property="article:modified_time" content="2025-06-03T08:56:38+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/b3ccf8b11b1823eaab62ab498d3b51a2b73af334/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/b3ccf8b11b1823eaab62ab498d3b51a2b73af334/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/b3ccf8b11b1823eaab62ab498d3b51a2b73af334/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/8f06ae1518198ca4001769583571c707242042ba/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/8f06ae1518198ca4001769583571c707242042ba/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/8f06ae1518198ca4001769583571c707242042ba/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/b3ccf8b11b1823eaab62ab498d3b51a2b73af334/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/8f06ae1518198ca4001769583571c707242042ba/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@b3ccf8b](https://github.com/kshitijrajsharma/building-regularization-research/tree/b3ccf8b11b1823eaab62ab498d3b51a2b73af334)
+from [kshitijrajsharma/building-regularization-research@8f06ae1](https://github.com/kshitijrajsharma/building-regularization-research/tree/8f06ae1518198ca4001769583571c707242042ba)
 on June 3, 2025.
 </em></small>
 
@@ -286,6 +286,59 @@ Similarly, another study proposed Poly-GAN (2023) to post-process OpenStreetMap 
 
 
 
+## Comparison: Traditional vs. Deep Learning Methods
+
+### Accuracy and Performance
+
+| Aspect            | Traditional Methods                                  | Deep Learning Methods                                                                 |
+|-------------------|------------------------------------------------------|----------------------------------------------------------------------------------------|
+| Detection Accuracy| Moderate; struggles with small/faint buildings       | High; CNNs and transformers achieve state-of-the-art IoU and recall                   |
+| Processing Speed  | Very fast (per building) on CPU                      | Slower per image but GPU-accelerated; parallelization possible                         |
+| Scalability       | Needs tuning for new regions                         | Scales to large areas                               |
+| Example           | Hough Transform, DP simplification                   | PolyWorld, Pix2Poly, Frame Field Learning                                              |
+
+### Flexibility and Generalization
+
+| Aspect            | Traditional Methods                                  | Deep Learning Methods                                                                 |
+|-------------------|------------------------------------------------------|----------------------------------------------------------------------------------------|
+| Adaptability      | Manual reprogramming required                        | Retrainable and fine-tunable on new data                                               |
+| Shape Handling    | Biased to rectilinear structures                     | Learns to detect irregular, curved, or complex forms                                   |
+| Data Sensitivity  | Edge-based; poor in low contrast                     | Learns semantic cues (shadows, context)                                                |
+| Example           | Thresholding, edge detectors                         | CNNs, Transformers trained on diverse imagery                                          |
+
+### Cartographic Quality
+
+| Aspect            | Traditional Methods                                  | Deep Learning Methods                                                                 |
+|-------------------|------------------------------------------------------|----------------------------------------------------------------------------------------|
+| Output Regularity | Hard constraints (e.g. 90° angles)                   | Learned regularity (polygon loss, angle constraints, GANs)                             |
+| Visual Quality    | Very clean, stylized                                 | Near finer details as compared from hand-crafted results                                     |
+| Limitations       | May snap overly aggressively                         | May allow some deviation; occasional noise                                           |
+| Example           | Regularize Footprint tool                     | PolyWorld, Pix2Poly with angle loss, GAN refinement                                                    |
+
+### GIS Integration
+
+| Aspect            | Traditional Methods                                  | Deep Learning Methods                                                                 |
+|-------------------|------------------------------------------------------|----------------------------------------------------------------------------------------|
+| Output Format     | Vector-ready (Polygons)                                   | Historically : Raster masks , Now outputs GeoJSON/Shapefiles directly                                               |
+| Workflow Fit      | Compatible with legacy GIS                           | Integrated in QGIS, ArcGIS Pro via plugins, OpenCV                                             |
+| Post-Processing   | Quite sophisticated                                              | Often Minimal with latest pipelines                                                          |
+| Example           | Manual digitization, vector tools                    | Microsoft’s global footprint pipeline, Google Open Buildings                           |
+
+### Quality Control
+
+| Aspect            | Traditional Methods                                  | Deep Learning Methods                                                                 |
+|-------------------|------------------------------------------------------|----------------------------------------------------------------------------------------|
+| Failure Visibility| Obvious errors, easy to flag                         | May generate plausible but wrong results                                              |
+| Correction        | Manual re-runs or inspection                         | Hybrid review: DL + regularization + optional human validation                         |
+| Robustness        | Deterministic but brittle , Easy to explain                           | Robust to noise, generalizes well across geographies, Hard to explain                                   |
+
+## Conclusion
+
+The transition from traditional methods to deep learning marks a major step forward in footprint extraction. Classical techniques were interpretable and rule-based, but lacked scalability and flexibility. Modern deep learning models like PolyWorld and Pix2Poly are accurate, fast (with GPU), generalize well, and produce GIS-ready vector outputs that rival manual digitization.
+
+Although traditional methods remain valuable for strict cartographic constraints, deep learning has become the default for global-scale mapping. These tools now support highly automated workflows, reducing manual effort and enabling rapid, consistent extraction of building footprints worldwide.
+
+The fusion of geometric logic with learning-based systems has established a new standard: fast, precise, and regularized footprints at scale, not just for research, but for operational, production-ready geospatial data pipelines.
 
 
 

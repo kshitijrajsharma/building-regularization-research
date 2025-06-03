@@ -53,8 +53,8 @@
   <meta name="dc.date" content="2025-06-03" />
   <meta name="citation_publication_date" content="2025-06-03" />
   <meta property="article:published_time" content="2025-06-03" />
-  <meta name="dc.modified" content="2025-06-03T08:42:30+00:00" />
-  <meta property="article:modified_time" content="2025-06-03T08:42:30+00:00" />
+  <meta name="dc.modified" content="2025-06-03T08:56:38+00:00" />
+  <meta property="article:modified_time" content="2025-06-03T08:56:38+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -70,9 +70,9 @@
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/b3ccf8b11b1823eaab62ab498d3b51a2b73af334/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/b3ccf8b11b1823eaab62ab498d3b51a2b73af334/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/b3ccf8b11b1823eaab62ab498d3b51a2b73af334/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/8f06ae1518198ca4001769583571c707242042ba/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/8f06ae1518198ca4001769583571c707242042ba/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/8f06ae1518198ca4001769583571c707242042ba/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -91,9 +91,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://kshitijrajsharma.github.io/building-regularization-research/v/b3ccf8b11b1823eaab62ab498d3b51a2b73af334/">permalink</a>)
+(<a href="https://kshitijrajsharma.github.io/building-regularization-research/v/8f06ae1518198ca4001769583571c707242042ba/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/kshitijrajsharma/building-regularization-research/tree/b3ccf8b11b1823eaab62ab498d3b51a2b73af334">kshitijrajsharma/building-regularization-research@b3ccf8b</a>
+from <a href="https://github.com/kshitijrajsharma/building-regularization-research/tree/8f06ae1518198ca4001769583571c707242042ba">kshitijrajsharma/building-regularization-research@8f06ae1</a>
 on June 3, 2025.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -323,6 +323,191 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 <p>Alongside the above, there have been other notable modern approaches. PolyBuilding (2022) <span class="citation" data-cites="EAqDvrRp">[<a href="#ref-EAqDvrRp" role="doc-biblioref">1</a>]</span> introduced a similar concept of a “polygon transformer” that directly predicts vector representations of buildings. It emphasizes fully end-to-end training and shows that a transformer can outperform CNN+RNN hybrids on benchmark aerial image datasets.</p>
 <p>Generative models have also been explored: for instance, RegGAN (2022) <span class="citation" data-cites="1KKEvx4M">[<a href="#ref-1KKEvx4M" role="doc-biblioref">14</a>]</span> used a generative adversarial network to refine building masks such that their boundaries look more like real building shapes. In RegGAN, a generator CNN outputs a building mask and a discriminator network critiques it, especially focusing on boundary regularity. This adversarial training leads to output masks with sharper, straighter edges than a standard segmentation network.</p>
 <p>Similarly, another study proposed Poly-GAN (2023) to post-process OpenStreetMap building footprints, adjusting vertices via a GAN to better align and orthogonalize them <span class="citation" data-cites="11tfzIA8i">[<a href="#ref-11tfzIA8i" role="doc-biblioref">15</a>]</span>. These GAN-based approaches can be seen as learned versions of the old heuristic regularization—rather than applying a Hough transform, they apply a discriminator that has learned what a “correct” building outline looks like and thus encourages the output to conform to those learned patterns.</p>
+<h2 id="comparison-traditional-vs.-deep-learning-methods">Comparison: Traditional vs. Deep Learning Methods</h2>
+<h3 id="accuracy-and-performance">Accuracy and Performance</h3>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 33%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Traditional Methods</th>
+<th>Deep Learning Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Detection Accuracy</td>
+<td>Moderate; struggles with small/faint buildings</td>
+<td>High; CNNs and transformers achieve state-of-the-art IoU and recall</td>
+</tr>
+<tr class="even">
+<td>Processing Speed</td>
+<td>Very fast (per building) on CPU</td>
+<td>Slower per image but GPU-accelerated; parallelization possible</td>
+</tr>
+<tr class="odd">
+<td>Scalability</td>
+<td>Needs tuning for new regions</td>
+<td>Scales to large areas</td>
+</tr>
+<tr class="even">
+<td>Example</td>
+<td>Hough Transform, DP simplification</td>
+<td>PolyWorld, Pix2Poly, Frame Field Learning</td>
+</tr>
+</tbody>
+</table>
+<h3 id="flexibility-and-generalization">Flexibility and Generalization</h3>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 33%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Traditional Methods</th>
+<th>Deep Learning Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Adaptability</td>
+<td>Manual reprogramming required</td>
+<td>Retrainable and fine-tunable on new data</td>
+</tr>
+<tr class="even">
+<td>Shape Handling</td>
+<td>Biased to rectilinear structures</td>
+<td>Learns to detect irregular, curved, or complex forms</td>
+</tr>
+<tr class="odd">
+<td>Data Sensitivity</td>
+<td>Edge-based; poor in low contrast</td>
+<td>Learns semantic cues (shadows, context)</td>
+</tr>
+<tr class="even">
+<td>Example</td>
+<td>Thresholding, edge detectors</td>
+<td>CNNs, Transformers trained on diverse imagery</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cartographic-quality">Cartographic Quality</h3>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 33%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Traditional Methods</th>
+<th>Deep Learning Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Output Regularity</td>
+<td>Hard constraints (e.g. 90° angles)</td>
+<td>Learned regularity (polygon loss, angle constraints, GANs)</td>
+</tr>
+<tr class="even">
+<td>Visual Quality</td>
+<td>Very clean, stylized</td>
+<td>Near finer details as compared from hand-crafted results</td>
+</tr>
+<tr class="odd">
+<td>Limitations</td>
+<td>May snap overly aggressively</td>
+<td>May allow some deviation; occasional noise</td>
+</tr>
+<tr class="even">
+<td>Example</td>
+<td>Regularize Footprint tool</td>
+<td>PolyWorld, Pix2Poly with angle loss, GAN refinement</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gis-integration">GIS Integration</h3>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 33%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Traditional Methods</th>
+<th>Deep Learning Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Output Format</td>
+<td>Vector-ready (Polygons)</td>
+<td>Historically : Raster masks , Now outputs GeoJSON/Shapefiles directly</td>
+</tr>
+<tr class="even">
+<td>Workflow Fit</td>
+<td>Compatible with legacy GIS</td>
+<td>Integrated in QGIS, ArcGIS Pro via plugins, OpenCV</td>
+</tr>
+<tr class="odd">
+<td>Post-Processing</td>
+<td>Quite sophisticated</td>
+<td>Often Minimal with latest pipelines</td>
+</tr>
+<tr class="even">
+<td>Example</td>
+<td>Manual digitization, vector tools</td>
+<td>Microsoft’s global footprint pipeline, Google Open Buildings</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quality-control">Quality Control</h3>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 33%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Traditional Methods</th>
+<th>Deep Learning Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Failure Visibility</td>
+<td>Obvious errors, easy to flag</td>
+<td>May generate plausible but wrong results</td>
+</tr>
+<tr class="even">
+<td>Correction</td>
+<td>Manual re-runs or inspection</td>
+<td>Hybrid review: DL + regularization + optional human validation</td>
+</tr>
+<tr class="odd">
+<td>Robustness</td>
+<td>Deterministic but brittle , Easy to explain</td>
+<td>Robust to noise, generalizes well across geographies, Hard to explain</td>
+</tr>
+</tbody>
+</table>
+<h2 id="conclusion">Conclusion</h2>
+<p>The transition from traditional methods to deep learning marks a major step forward in footprint extraction. Classical techniques were interpretable and rule-based, but lacked scalability and flexibility. Modern deep learning models like PolyWorld and Pix2Poly are accurate, fast (with GPU), generalize well, and produce GIS-ready vector outputs that rival manual digitization.</p>
+<p>Although traditional methods remain valuable for strict cartographic constraints, deep learning has become the default for global-scale mapping. These tools now support highly automated workflows, reducing manual effort and enabling rapid, consistent extraction of building footprints worldwide.</p>
+<p>The fusion of geometric logic with learning-based systems has established a new standard: fast, precise, and regularized footprints at scale, not just for research, but for operational, production-ready geospatial data pipelines.</p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
