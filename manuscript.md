@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-06-03" />
   <meta name="citation_publication_date" content="2025-06-03" />
   <meta property="article:published_time" content="2025-06-03" />
-  <meta name="dc.modified" content="2025-06-03T08:58:49+00:00" />
-  <meta property="article:modified_time" content="2025-06-03T08:58:49+00:00" />
+  <meta name="dc.modified" content="2025-06-03T09:45:58+00:00" />
+  <meta property="article:modified_time" content="2025-06-03T09:45:58+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/339f5e7dde04f5190ea81d0c5f93119f64979a59/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/339f5e7dde04f5190ea81d0c5f93119f64979a59/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/339f5e7dde04f5190ea81d0c5f93119f64979a59/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/529944f978fdfeca0953acd68c5bf506f4ceca8d/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/529944f978fdfeca0953acd68c5bf506f4ceca8d/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/529944f978fdfeca0953acd68c5bf506f4ceca8d/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/339f5e7dde04f5190ea81d0c5f93119f64979a59/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/529944f978fdfeca0953acd68c5bf506f4ceca8d/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@339f5e7](https://github.com/kshitijrajsharma/building-regularization-research/tree/339f5e7dde04f5190ea81d0c5f93119f64979a59)
+from [kshitijrajsharma/building-regularization-research@529944f](https://github.com/kshitijrajsharma/building-regularization-research/tree/529944f978fdfeca0953acd68c5bf506f4ceca8d)
 on June 3, 2025.
 </em></small>
 
@@ -130,7 +130,7 @@ The result is a cleaner, rectilinear footprint where spurious bends are straight
 This yielded neatly rectangular footprints for buildings aligned to the two main axes, although the method was inherently limited to rectilinear structures. Tian and Reinartz (2013) extended the idea to allow two arbitrary dominant orientations (not necessarily parallel/perpendicular to the image axes), enabling footprints with an oblique alignment (e.g. buildings rotated on the ground) [@doi:10.5194/isprs-annals-X-2-2024-217-2024].
 
 These Hough-based methods exemplify how prior knowledge of building shape (e.g. most buildings have parallel opposite walls and right-angle corners) was hard-coded into algorithms well before machine learning became common. The advantage was that the output polygons were regular by design : straight lines, right or consistent angles; making them immediately usable for mapping. However, the success of these methods depended on reliable low-level edge detection. In practice, missing or spurious line segments could cause incomplete or incorrect polygons.
-Methods like Cui’s required a clear dominance of two perpendicular directions; complex or curved buildings, or those with more than two prevailing orientations, fell outside their scope. Hough transform is considered as a computational complex in terms of algorithm itself & often require postprocessing techniques like snapping/merging lines or form cycles to create valid polygons[@url:https://medium.com/@st1739/hough-transform-287b2dac0c70]
+Methods like Cui’s required a clear dominance of two perpendicular directions; complex or curved buildings, or those with more than two prevailing orientations, fell outside their scope. Hough transform is considered as a computational complex in terms of algorithm itself & often require postprocessing techniques like snapping/merging lines or form cycles to create valid polygons[@url:https://medium.com/st1739/hough-transform-287b2dac0c70]
 
 ![A simple Hough transformation explaination](https://github.com/user-attachments/assets/358c6451-8978-4cba-9e81-697431ac72c4?sanitize=true){#fig:hough-transformation width="5in"}
 
