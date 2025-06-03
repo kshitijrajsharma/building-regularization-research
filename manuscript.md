@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-06-03" />
   <meta name="citation_publication_date" content="2025-06-03" />
   <meta property="article:published_time" content="2025-06-03" />
-  <meta name="dc.modified" content="2025-06-03T08:57:50+00:00" />
-  <meta property="article:modified_time" content="2025-06-03T08:57:50+00:00" />
+  <meta name="dc.modified" content="2025-06-03T08:58:49+00:00" />
+  <meta property="article:modified_time" content="2025-06-03T08:58:49+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/82fafa682a8089f80b0c52545e5a6421847f7916/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/82fafa682a8089f80b0c52545e5a6421847f7916/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/82fafa682a8089f80b0c52545e5a6421847f7916/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/339f5e7dde04f5190ea81d0c5f93119f64979a59/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/339f5e7dde04f5190ea81d0c5f93119f64979a59/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/339f5e7dde04f5190ea81d0c5f93119f64979a59/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/82fafa682a8089f80b0c52545e5a6421847f7916/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/339f5e7dde04f5190ea81d0c5f93119f64979a59/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@82fafa6](https://github.com/kshitijrajsharma/building-regularization-research/tree/82fafa682a8089f80b0c52545e5a6421847f7916)
+from [kshitijrajsharma/building-regularization-research@339f5e7](https://github.com/kshitijrajsharma/building-regularization-research/tree/339f5e7dde04f5190ea81d0c5f93119f64979a59)
 on June 3, 2025.
 </em></small>
 
@@ -84,7 +84,7 @@ on June 3, 2025.
     · ![GitHub icon](images/github.svg){.inline_icon width=16 height=16}
     [kshitijrajsharma](https://github.com/kshitijrajsharma)
     · ![Mastodon icon](images/mastodon.svg){.inline_icon width=16 height=16}
-    [\@krschap@mastodon.social](https://mastodon.social/@krschap)
+    [\@kshitijrajsharma@mastodon.social](https://mastodon.social/@kshitijrajsharma)
     <br>
   <small>
      Department of Geoinformatics, Paris Lodron University, Salzburg, Austria
