@@ -16,7 +16,7 @@ Castrejon
 CNNs
 collinear
 Comaprison
-Convolutional
+convolutional
 CrowdAI
 Cui
 Cui’s
@@ -27,7 +27,7 @@ discretizes
 DL
 DSAC
 Duda
-Explaination
+explaination
 Fazan
 FFL
 FLL
