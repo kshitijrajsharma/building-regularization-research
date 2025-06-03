@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2025-05-30'
+date-meta: '2025-06-03'
 author-meta:
 - Kshitij Raj Sharma
 header-includes: |
@@ -19,11 +19,11 @@ header-includes: |
   <meta name="citation_title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
   <meta property="og:title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
   <meta property="twitter:title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
-  <meta name="dc.date" content="2025-05-30" />
-  <meta name="citation_publication_date" content="2025-05-30" />
-  <meta property="article:published_time" content="2025-05-30" />
-  <meta name="dc.modified" content="2025-05-30T13:10:48+00:00" />
-  <meta property="article:modified_time" content="2025-05-30T13:10:48+00:00" />
+  <meta name="dc.date" content="2025-06-03" />
+  <meta name="citation_publication_date" content="2025-06-03" />
+  <meta property="article:published_time" content="2025-06-03" />
+  <meta name="dc.modified" content="2025-06-03T08:42:30+00:00" />
+  <meta property="article:modified_time" content="2025-06-03T08:42:30+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/c22b52a11915ece9c415bbb962a7a212c56451ff/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/c22b52a11915ece9c415bbb962a7a212c56451ff/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/c22b52a11915ece9c415bbb962a7a212c56451ff/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/b3ccf8b11b1823eaab62ab498d3b51a2b73af334/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/b3ccf8b11b1823eaab62ab498d3b51a2b73af334/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/b3ccf8b11b1823eaab62ab498d3b51a2b73af334/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,10 +65,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/c22b52a11915ece9c415bbb962a7a212c56451ff/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/b3ccf8b11b1823eaab62ab498d3b51a2b73af334/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@c22b52a](https://github.com/kshitijrajsharma/building-regularization-research/tree/c22b52a11915ece9c415bbb962a7a212c56451ff)
-on May 30, 2025.
+from [kshitijrajsharma/building-regularization-research@b3ccf8b](https://github.com/kshitijrajsharma/building-regularization-research/tree/b3ccf8b11b1823eaab62ab498d3b51a2b73af334)
+on June 3, 2025.
 </em></small>
 
 
@@ -232,23 +232,24 @@ Despite having better performance than the frame fields models on the CrowdAI da
 
 ![PolyWorld vs Frame Field Learning on CrowdAI test dataset : [source](https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/#:~:text=A%20popular%2C%20yet%20naive%20approach,is%20applied%20to%20the%20polygons) ](https://github.com/user-attachments/assets/8595b722-f02d-4ae1-852f-fe00db42cdf3){#fig:poly-world-frame-field height="3in"}
 
-![Comaprison results oon CrowdAI test dataset by PolyWorld](https://github.com/user-attachments/assets/a0d97378-4845-4cf6-bf83-d61883457d0b){#fig:poly-world-frame-field height="3in"}
+![Comaprison results oon CrowdAI test dataset by PolyWorld](https://github.com/user-attachments/assets/a0d97378-4845-4cf6-bf83-d61883457d0b){#fig:poly-world-frame-field}
 
 Figure represents MS COCO results on the CrowdAI test dataset for all the building extraction and polygonization experiments. The results of PolyWorld are calculated discarding the correction offsets (offset off), and refining the vertex positions (offset on). FFL refers to the Frame Field Learning  method. The results are computed with and without frame field estimation. “mask” refers to the pure segmentation produced by the model. “simple poly” refers to the Douglas–Peucker polygon simplification, and “ACM poly” refers to the Active Contour Model polygonization method [@doi:10.1109/cvpr52688.2022.00189]
 
-| Metric        | Meaning                                                                                                     |
-| ------------- | ----------------------------------------------------------------------------------------------------------- |
-| **AP**        | Average Precision (overall) – higher is better. General performance measure combining precision and recall. |
-| **AP50**      | AP at IoU threshold 0.5 – more lenient match condition.                                                     |
-| **AP75**      | AP at IoU threshold 0.75 – stricter match condition.                                                        |
-| **APS / APM / APL** | AP for **small**, **medium**, and **large** buildings, respectively.                              |
-| **AR**        | Average Recall (overall) – measures how well true objects are detected.                                     |
-| **AR50 / AR75**   | AR at IoU thresholds 0.5 and 0.75.                                                                    |
-| **ARS / ARM / ARL** | AR for **small**, **medium**, and **large** objects, respectively.                                |
+| Metric           | Meaning                                                                                       |
+|------------------|-----------------------------------------------------------------------------------------------|
+| AP               | Average Precision (overall) – higher is better. General performance measure combining precision and recall. |
+| AP50             | AP at IoU threshold 0.5 – more lenient match condition.                                       |
+| AP75             | AP at IoU threshold 0.75 – stricter match condition.                                          |
+| APS / APM / APL  | AP for small, medium, and large buildings, respectively.                                      |
+| AR               | Average Recall (overall) – measures how well true objects are detected.                       |
+| AR50 / AR75      | AR at IoU thresholds 0.5 and 0.75.                                                             |
+| ARS / ARM / ARL  | AR for small, medium, and large objects, respectively.                                        |
 
-## Re:PolyWorld 
 
-Following PolyWorld, Zorzi and Fraundorfer (2023)[@doi:10.1109/iccv51070.2023.01537] introduced Re:PolyWorld, an improved multi-stage version of the framework . Re:PolyWorld added a second refinement stage where an initial polygon prediction is further optimized and made even more regular by an additional GNN module. 
+## Improved version - Re:PolyWorld (2023)
+
+Following PolyWorld, Zorzi and Fraundorfer (2023)[@doi:10.1109/iccv51070.2023.01537] introduced Re:PolyWorld, which is claimed to be an improved multi-stage version of the framework . Re:PolyWorld added a second refinement stage where an initial polygon prediction is further optimized and made even more regular by an additional GNN module. 
 
 ![Re:PolyWorld Methodology](https://github.com/user-attachments/assets/1eee50f6-d6fe-459c-b44c-a199cd1484ec){#fig:re-poly-world width="5in"}
 
@@ -257,6 +258,36 @@ With these enhancements, Re:PolyWorld achieved new state-of-the-art scores on th
 ![Benchmark dataset of Re:PolyWorld](https://github.com/user-attachments/assets/850bd0eb-4c73-49b6-8d4f-9de49fd9e1ac){#fig:re-poly-world-benchmarks width="5in"}
 
 he continued success of these GNN-based methods demonstrates the value of treating polygon formation as a graph problem (where deep networks ensure the graph forms nice cycles with desired properties) rather than a pixel-by-pixel segmentation problem
+
+### Transformer-Based Sequence Models – Pix2Poly
+
+Very recently, researchers have applied transformers—the sequence modeling architecture behind advances in NLP—to polygon extraction. Pix2Poly [@url:https://arxiv.org/html/2412.07899v1] is an attention-based model that casts building footprint delineation as a sequence prediction problem, handled entirely by a transformer encoder-decoder.
+
+The key idea is to avoid the multi-step detour that graph-based models take (e.g., detect vertices → match into polygon). Instead, Pix2Poly’s transformer directly outputs an ordered list of vertex coordinates in sequence, one vertex after another, in a single forward pass. To do this, it discretizes continuous image coordinates into a sequence of tokens (similar to how one might tokenize words or subwords in language) and trains the network to emit the token sequence corresponding to the building outline.
+
+![Overview of Pix2Poly Architecture](https://github.com/user-attachments/assets/cd5dd0de-4643-4999-a4eb-be6a48e551fb){#fig:pix2poly-arch height="5in"}
+
+
+Because the transformer’s self-attention can attend globally to the image, Pix2Poly can, in theory, capture the global shape of the building while placing each vertex. The authors highlight that it avoids certain bottlenecks of earlier methods: for example, it doesn’t require a non-maxima suppression step to select vertices (which was non-differentiable in many prior pipelines), nor does it need a separate graph matching module, since the sequence inherently encodes the connectivity.
+
+The entire model is differentiable end-to-end, making training more straightforward and cohesive. In their experiments, Pix2Poly achieved state-of-the-art results not only for building footprints but also for road network extraction, indicating the versatility of the approach.
+
+Essentially, Pix2Poly represents the convergence of transformer-based detection with graph learning: it uses a transformer as a “vertex sequence detector” and still incorporates an optimal matching network (similar to PolyWorld’s assignment module) to ensure the predicted sequence forms closed polygons. This model claimed to be less complex as compared to FLL , PolyWorld as it has total parameter count of (31.9M) [@url:https://arxiv.org/html/2412.07899v1] 
+
+![Example of Pix2poly output](https://github.com/user-attachments/assets/b268f9b1-3a30-441d-981b-af58336805bc){#fig:pix2poly-arch height="3in"}
+
+### Other Noticable Advances
+
+Alongside the above, there have been other notable modern approaches. PolyBuilding (2022) [@url:https://openaccess.thecvf.com/content/CVPR2022/html/Zorzi_PolyWorld_Polygonal_Building_Extraction_With_Graph_Neural_Networks_in_Satellite_CVPR_2022_paper.html] introduced a similar concept of a “polygon transformer” that directly predicts vector representations of buildings. It emphasizes fully end-to-end training and shows that a transformer can outperform CNN+RNN hybrids on benchmark aerial image datasets.
+
+Generative models have also been explored: for instance, RegGAN (2022) [@url:https://www.mdpi.com/2072-4292/14/8/1835] used a generative adversarial network to refine building masks such that their boundaries look more like real building shapes. In RegGAN, a generator CNN outputs a building mask and a discriminator network critiques it, especially focusing on boundary regularity. This adversarial training leads to output masks with sharper, straighter edges than a standard segmentation network.
+
+Similarly, another study proposed Poly-GAN (2023) to post-process OpenStreetMap building footprints, adjusting vertices via a GAN to better align and orthogonalize them [@doi:10.1007/978-3-031-34612-5_13]. These GAN-based approaches can be seen as learned versions of the old heuristic regularization—rather than applying a Hough transform, they apply a discriminator that has learned what a “correct” building outline looks like and thus encourages the output to conform to those learned patterns.
+
+
+
+
+
 
 
 ## References {.page_break_before}
