@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-06-03" />
   <meta name="citation_publication_date" content="2025-06-03" />
   <meta property="article:published_time" content="2025-06-03" />
-  <meta name="dc.modified" content="2025-06-03T10:06:30+00:00" />
-  <meta property="article:modified_time" content="2025-06-03T10:06:30+00:00" />
+  <meta name="dc.modified" content="2025-06-03T10:26:26+00:00" />
+  <meta property="article:modified_time" content="2025-06-03T10:26:26+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/35c7c479e9b5f08c3d2f718d76219497664bd7e7/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/35c7c479e9b5f08c3d2f718d76219497664bd7e7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/35c7c479e9b5f08c3d2f718d76219497664bd7e7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/60fad628db99fc11d7fcd3b20db582a69dd481d3/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/60fad628db99fc11d7fcd3b20db582a69dd481d3/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/60fad628db99fc11d7fcd3b20db582a69dd481d3/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/35c7c479e9b5f08c3d2f718d76219497664bd7e7/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/60fad628db99fc11d7fcd3b20db582a69dd481d3/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@35c7c47](https://github.com/kshitijrajsharma/building-regularization-research/tree/35c7c479e9b5f08c3d2f718d76219497664bd7e7)
+from [kshitijrajsharma/building-regularization-research@60fad62](https://github.com/kshitijrajsharma/building-regularization-research/tree/60fad628db99fc11d7fcd3b20db582a69dd481d3)
 on June 3, 2025.
 </em></small>
 
@@ -173,6 +173,7 @@ Gur et al. (2019) extended this concept by iteratively updating a polygon outlin
 
 Hatamizadeh et al. (2020) proposed a multi-building active contour model: a CNN first predicts initial contours for many buildings in a scene, and then a learned energy function refines all of them simultaneously [@doi:10.5194/isprs-annals-x-2-2024-217-2024]. This allowed processing dense urban scenes with many buildings at once, something earlier active-contour methods (which often assumed one building at a time) didn’t handle. Hatamizadeh’s model was end-to-end (it directly outputs vector polygons from an image), but like its predecessors, its regularization was implicit it preferred smooth, compact shapes but did not guarantee, say, all angles = 90°.
 
+**Source Code** : [DSAC](https://github.com/dmarcosg/DSAC) , [ACDRNet](https://github.com/shirgur/ACDRNet), [DALS](https://github.com/ahatamiz/dals)
 
 ### Recurrent Vertex Prediction (Polygon RNNs) : PolyMapper
 
@@ -200,6 +201,8 @@ These approaches marked a significant improvement over older heuristic technique
 
 Despite this progress, early deep learning models still had limitations. The building shapes they produced were often *almost* clean but not perfectly geometric for example, a nearly straight wall might still have a slight jitter in the predicted vertices. This lack of geometric precision posed challenges for GIS applications that require clean vector shapes.
 
+**Source Code** :  NA
+
 ## Modern Deep Learning Approaches (2020s) 
 
 ### Polygonal Building Segmentation by Frame Field Learning
@@ -213,6 +216,8 @@ A **frame field** acts like a directional map around a building's edges: it show
 This method is able to handle buildings that are touching and buildings with courtyards by explicitly representing shared walls and generating polygons with holes. In addition, it runs about 10x faster than PolyMapper at inference time. The downside of this method is that the polygon extraction routine is complex and lacks the elegance of a model trained end-to-end.[@url:https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/]
 
 In the last few years, deep learning models for building footprint regularization have reached new levels of maturity. These models are characterized by end-to-end training (the network learns to output a final polygon with minimal post-processing) and by the integration of architectural elements that explicitly handle the polygon’s structure (such as graph neural networks, transformers, or differentiable geometric algorithms). Below we highlight several state-of-the-art approaches, including CNN/RNN hybrids, graph-based models, and transformer-based models, and discuss how they improve upon prior methods.
+
+**Source Code** : [GitHub](https://github.com/Lydorn/Polygonization-by-Frame-Field-Learning)
 
 ### PolyWorld: End-to-End Polygon Extraction via CNN and GNN
 
@@ -246,8 +251,9 @@ Figure represents MS COCO results on the CrowdAI test dataset for all the buildi
 | AR50 / AR75      | AR at IoU thresholds 0.5 and 0.75.                                                             |
 | ARS / ARM / ARL  | AR for small, medium, and large objects, respectively.                                        |
 
+**Source Code** :  [GitHub](https://github.com/zorzi-s/PolyWorldPretrainedNetwork)
 
-## Improved version - Re:PolyWorld (2023)
+## Improved version , Re:PolyWorld (2023)
 
 Following PolyWorld, Zorzi and Fraundorfer (2023)[@doi:10.1109/iccv51070.2023.01537] introduced Re:PolyWorld, which is claimed to be an improved multi-stage version of the framework . Re:PolyWorld added a second refinement stage where an initial polygon prediction is further optimized and made even more regular by an additional GNN module. 
 
@@ -259,7 +265,7 @@ With these enhancements, Re:PolyWorld achieved new state-of-the-art scores on th
 
 he continued success of these GNN-based methods demonstrates the value of treating polygon formation as a graph problem (where deep networks ensure the graph forms nice cycles with desired properties) rather than a pixel-by-pixel segmentation problem
 
-### Transformer-Based Sequence Models – Pix2Poly
+### Transformer-Based Sequence Models : Pix2Poly
 
 Very recently, researchers have applied transformers the sequence modeling architecture behind advances in NLP to polygon extraction. Pix2Poly [@url:https://arxiv.org/html/2412.07899v1] is an attention-based model that casts building footprint delineation as a sequence prediction problem, handled entirely by a transformer encoder-decoder.
 
@@ -275,6 +281,8 @@ The entire model is differentiable end-to-end, making training more straightforw
 Essentially, Pix2Poly represents the convergence of transformer-based detection with graph learning: it uses a transformer as a “vertex sequence detector” and still incorporates an optimal matching network (similar to PolyWorld’s assignment module) to ensure the predicted sequence forms closed polygons. This model claimed to be less complex as compared to FLL , PolyWorld as it has total parameter count of (31.9M) [@url:https://arxiv.org/html/2412.07899v1] 
 
 ![Example of Pix2poly output](https://github.com/user-attachments/assets/b268f9b1-3a30-441d-981b-af58336805bc){#fig:pix2poly-arch height="3in"}
+
+**Source Code** :  [Github](https://github.com/yeshwanth95/Pix2Poly?tab=readme-ov-file)
 
 ### Other Noticable Advances
 

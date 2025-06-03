@@ -53,8 +53,8 @@
   <meta name="dc.date" content="2025-06-03" />
   <meta name="citation_publication_date" content="2025-06-03" />
   <meta property="article:published_time" content="2025-06-03" />
-  <meta name="dc.modified" content="2025-06-03T10:06:30+00:00" />
-  <meta property="article:modified_time" content="2025-06-03T10:06:30+00:00" />
+  <meta name="dc.modified" content="2025-06-03T10:26:26+00:00" />
+  <meta property="article:modified_time" content="2025-06-03T10:26:26+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -70,9 +70,9 @@
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/35c7c479e9b5f08c3d2f718d76219497664bd7e7/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/35c7c479e9b5f08c3d2f718d76219497664bd7e7/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/35c7c479e9b5f08c3d2f718d76219497664bd7e7/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/60fad628db99fc11d7fcd3b20db582a69dd481d3/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/60fad628db99fc11d7fcd3b20db582a69dd481d3/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/60fad628db99fc11d7fcd3b20db582a69dd481d3/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -91,9 +91,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://kshitijrajsharma.github.io/building-regularization-research/v/35c7c479e9b5f08c3d2f718d76219497664bd7e7/">permalink</a>)
+(<a href="https://kshitijrajsharma.github.io/building-regularization-research/v/60fad628db99fc11d7fcd3b20db582a69dd481d3/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/kshitijrajsharma/building-regularization-research/tree/35c7c479e9b5f08c3d2f718d76219497664bd7e7">kshitijrajsharma/building-regularization-research@35c7c47</a>
+from <a href="https://github.com/kshitijrajsharma/building-regularization-research/tree/60fad628db99fc11d7fcd3b20db582a69dd481d3">kshitijrajsharma/building-regularization-research@60fad62</a>
 on June 3, 2025.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -178,6 +178,7 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 <p>A significant development in bridging classical regularization and deep learning was the integration of active contour models into neural networks. Marcos et al. (2018) introduced Deep Structured Active Contours (DSAC), a hybrid approach where a CNN learns to predict the parameters of an active contour that locks onto building edges . In their framework, the network output is not a raster, but rather coefficients that define the shape and tension of an active contour (snake) which then deforms to fit the building boundary.</p>
 <p>Gur et al. (2019) extended this concept by iteratively updating a polygon outline in an end-to-end trainable manner. Their pipeline starts with an approximate polygon (like a coarse outline of the building) and uses a neural network to repeatedly adjust the vertices, analogous to how one would iteratively relax an active contour. While effective, the polygons produced by Gur et al. were not explicitly enforced to be rectilinear the focus was on aligning to image evidence, not necessarily making right angles <span class="citation" data-cites="14nvFtl2Y">[<a href="#ref-14nvFtl2Y" role="doc-biblioref">2</a>]</span>.</p>
 <p>Hatamizadeh et al. (2020) proposed a multi-building active contour model: a CNN first predicts initial contours for many buildings in a scene, and then a learned energy function refines all of them simultaneously <span class="citation" data-cites="14nvFtl2Y">[<a href="#ref-14nvFtl2Y" role="doc-biblioref">2</a>]</span>. This allowed processing dense urban scenes with many buildings at once, something earlier active-contour methods (which often assumed one building at a time) didn’t handle. Hatamizadeh’s model was end-to-end (it directly outputs vector polygons from an image), but like its predecessors, its regularization was implicit it preferred smooth, compact shapes but did not guarantee, say, all angles = 90°.</p>
+<p><strong>Source Code</strong> : <a href="https://github.com/dmarcosg/DSAC">DSAC</a> , <a href="https://github.com/shirgur/ACDRNet">ACDRNet</a>, <a href="https://github.com/ahatamiz/dals">DALS</a></p>
 <h3 id="recurrent-vertex-prediction-polygon-rnns-polymapper">Recurrent Vertex Prediction (Polygon RNNs) : PolyMapper</h3>
 <p>Instead of converting segmentation masks into polygons as a post-processing step, Recurrent Vertex Prediction models approach polygon extraction as a sequence prediction problem. In this framework, the model outputs a series of vertices one at a time, similar to writing out coordinate lists.</p>
 <p>Polygon-RNN, first introduced by Castrejon et al. (2017) and later improved by Acuna et al. (2018), demonstrated that a recurrent neural network (RNN) could learn to draw object outlines by sequentially predicting polygon vertices, using image features to guide the process at each step.</p>
@@ -203,6 +204,7 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 </ol>
 <p>These approaches marked a significant improvement over older heuristic techniques. Convolutional neural networks (CNNs) could generalize better across diverse geographies and imaging conditions. For instance, a model trained on buildings in one city could often perform reasonably well in another, whereas hand-tuned algorithms often failed when conditions changed.</p>
 <p>Despite this progress, early deep learning models still had limitations. The building shapes they produced were often <em>almost</em> clean but not perfectly geometric for example, a nearly straight wall might still have a slight jitter in the predicted vertices. This lack of geometric precision posed challenges for GIS applications that require clean vector shapes.</p>
+<p><strong>Source Code</strong> : NA</p>
 <h2 id="modern-deep-learning-approaches-2020s">Modern Deep Learning Approaches (2020s)</h2>
 <h3 id="polygonal-building-segmentation-by-frame-field-learning">Polygonal Building Segmentation by Frame Field Learning</h3>
 <p>In addition to direct polygon prediction, researchers also explored ways to inject geometric structure into the deep learning process. One notable approach by Girard et al. (2021) <span class="citation" data-cites="18ItrlOd4">[<a href="#ref-18ItrlOd4" role="doc-biblioref">9</a>]</span> involved predicting not only a segmentation mask for buildings, but also a frame field : a set of orthogonal vectors at each pixel along the boundary indicating local edge directions.</p>
@@ -215,6 +217,7 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 </div>
 <p>This method is able to handle buildings that are touching and buildings with courtyards by explicitly representing shared walls and generating polygons with holes. In addition, it runs about 10x faster than PolyMapper at inference time. The downside of this method is that the polygon extraction routine is complex and lacks the elegance of a model trained end-to-end.<span class="citation" data-cites="eYYCP7Ll">[<a href="#ref-eYYCP7Ll" role="doc-biblioref">5</a>/]</span></p>
 <p>In the last few years, deep learning models for building footprint regularization have reached new levels of maturity. These models are characterized by end-to-end training (the network learns to output a final polygon with minimal post-processing) and by the integration of architectural elements that explicitly handle the polygon’s structure (such as graph neural networks, transformers, or differentiable geometric algorithms). Below we highlight several state-of-the-art approaches, including CNN/RNN hybrids, graph-based models, and transformer-based models, and discuss how they improve upon prior methods.</p>
+<p><strong>Source Code</strong> : <a href="https://github.com/Lydorn/Polygonization-by-Frame-Field-Learning">GitHub</a></p>
 <h3 id="polyworld-end-to-end-polygon-extraction-via-cnn-and-gnn">PolyWorld: End-to-End Polygon Extraction via CNN and GNN</h3>
 <p><strong>PolyWorld</strong> <span class="citation" data-cites="NF3gvseN">[<a href="#ref-NF3gvseN" role="doc-biblioref">10</a>]</span> introduces a novel end-to-end deep learning architecture for extracting vector building footprints directly from satellite imagery. Unlike earlier methods such as Polygon-RNN or PolyMapper, which rely on sequential vertex prediction or post-processing of segmentation masks, PolyWorld formulates the problem as a graph-based polygon matching task.</p>
 <p>The pipeline involves three main stages:</p>
@@ -285,7 +288,8 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 </tr>
 </tbody>
 </table>
-<h2 id="improved-version---repolyworld-2023">Improved version - Re:PolyWorld (2023)</h2>
+<p><strong>Source Code</strong> : <a href="https://github.com/zorzi-s/PolyWorldPretrainedNetwork">GitHub</a></p>
+<h2 id="improved-version-repolyworld-2023">Improved version , Re:PolyWorld (2023)</h2>
 <p>Following PolyWorld, Zorzi and Fraundorfer (2023)<span class="citation" data-cites="1FEnUJGfB">[<a href="#ref-1FEnUJGfB" role="doc-biblioref">11</a>]</span> introduced Re:PolyWorld, which is claimed to be an improved multi-stage version of the framework . Re:PolyWorld added a second refinement stage where an initial polygon prediction is further optimized and made even more regular by an additional GNN module.</p>
 <div id="fig:re-poly-world" class="fignos">
 <figure>
@@ -301,7 +305,7 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 </figure>
 </div>
 <p>he continued success of these GNN-based methods demonstrates the value of treating polygon formation as a graph problem (where deep networks ensure the graph forms nice cycles with desired properties) rather than a pixel-by-pixel segmentation problem</p>
-<h3 id="transformer-based-sequence-models-pix2poly">Transformer-Based Sequence Models – Pix2Poly</h3>
+<h3 id="transformer-based-sequence-models-pix2poly">Transformer-Based Sequence Models : Pix2Poly</h3>
 <p>Very recently, researchers have applied transformers the sequence modeling architecture behind advances in NLP to polygon extraction. Pix2Poly <span class="citation" data-cites="18Upmkr67">[<a href="#ref-18Upmkr67" role="doc-biblioref">12</a>]</span> is an attention-based model that casts building footprint delineation as a sequence prediction problem, handled entirely by a transformer encoder-decoder.</p>
 <p>The key idea is to avoid the multi-step detour that graph-based models take (e.g., detect vertices → match into polygon). Instead, Pix2Poly’s transformer directly outputs an ordered list of vertex coordinates in sequence, one vertex after another, in a single forward pass. To do this, it discretizes continuous image coordinates into a sequence of tokens (similar to how one might tokenize words or subwords in language) and trains the network to emit the token sequence corresponding to the building outline.</p>
 <div id="fig:pix2poly-arch" class="fignos">
@@ -319,6 +323,7 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 <figcaption aria-hidden="true"><span>Figure 15:</span> Example of Pix2poly output</figcaption>
 </figure>
 </div>
+<p><strong>Source Code</strong> : <a href="https://github.com/yeshwanth95/Pix2Poly?tab=readme-ov-file">Github</a></p>
 <h3 id="other-noticable-advances">Other Noticable Advances</h3>
 <p>Alongside the above, there have been other notable modern approaches. PolyBuilding (2022) <span class="citation" data-cites="EAqDvrRp">[<a href="#ref-EAqDvrRp" role="doc-biblioref">1</a>]</span> introduced a similar concept of a “polygon transformer” that directly predicts vector representations of buildings. It emphasizes fully end-to-end training and shows that a transformer can outperform CNN+RNN hybrids on benchmark aerial image datasets.</p>
 <p>Generative models have also been explored: for instance, RegGAN (2022) <span class="citation" data-cites="gSxajAT2">[<a href="#ref-gSxajAT2" role="doc-biblioref">13</a>]</span> used a generative adversarial network to refine building masks such that their boundaries look more like real building shapes. In RegGAN, a generator CNN outputs a building mask and a discriminator network critiques it, especially focusing on boundary regularity. This adversarial training leads to output masks with sharper, straighter edges than a standard segmentation network.</p>

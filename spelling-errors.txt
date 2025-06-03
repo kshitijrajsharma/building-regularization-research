@@ -1,3 +1,4 @@
+ACDRNet
 ACM
 Acuna
 Albers
@@ -16,11 +17,12 @@ Castrejon
 CNNs
 collinear
 Comaprison
-convolutional
+Convolutional
 CrowdAI
 Cui
 Cui’s
 Dal
+DALS
 DeepLab
 detections
 discretizes
@@ -46,7 +48,7 @@ Gur
 Hatamizadeh
 Hatamizadehet
 Hatamizadeh’s
-hough
+Hough
 Huertas
 interpretable
 iteratively
