@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-06-03" />
   <meta name="citation_publication_date" content="2025-06-03" />
   <meta property="article:published_time" content="2025-06-03" />
-  <meta name="dc.modified" content="2025-06-03T09:52:21+00:00" />
-  <meta property="article:modified_time" content="2025-06-03T09:52:21+00:00" />
+  <meta name="dc.modified" content="2025-06-03T09:56:58+00:00" />
+  <meta property="article:modified_time" content="2025-06-03T09:56:58+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/22e15830a408c66ad0e874bc11ca5e40fa5ab7b4/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/22e15830a408c66ad0e874bc11ca5e40fa5ab7b4/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/22e15830a408c66ad0e874bc11ca5e40fa5ab7b4/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/f7e703da08876f91e1cff9f1978869eb33dd619f/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/f7e703da08876f91e1cff9f1978869eb33dd619f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/f7e703da08876f91e1cff9f1978869eb33dd619f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/22e15830a408c66ad0e874bc11ca5e40fa5ab7b4/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/f7e703da08876f91e1cff9f1978869eb33dd619f/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@22e1583](https://github.com/kshitijrajsharma/building-regularization-research/tree/22e15830a408c66ad0e874bc11ca5e40fa5ab7b4)
+from [kshitijrajsharma/building-regularization-research@f7e703d](https://github.com/kshitijrajsharma/building-regularization-research/tree/f7e703da08876f91e1cff9f1978869eb33dd619f)
 on June 3, 2025.
 </em></small>
 
@@ -280,7 +280,7 @@ Essentially, Pix2Poly represents the convergence of transformer-based detection 
 
 Alongside the above, there have been other notable modern approaches. PolyBuilding (2022) [@url:https://openaccess.thecvf.com/content/CVPR2022/html/Zorzi_PolyWorld_Polygonal_Building_Extraction_With_Graph_Neural_Networks_in_Satellite_CVPR_2022_paper.html] introduced a similar concept of a “polygon transformer” that directly predicts vector representations of buildings. It emphasizes fully end-to-end training and shows that a transformer can outperform CNN+RNN hybrids on benchmark aerial image datasets.
 
-Generative models have also been explored: for instance, RegGAN (2022) [@url:https://www.mdpi.com/2072-4292/14/8/1835] used a generative adversarial network to refine building masks such that their boundaries look more like real building shapes. In RegGAN, a generator CNN outputs a building mask and a discriminator network critiques it, especially focusing on boundary regularity. This adversarial training leads to output masks with sharper, straighter edges than a standard segmentation network.
+Generative models have also been explored: for instance, RegGAN (2022) [@doi:10.3390/rs14081835] used a generative adversarial network to refine building masks such that their boundaries look more like real building shapes. In RegGAN, a generator CNN outputs a building mask and a discriminator network critiques it, especially focusing on boundary regularity. This adversarial training leads to output masks with sharper, straighter edges than a standard segmentation network.
 
 Similarly, another study proposed Poly-GAN (2023) to post-process OpenStreetMap building footprints, adjusting vertices via a GAN to better align and orthogonalize them [@doi:10.1007/978-3-031-34612-5_13]. These GAN-based approaches can be seen as learned versions of the old heuristic regularization rather than applying a Hough transform, they apply a discriminator that has learned what a “correct” building outline looks like and thus encourages the output to conform to those learned patterns.
 
