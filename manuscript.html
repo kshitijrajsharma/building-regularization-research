@@ -53,8 +53,8 @@
   <meta name="dc.date" content="2025-06-03" />
   <meta name="citation_publication_date" content="2025-06-03" />
   <meta property="article:published_time" content="2025-06-03" />
-  <meta name="dc.modified" content="2025-06-03T10:04:38+00:00" />
-  <meta property="article:modified_time" content="2025-06-03T10:04:38+00:00" />
+  <meta name="dc.modified" content="2025-06-03T10:06:30+00:00" />
+  <meta property="article:modified_time" content="2025-06-03T10:06:30+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -70,9 +70,9 @@
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/518d3980a7955cc5f577a72ad1d85b282bece8ab/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/518d3980a7955cc5f577a72ad1d85b282bece8ab/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/518d3980a7955cc5f577a72ad1d85b282bece8ab/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/35c7c479e9b5f08c3d2f718d76219497664bd7e7/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/35c7c479e9b5f08c3d2f718d76219497664bd7e7/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/35c7c479e9b5f08c3d2f718d76219497664bd7e7/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -91,9 +91,9 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://kshitijrajsharma.github.io/building-regularization-research/v/518d3980a7955cc5f577a72ad1d85b282bece8ab/">permalink</a>)
+(<a href="https://kshitijrajsharma.github.io/building-regularization-research/v/35c7c479e9b5f08c3d2f718d76219497664bd7e7/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/kshitijrajsharma/building-regularization-research/tree/518d3980a7955cc5f577a72ad1d85b282bece8ab">kshitijrajsharma/building-regularization-research@518d398</a>
+from <a href="https://github.com/kshitijrajsharma/building-regularization-research/tree/35c7c479e9b5f08c3d2f718d76219497664bd7e7">kshitijrajsharma/building-regularization-research@35c7c47</a>
 on June 3, 2025.
 </em></small></p>
 <h2 id="authors">Authors</h2>
@@ -178,10 +178,10 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 <p>A significant development in bridging classical regularization and deep learning was the integration of active contour models into neural networks. Marcos et al. (2018) introduced Deep Structured Active Contours (DSAC), a hybrid approach where a CNN learns to predict the parameters of an active contour that locks onto building edges . In their framework, the network output is not a raster, but rather coefficients that define the shape and tension of an active contour (snake) which then deforms to fit the building boundary.</p>
 <p>Gur et al. (2019) extended this concept by iteratively updating a polygon outline in an end-to-end trainable manner. Their pipeline starts with an approximate polygon (like a coarse outline of the building) and uses a neural network to repeatedly adjust the vertices, analogous to how one would iteratively relax an active contour. While effective, the polygons produced by Gur et al. were not explicitly enforced to be rectilinear the focus was on aligning to image evidence, not necessarily making right angles <span class="citation" data-cites="14nvFtl2Y">[<a href="#ref-14nvFtl2Y" role="doc-biblioref">2</a>]</span>.</p>
 <p>Hatamizadeh et al. (2020) proposed a multi-building active contour model: a CNN first predicts initial contours for many buildings in a scene, and then a learned energy function refines all of them simultaneously <span class="citation" data-cites="14nvFtl2Y">[<a href="#ref-14nvFtl2Y" role="doc-biblioref">2</a>]</span>. This allowed processing dense urban scenes with many buildings at once, something earlier active-contour methods (which often assumed one building at a time) didn’t handle. Hatamizadeh’s model was end-to-end (it directly outputs vector polygons from an image), but like its predecessors, its regularization was implicit it preferred smooth, compact shapes but did not guarantee, say, all angles = 90°.</p>
-<h3 id="recurrent-vertex-prediction-polygon-rnns--polymapper">Recurrent Vertex Prediction (Polygon RNNs)- PolyMapper</h3>
+<h3 id="recurrent-vertex-prediction-polygon-rnns-polymapper">Recurrent Vertex Prediction (Polygon RNNs) : PolyMapper</h3>
 <p>Instead of converting segmentation masks into polygons as a post-processing step, Recurrent Vertex Prediction models approach polygon extraction as a sequence prediction problem. In this framework, the model outputs a series of vertices one at a time, similar to writing out coordinate lists.</p>
 <p>Polygon-RNN, first introduced by Castrejon et al. (2017) and later improved by Acuna et al. (2018), demonstrated that a recurrent neural network (RNN) could learn to draw object outlines by sequentially predicting polygon vertices, using image features to guide the process at each step.</p>
-<p>A notable extension of this idea is <strong>PolyMapper</strong>, which integrates convolutional and recurrent modules in an end-to-end architecture. First, a CNN component (similar to Mask R-CNN) detects building instances and predicts coarse masks along with boundary and corner probability maps. Next, the most likely vertices from the corner map are selected and passed, together with image features, into an LSTM-based recurrent module. This module outputs vertices in sequence to trace the building outline, stopping when an end-of-sequence token is predicted, which signals the polygon should close.</p>
+<p>A notable extension of this idea is PolyMapper, which integrates convolutional and recurrent modules in an end-to-end architecture. First, a CNN component (similar to Mask R-CNN) detects building instances and predicts coarse masks along with boundary and corner probability maps. Next, the most likely vertices from the corner map are selected and passed, together with image features, into an LSTM-based recurrent module. This module outputs vertices in sequence to trace the building outline, stopping when an end-of-sequence token is predicted, which signals the polygon should close.</p>
 <div id="fig:polymapper-approach" class="fignos">
 <figure>
 <img src="https://github.com/user-attachments/assets/f04e317d-754b-4c0f-a109-da2c8c6ff868" style="height:3in" alt="Figure 6: Comparison of output generated by instance segmentation and Polymapper , source" />
