@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-06-03" />
   <meta name="citation_publication_date" content="2025-06-03" />
   <meta property="article:published_time" content="2025-06-03" />
-  <meta name="dc.modified" content="2025-06-03T08:56:38+00:00" />
-  <meta property="article:modified_time" content="2025-06-03T08:56:38+00:00" />
+  <meta name="dc.modified" content="2025-06-03T08:57:50+00:00" />
+  <meta property="article:modified_time" content="2025-06-03T08:57:50+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/8f06ae1518198ca4001769583571c707242042ba/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/8f06ae1518198ca4001769583571c707242042ba/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/8f06ae1518198ca4001769583571c707242042ba/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/82fafa682a8089f80b0c52545e5a6421847f7916/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/82fafa682a8089f80b0c52545e5a6421847f7916/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/82fafa682a8089f80b0c52545e5a6421847f7916/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/8f06ae1518198ca4001769583571c707242042ba/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/82fafa682a8089f80b0c52545e5a6421847f7916/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@8f06ae1](https://github.com/kshitijrajsharma/building-regularization-research/tree/8f06ae1518198ca4001769583571c707242042ba)
+from [kshitijrajsharma/building-regularization-research@82fafa6](https://github.com/kshitijrajsharma/building-regularization-research/tree/82fafa682a8089f80b0c52545e5a6421847f7916)
 on June 3, 2025.
 </em></small>
 
@@ -282,7 +282,7 @@ Alongside the above, there have been other notable modern approaches. PolyBuildi
 
 Generative models have also been explored: for instance, RegGAN (2022) [@url:https://www.mdpi.com/2072-4292/14/8/1835] used a generative adversarial network to refine building masks such that their boundaries look more like real building shapes. In RegGAN, a generator CNN outputs a building mask and a discriminator network critiques it, especially focusing on boundary regularity. This adversarial training leads to output masks with sharper, straighter edges than a standard segmentation network.
 
-Similarly, another study proposed Poly-GAN (2023) to post-process OpenStreetMap building footprints, adjusting vertices via a GAN to better align and orthogonalize them [@doi:10.1007/978-3-031-34612-5_13]. These GAN-based approaches can be seen as learned versions of the old heuristic regularization—rather than applying a Hough transform, they apply a discriminator that has learned what a “correct” building outline looks like and thus encourages the output to conform to those learned patterns.
+Similarly, another study proposed Poly-GAN (2023) to post-process OpenStreetMap building footprints, adjusting vertices via a GAN to better align and orthogonalize them [@doi:10.1007/978-3-031-34612-5_13]. These GAN-based approaches can be seen as learned versions of the old heuristic regularization rather than applying a Hough transform, they apply a discriminator that has learned what a “correct” building outline looks like and thus encourages the output to conform to those learned patterns.
 
 
 

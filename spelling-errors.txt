@@ -16,7 +16,7 @@ Castrejon
 CNNs
 collinear
 Comaprison
-Convolutional
+convolutional
 CrowdAI
 Cui
 Cui’s
@@ -47,7 +47,7 @@ Gur
 Hatamizadeh
 Hatamizadehet
 Hatamizadeh’s
-Hough
+hough
 Huertas
 interpretable
 iteratively
@@ -71,7 +71,7 @@ Peucker
 planimetric
 PolyBuilding
 polygonization
-PolyMapper
+Polymapper
 Poly’s
 PolyWold
 PolyWorld
