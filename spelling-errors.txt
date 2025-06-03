@@ -27,7 +27,7 @@ discretizes
 DL
 DSAC
 Duda
-Explaination
+explaination
 Fazan
 FFL
 FLL
@@ -46,7 +46,7 @@ Gur
 Hatamizadeh
 Hatamizadehet
 Hatamizadeh’s
-Hough
+hough
 Huertas
 interpretable
 iteratively
@@ -70,7 +70,7 @@ Peucker
 planimetric
 PolyBuilding
 polygonization
-PolyMapper
+Polymapper
 Poly’s
 PolyWold
 PolyWorld

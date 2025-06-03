@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-06-03" />
   <meta name="citation_publication_date" content="2025-06-03" />
   <meta property="article:published_time" content="2025-06-03" />
-  <meta name="dc.modified" content="2025-06-03T09:49:15+00:00" />
-  <meta property="article:modified_time" content="2025-06-03T09:49:15+00:00" />
+  <meta name="dc.modified" content="2025-06-03T09:52:21+00:00" />
+  <meta property="article:modified_time" content="2025-06-03T09:52:21+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/42d1141b1b1613f36b2da77f3bbc3470d16f1511/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/42d1141b1b1613f36b2da77f3bbc3470d16f1511/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/42d1141b1b1613f36b2da77f3bbc3470d16f1511/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/22e15830a408c66ad0e874bc11ca5e40fa5ab7b4/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/22e15830a408c66ad0e874bc11ca5e40fa5ab7b4/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/22e15830a408c66ad0e874bc11ca5e40fa5ab7b4/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/42d1141b1b1613f36b2da77f3bbc3470d16f1511/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/22e15830a408c66ad0e874bc11ca5e40fa5ab7b4/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@42d1141](https://github.com/kshitijrajsharma/building-regularization-research/tree/42d1141b1b1613f36b2da77f3bbc3470d16f1511)
+from [kshitijrajsharma/building-regularization-research@22e1583](https://github.com/kshitijrajsharma/building-regularization-research/tree/22e15830a408c66ad0e874bc11ca5e40fa5ab7b4)
 on June 3, 2025.
 </em></small>
 
@@ -119,8 +119,8 @@ The Douglas–Peucker algorithm (originally from 1973) [@douglas1973] became a c
 
 Overall, early methods were largely rule-based: edges and corners were detected via image filters, and building shapes were assembled by connecting these primitives under geometric constraints defined by human experts.
 
-**Regularization via Hough Transform**: By the 2000s, more sophisticated heuristics were introduced to enforce regularity in building outlines. A prominent tool was the Hough Transform for line detection. Hough transform is a feature extraction method used in image analysis. Hough transform can be used to isolate features of any regular curve like lines, circles, ellipses, etc. Hough transform in its simplest from can be used to detect straight lines in an image.[@url:https://medium.com/st1739/hough-transform-287b2dac0c70]
-For instance, Guercke and Sester (2011) proposed a footprint simplification method that takes an initial digitized outline (which might be jagged) and uses a Hough Transform to identify the dominant line orientations; close-to-collinear segments are merged and adjusted by least-squares to align with those dominant directions [@url:https://www.mdpi.com/2220-9964/8/4/191].
+**Regularization via Hough Transform**: By the 2000s, more sophisticated heuristics were introduced to enforce regularity in building outlines. A prominent tool was the Hough Transform for line detection. Hough transform is a feature extraction method used in image analysis. Hough transform can be used to isolate features of any regular curve like lines, circles, ellipses, etc. Hough transform in its simplest from can be used to detect straight lines in an image.[@url:https://medium.com/st1739/hough-transform-287b2dac0c70/]
+For instance, Guercke and Sester (2011) proposed a footprint simplification method that takes an initial digitized outline (which might be jagged) and uses a Hough Transform to identify the dominant line orientations; close-to-collinear segments are merged and adjusted by least-squares to align with those dominant directions [@doi:10.3390/ijgi8040191].
 
 ![Initial hough transofrmation line segment explained by Guercke and Sester (2011)](https://github.com/user-attachments/assets/505773d4-2f24-4c82-8a09-7a87297e5d06?sanitize=true){#fig:hough-transformation-line height="2in"}
 
