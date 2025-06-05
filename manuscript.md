@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2025-06-03'
+date-meta: '2025-06-05'
 author-meta:
 - Kshitij Raj Sharma
 header-includes: |
@@ -19,11 +19,11 @@ header-includes: |
   <meta name="citation_title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
   <meta property="og:title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
   <meta property="twitter:title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
-  <meta name="dc.date" content="2025-06-03" />
-  <meta name="citation_publication_date" content="2025-06-03" />
-  <meta property="article:published_time" content="2025-06-03" />
-  <meta name="dc.modified" content="2025-06-03T10:26:26+00:00" />
-  <meta property="article:modified_time" content="2025-06-03T10:26:26+00:00" />
+  <meta name="dc.date" content="2025-06-05" />
+  <meta name="citation_publication_date" content="2025-06-05" />
+  <meta property="article:published_time" content="2025-06-05" />
+  <meta name="dc.modified" content="2025-06-05T08:09:47+00:00" />
+  <meta property="article:modified_time" content="2025-06-05T08:09:47+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/60fad628db99fc11d7fcd3b20db582a69dd481d3/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/60fad628db99fc11d7fcd3b20db582a69dd481d3/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/60fad628db99fc11d7fcd3b20db582a69dd481d3/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/c8fb62dfacd94d5e9ea1b431137c2b41c8d1ecdf/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/c8fb62dfacd94d5e9ea1b431137c2b41c8d1ecdf/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/c8fb62dfacd94d5e9ea1b431137c2b41c8d1ecdf/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,10 +65,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/60fad628db99fc11d7fcd3b20db582a69dd481d3/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/c8fb62dfacd94d5e9ea1b431137c2b41c8d1ecdf/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@60fad62](https://github.com/kshitijrajsharma/building-regularization-research/tree/60fad628db99fc11d7fcd3b20db582a69dd481d3)
-on June 3, 2025.
+from [kshitijrajsharma/building-regularization-research@c8fb62d](https://github.com/kshitijrajsharma/building-regularization-research/tree/c8fb62dfacd94d5e9ea1b431137c2b41c8d1ecdf)
+on June 5, 2025.
 </em></small>
 
 
@@ -154,6 +154,9 @@ These model-fitting approaches introduced the idea of globally optimizing a foot
 However, these approaches struggled as building shapes grew more complex or data quality worsened. Irregular or curved buildings (round towers, L- or T-shaped footprints, etc.) did not fit neatly into a two-orientation assumption or a single rectangle model. Many algorithms were fragile: failing to detect a single key edge could cause entire sides of a polygon to be missed. They were also scenario-specific often tailored to isolated buildings with simple roofs and would require retuning for different environments or data sources. It is often said that while such classical methods work in some cases, they are “not applicable to many complex building structures” and they rely heavily on human-engineered features and parameters [@doi:10.3390/ijgi8040191].
 
 In summary, the pre-2010s state-of-the-art could produce “regular” building outlines under favorable conditions, but lacked the robustness and generality needed for broad, automated mapping tasks. These limitations set the stage for machine learning, which promised to learn building shape patterns directly from data and reduce the need for ad hoc rules.
+
+![A comparison of traditional regularization algorithms on a noisy polygon in terms of node reduction, shape simplification, and edge smoothness ](https://github.com/user-attachments/assets/bac6a47d-79a6-48ec-8c34-4cf4b3c3e556){#fig:comparison-of-traditional-technique width="3in"} [@doi:10.1007/978-3-031-34612-5_13]
+
 
 ## Learning-Based Methods (2010s)
 
