@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2025-06-05'
+date-meta: '2025-06-06'
 author-meta:
 - Kshitij Raj Sharma
 header-includes: |
@@ -19,11 +19,11 @@ header-includes: |
   <meta name="citation_title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
   <meta property="og:title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
   <meta property="twitter:title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
-  <meta name="dc.date" content="2025-06-05" />
-  <meta name="citation_publication_date" content="2025-06-05" />
-  <meta property="article:published_time" content="2025-06-05" />
-  <meta name="dc.modified" content="2025-06-05T08:09:47+00:00" />
-  <meta property="article:modified_time" content="2025-06-05T08:09:47+00:00" />
+  <meta name="dc.date" content="2025-06-06" />
+  <meta name="citation_publication_date" content="2025-06-06" />
+  <meta property="article:published_time" content="2025-06-06" />
+  <meta name="dc.modified" content="2025-06-06T12:23:52+00:00" />
+  <meta property="article:modified_time" content="2025-06-06T12:23:52+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/c8fb62dfacd94d5e9ea1b431137c2b41c8d1ecdf/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/c8fb62dfacd94d5e9ea1b431137c2b41c8d1ecdf/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/c8fb62dfacd94d5e9ea1b431137c2b41c8d1ecdf/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/a2f60dfe3a8303ab42797acd877287587c34905e/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/a2f60dfe3a8303ab42797acd877287587c34905e/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/a2f60dfe3a8303ab42797acd877287587c34905e/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,10 +65,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/c8fb62dfacd94d5e9ea1b431137c2b41c8d1ecdf/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/a2f60dfe3a8303ab42797acd877287587c34905e/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@c8fb62d](https://github.com/kshitijrajsharma/building-regularization-research/tree/c8fb62dfacd94d5e9ea1b431137c2b41c8d1ecdf)
-on June 5, 2025.
+from [kshitijrajsharma/building-regularization-research@a2f60df](https://github.com/kshitijrajsharma/building-regularization-research/tree/a2f60dfe3a8303ab42797acd877287587c34905e)
+on June 6, 2025.
 </em></small>
 
 
@@ -166,7 +166,7 @@ This two-step approach : **CNN segmentation followed by geometric post-processin
 
 Once a clean building mask was obtained, off-the-shelf polygonization (e.g., marching squares to trace outlines) and Douglas–Peucker simplification would yield a polygon vector. A problem with this approach is that semantic segmentation models are unable to delineate the boundaries between objects of the same class. This means that a single polygon will be drawn around a group of buildings that share walls, such as a block of rowhouses. To handle this case, the semantic segmentation model can be replaced with an instance segmentation model such as **Mask R-CNN**. This model generates a separate raster mask for each instance of a class that is detected [@url:https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures]. Beyong which additional smoothing or regularization was needed, and many practitioners continued to apply tolerance-based simplification or mild “squaring” adjustments to make the polygons map-ready.
 
-![Semantic Segmentation to Instance Segmentation Aprooaches , [Source](https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/#:~:text=A%20popular%2C%20yet%20naive%20approach,is%20applied%20to%20the%20polygons) ](https://github.com/user-attachments/assets/8036b15c-4532-4f5d-a863-ce077a379580){#fig:segmentation-approaches height="3in"}
+![Semantic Segmentation to Instance Segmentation Aprooaches , [Source](https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/) ](https://github.com/user-attachments/assets/8036b15c-4532-4f5d-a863-ce077a379580){#fig:segmentation-approaches height="3in"}
 
 ## Deep Structured Models (Active Contours)
 
