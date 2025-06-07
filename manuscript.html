@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Kshitij Raj Sharma" />
-  <meta name="dcterms.date" content="2025-06-06" />
+  <meta name="dcterms.date" content="2025-06-07" />
   <meta name="keywords" content="markdown, publishing, manubot" />
   <title>Building Footprint Regularization : From Vectorization to Deep Learning</title>
   <style>
@@ -50,11 +50,11 @@
   <meta name="citation_title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
   <meta property="og:title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
   <meta property="twitter:title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
-  <meta name="dc.date" content="2025-06-06" />
-  <meta name="citation_publication_date" content="2025-06-06" />
-  <meta property="article:published_time" content="2025-06-06" />
-  <meta name="dc.modified" content="2025-06-06T12:28:14+00:00" />
-  <meta property="article:modified_time" content="2025-06-06T12:28:14+00:00" />
+  <meta name="dc.date" content="2025-06-07" />
+  <meta name="citation_publication_date" content="2025-06-07" />
+  <meta property="article:published_time" content="2025-06-07" />
+  <meta name="dc.modified" content="2025-06-07T08:47:29+00:00" />
+  <meta property="article:modified_time" content="2025-06-07T08:47:29+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -70,9 +70,9 @@
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/acc0e5220f31762aff97445b14d4876e551796ae/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/acc0e5220f31762aff97445b14d4876e551796ae/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/acc0e5220f31762aff97445b14d4876e551796ae/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/20682fc0009e95f067a94d8d5fe91683b45531ab/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/20682fc0009e95f067a94d8d5fe91683b45531ab/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/20682fc0009e95f067a94d8d5fe91683b45531ab/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -91,10 +91,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://kshitijrajsharma.github.io/building-regularization-research/v/acc0e5220f31762aff97445b14d4876e551796ae/">permalink</a>)
+(<a href="https://kshitijrajsharma.github.io/building-regularization-research/v/20682fc0009e95f067a94d8d5fe91683b45531ab/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/kshitijrajsharma/building-regularization-research/tree/acc0e5220f31762aff97445b14d4876e551796ae">kshitijrajsharma/building-regularization-research@acc0e52</a>
-on June 6, 2025.
+from <a href="https://github.com/kshitijrajsharma/building-regularization-research/tree/20682fc0009e95f067a94d8d5fe91683b45531ab">kshitijrajsharma/building-regularization-research@20682fc</a>
+on June 7, 2025.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -165,14 +165,20 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 <p>However, these approaches struggled as building shapes grew more complex or data quality worsened. Irregular or curved buildings (round towers, L- or T-shaped footprints, etc.) did not fit neatly into a two-orientation assumption or a single rectangle model. Many algorithms were fragile: failing to detect a single key edge could cause entire sides of a polygon to be missed. They were also scenario-specific often tailored to isolated buildings with simple roofs and would require retuning for different environments or data sources. It is often said that while such classical methods work in some cases, they are “not applicable to many complex building structures” and they rely heavily on human-engineered features and parameters <span class="citation" data-cites="WGnpWHap">[<a href="#ref-WGnpWHap" role="doc-biblioref">3</a>]</span>.</p>
 <p>In summary, the pre-2010s state-of-the-art could produce “regular” building outlines under favorable conditions, but lacked the robustness and generality needed for broad, automated mapping tasks. These limitations set the stage for machine learning, which promised to learn building shape patterns directly from data and reduce the need for ad hoc rules.</p>
 <p><img src="https://github.com/user-attachments/assets/bac6a47d-79a6-48ec-8c34-4cf4b3c3e556" id="fig:comparison-of-traditional-technique" style="width:3in" alt="A comparison of traditional regularization algorithms on a noisy polygon in terms of node reduction, shape simplification, and edge smoothness" /> <span class="citation" data-cites="11tfzIA8i">[<a href="#ref-11tfzIA8i" role="doc-biblioref">9</a>]</span></p>
+<div id="fig:comparison-of-traditional-techniques" class="fignos">
+<figure>
+<img src="https://github.com/user-attachments/assets/bac6a47d-79a6-48ec-8c34-4cf4b3c3e556" style="width:3in" alt="Figure 5: A comparison of traditional regularization algorithms on a noisy polygon in terms of node reduction, shape simplification, and edge smoothness source" />
+<figcaption aria-hidden="true"><span>Figure 5:</span> A comparison of traditional regularization algorithms on a noisy polygon in terms of node reduction, shape simplification, and edge smoothness <a href="#">source</a></figcaption>
+</figure>
+</div>
 <h2 id="learning-based-methods-2010s">Learning-Based Methods (2010s)</h2>
 <p>By the mid-2010s, the rise of deep learning fundamentally changed how building footprints were extracted. Instead of manually defining edges and shape rules, researchers began training convolutional neural networks (CNNs) to recognize buildings and output them in raster or vector form. The typical pipeline circa 2015–2017 was to use a semantic segmentation network (such as U-Net or DeepLab) to produce a binary mask of building pixels, then apply a vectorization algorithm to convert that mask into polygons <span class="citation" data-cites="eYYCP7Ll">[<a href="#ref-eYYCP7Ll" role="doc-biblioref">5</a>]</span>.</p>
 <p>This two-step approach : <strong>CNN segmentation followed by geometric post-processing</strong> was a direct evolution of earlier workflows, swapping out hand-coded image filters for learned CNN features. For example, Marmanis et al. (2016) and Maggiori et al. (2017) mentioned that fully convolutional networks could outperform traditional techniques in detecting building regions from aerial images <span class="citation" data-cites="WGnpWHap">[<a href="#ref-WGnpWHap" role="doc-biblioref">3</a>]</span>.</p>
 <p>Once a clean building mask was obtained, off-the-shelf polygonization (e.g., marching squares to trace outlines) and Douglas–Peucker simplification would yield a polygon vector. A problem with this approach is that semantic segmentation models are unable to delineate the boundaries between objects of the same class. This means that a single polygon will be drawn around a group of buildings that share walls, such as a block of rowhouses. To handle this case, the semantic segmentation model can be replaced with an instance segmentation model such as <strong>Mask R-CNN</strong>. This model generates a separate raster mask for each instance of a class that is detected <span class="citation" data-cites="eYYCP7Ll">[<a href="#ref-eYYCP7Ll" role="doc-biblioref">5</a>]</span>. Beyong which additional smoothing or regularization was needed, and many practitioners continued to apply tolerance-based simplification or mild “squaring” adjustments to make the polygons map-ready.</p>
 <div id="fig:segmentation-approaches" class="fignos">
 <figure>
-<img src="https://github.com/user-attachments/assets/8036b15c-4532-4f5d-a863-ce077a379580" style="height:3in" alt="Figure 5: Semantic Segmentation to Instance Segmentation Aprooaches , source" />
-<figcaption aria-hidden="true"><span>Figure 5:</span> Semantic Segmentation to Instance Segmentation Aprooaches , <a href="https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/">source</a></figcaption>
+<img src="https://github.com/user-attachments/assets/8036b15c-4532-4f5d-a863-ce077a379580" style="height:3in" alt="Figure 6: Semantic Segmentation to Instance Segmentation Aprooaches , source" />
+<figcaption aria-hidden="true"><span>Figure 6:</span> Semantic Segmentation to Instance Segmentation Aprooaches , <a href="https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/">source</a></figcaption>
 </figure>
 </div>
 <h2 id="deep-structured-models-active-contours">Deep Structured Models (Active Contours)</h2>
@@ -186,16 +192,16 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 <p>A notable extension of this idea is PolyMapper, which integrates convolutional and recurrent modules in an end-to-end architecture. First, a CNN component (similar to Mask R-CNN) detects building instances and predicts coarse masks along with boundary and corner probability maps. Next, the most likely vertices from the corner map are selected and passed, together with image features, into an LSTM-based recurrent module. This module outputs vertices in sequence to trace the building outline, stopping when an end-of-sequence token is predicted, which signals the polygon should close.</p>
 <div id="fig:polymapper-approach" class="fignos">
 <figure>
-<img src="https://github.com/user-attachments/assets/f04e317d-754b-4c0f-a109-da2c8c6ff868" style="height:3in" alt="Figure 6: Comparison of output generated by instance segmentation and Polymapper , source" />
-<figcaption aria-hidden="true"><span>Figure 6:</span> Comparison of output generated by instance segmentation and Polymapper , <a href="https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/#:~:text=A%20popular%2C%20yet%20naive%20approach,is%20applied%20to%20the%20polygons">source</a></figcaption>
+<img src="https://github.com/user-attachments/assets/f04e317d-754b-4c0f-a109-da2c8c6ff868" style="height:3in" alt="Figure 7: Comparison of output generated by instance segmentation and Polymapper , source" />
+<figcaption aria-hidden="true"><span>Figure 7:</span> Comparison of output generated by instance segmentation and Polymapper , <a href="https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/#:~:text=A%20popular%2C%20yet%20naive%20approach,is%20applied%20to%20the%20polygons">source</a></figcaption>
 </figure>
 </div>
 <p>This approach has distinct advantages: the RNN can learn to skip over minor irregularities, resulting in cleaner and simpler polygons with fewer vertices. It can also learn to favor structural regularities, such as right angles, due to its exposure to training data. PolyMapper demonstrated that such models produce more regular and human-like building footprints than traditional instance segmentation pipelines.</p>
 <p>However, this modeling approach brings complexity. The network must learn when to terminate the sequence (when to stop adding vertexes), and the loss function must account for sequence prediction dynamics. Early Polygon-RNN models also faced issues such as generating self-intersecting polygons or incorrectly ordering vertices unless constraints were explicitly enforced.</p>
 <div id="fig:polymapper-approach" class="fignos">
 <figure>
-<img src="https://github.com/user-attachments/assets/a96421ac-94f7-47c2-a387-7ae0a4a6f701" style="width:5in" alt="Figure 7: Overview of PolyMapper for Building and Roads : Source" />
-<figcaption aria-hidden="true"><span>Figure 7:</span> Overview of PolyMapper for Building and Roads : <a href="https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/#:~:text=A%20popular%2C%20yet%20naive%20approach,is%20applied%20to%20the%20polygons">Source</a></figcaption>
+<img src="https://github.com/user-attachments/assets/a96421ac-94f7-47c2-a387-7ae0a4a6f701" style="width:5in" alt="Figure 8: Overview of PolyMapper for Building and Roads : Source" />
+<figcaption aria-hidden="true"><span>Figure 8:</span> Overview of PolyMapper for Building and Roads : <a href="https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/#:~:text=A%20popular%2C%20yet%20naive%20approach,is%20applied%20to%20the%20polygons">Source</a></figcaption>
 </figure>
 </div>
 <p>By the end of the 2010s, two main deep learning approaches emerged for extracting building footprints from imagery:</p>
@@ -212,8 +218,8 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 <p>A <strong>frame field</strong> acts like a directional map around a building’s edges: it shows which way walls run and where corners should be. Using this directional information, the method first extracts a rough outline from the mask and then <strong>snaps and refines it</strong> by aligning it with the frame field and detected corner points. The post-processing pipeline includes multiple geometric steps such as skeletonization, corner detection, and line simplification each algorithmically defined rather than learned.</p>
 <div id="fig:frame-field" class="fignos">
 <figure>
-<img src="https://github.com/user-attachments/assets/f70113fd-0d21-48dd-b1c8-535b1bfabe83" style="width:5in" alt="Figure 8: Explaination of framefield : Source" />
-<figcaption aria-hidden="true"><span>Figure 8:</span> Explaination of framefield : <a href="https://github.com/Lydorn/Polygonization-by-Frame-Field-Learning?tab=readme-ov-file">Source</a></figcaption>
+<img src="https://github.com/user-attachments/assets/f70113fd-0d21-48dd-b1c8-535b1bfabe83" style="width:5in" alt="Figure 9: Explaination of framefield : Source" />
+<figcaption aria-hidden="true"><span>Figure 9:</span> Explaination of framefield : <a href="https://github.com/Lydorn/Polygonization-by-Frame-Field-Learning?tab=readme-ov-file">Source</a></figcaption>
 </figure>
 </div>
 <p>This method is able to handle buildings that are touching and buildings with courtyards by explicitly representing shared walls and generating polygons with holes. In addition, it runs about 10x faster than PolyMapper at inference time. The downside of this method is that the polygon extraction routine is complex and lacks the elegance of a model trained end-to-end.<span class="citation" data-cites="eYYCP7Ll">[<a href="#ref-eYYCP7Ll" role="doc-biblioref">5</a>/]</span></p>
@@ -229,21 +235,21 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 </ol>
 <div id="fig:poly-world" class="fignos">
 <figure>
-<img src="https://github.com/user-attachments/assets/158fcb33-5707-4edf-ac92-df2f4ddf4749" style="height:3in" alt="Figure 9: Explanation of how PolyWorld works: source" />
-<figcaption aria-hidden="true"><span>Figure 9:</span> Explanation of how PolyWorld works: <a href="https://github.com/zorzi-s/PolyWorldPretrainedNetwork">source</a></figcaption>
+<img src="https://github.com/user-attachments/assets/158fcb33-5707-4edf-ac92-df2f4ddf4749" style="height:3in" alt="Figure 10: Explanation of how PolyWorld works: source" />
+<figcaption aria-hidden="true"><span>Figure 10:</span> Explanation of how PolyWorld works: <a href="https://github.com/zorzi-s/PolyWorldPretrainedNetwork">source</a></figcaption>
 </figure>
 </div>
 <p>Despite having better performance than the frame fields models on the CrowdAI dataset, PolyWold does not have the ability to generate polygons with holes, or handle buildings with shared walls. However, the authors offer some ideas for how the model could be modified to handle these cases. The model and inference (but not the training) source code is open source, but has a restrictive license that only permits its use for research.<span class="citation" data-cites="eYYCP7Ll">[<a href="#ref-eYYCP7Ll" role="doc-biblioref">5</a>/]</span></p>
 <div id="fig:poly-world-frame-field" class="fignos">
 <figure>
-<img src="https://github.com/user-attachments/assets/8595b722-f02d-4ae1-852f-fe00db42cdf3" style="height:3in" alt="Figure 10: PolyWorld vs Frame Field Learning on CrowdAI test dataset : source" />
-<figcaption aria-hidden="true"><span>Figure 10:</span> PolyWorld vs Frame Field Learning on CrowdAI test dataset : <a href="https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/#:~:text=A%20popular%2C%20yet%20naive%20approach,is%20applied%20to%20the%20polygons">source</a></figcaption>
+<img src="https://github.com/user-attachments/assets/8595b722-f02d-4ae1-852f-fe00db42cdf3" style="height:3in" alt="Figure 11: PolyWorld vs Frame Field Learning on CrowdAI test dataset : source" />
+<figcaption aria-hidden="true"><span>Figure 11:</span> PolyWorld vs Frame Field Learning on CrowdAI test dataset : <a href="https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/#:~:text=A%20popular%2C%20yet%20naive%20approach,is%20applied%20to%20the%20polygons">source</a></figcaption>
 </figure>
 </div>
 <div id="fig:poly-world-frame-field" class="fignos">
 <figure>
-<img src="https://github.com/user-attachments/assets/a0d97378-4845-4cf6-bf83-d61883457d0b" alt="Figure 11: Comaprison results oon CrowdAI test dataset by PolyWorld" />
-<figcaption aria-hidden="true"><span>Figure 11:</span> Comaprison results oon CrowdAI test dataset by PolyWorld</figcaption>
+<img src="https://github.com/user-attachments/assets/a0d97378-4845-4cf6-bf83-d61883457d0b" alt="Figure 12: Comaprison results oon CrowdAI test dataset by PolyWorld" />
+<figcaption aria-hidden="true"><span>Figure 12:</span> Comaprison results oon CrowdAI test dataset by PolyWorld</figcaption>
 </figure>
 </div>
 <p>Figure represents MS COCO results on the CrowdAI test dataset for all the building extraction and polygonization experiments. The results of PolyWorld are calculated discarding the correction offsets (offset off), and refining the vertex positions (offset on). FFL refers to the Frame Field Learning method. The results are computed with and without frame field estimation. “mask” refers to the pure segmentation produced by the model. “simple poly” refers to the Douglas–Peucker polygon simplification, and “ACM poly” refers to the Active Contour Model polygonization method <span class="citation" data-cites="NF3gvseN">[<a href="#ref-NF3gvseN" role="doc-biblioref">11</a>]</span></p>
@@ -294,15 +300,15 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 <p>Following PolyWorld, Zorzi and Fraundorfer (2023)<span class="citation" data-cites="1FEnUJGfB">[<a href="#ref-1FEnUJGfB" role="doc-biblioref">12</a>]</span> introduced Re:PolyWorld, which is claimed to be an improved multi-stage version of the framework . Re:PolyWorld added a second refinement stage where an initial polygon prediction is further optimized and made even more regular by an additional GNN module.</p>
 <div id="fig:re-poly-world" class="fignos">
 <figure>
-<img src="https://github.com/user-attachments/assets/1eee50f6-d6fe-459c-b44c-a199cd1484ec" style="width:5in" alt="Figure 12: Re:PolyWorld Methodology" />
-<figcaption aria-hidden="true"><span>Figure 12:</span> Re:PolyWorld Methodology</figcaption>
+<img src="https://github.com/user-attachments/assets/1eee50f6-d6fe-459c-b44c-a199cd1484ec" style="width:5in" alt="Figure 13: Re:PolyWorld Methodology" />
+<figcaption aria-hidden="true"><span>Figure 13:</span> Re:PolyWorld Methodology</figcaption>
 </figure>
 </div>
 <p>With these enhancements, Re:PolyWorld achieved new state-of-the-art scores on the CrowdAI dataset, improving both the precision and the shape quality of footprints. For example, it improved the mean intersection-over-union (IoU) and corner angle error metrics beyond what PolyWorld and a strong frame-field baseline had achieved.</p>
 <div id="fig:re-poly-world-benchmarks" class="fignos">
 <figure>
-<img src="https://github.com/user-attachments/assets/850bd0eb-4c73-49b6-8d4f-9de49fd9e1ac" style="width:5in" alt="Figure 13: Benchmark dataset of Re:PolyWorld" />
-<figcaption aria-hidden="true"><span>Figure 13:</span> Benchmark dataset of Re:PolyWorld</figcaption>
+<img src="https://github.com/user-attachments/assets/850bd0eb-4c73-49b6-8d4f-9de49fd9e1ac" style="width:5in" alt="Figure 14: Benchmark dataset of Re:PolyWorld" />
+<figcaption aria-hidden="true"><span>Figure 14:</span> Benchmark dataset of Re:PolyWorld</figcaption>
 </figure>
 </div>
 <p>he continued success of these GNN-based methods demonstrates the value of treating polygon formation as a graph problem (where deep networks ensure the graph forms nice cycles with desired properties) rather than a pixel-by-pixel segmentation problem</p>
@@ -311,8 +317,8 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 <p>The key idea is to avoid the multi-step detour that graph-based models take (e.g., detect vertices → match into polygon). Instead, Pix2Poly’s transformer directly outputs an ordered list of vertex coordinates in sequence, one vertex after another, in a single forward pass. To do this, it discretizes continuous image coordinates into a sequence of tokens (similar to how one might tokenize words or subwords in language) and trains the network to emit the token sequence corresponding to the building outline.</p>
 <div id="fig:pix2poly-arch" class="fignos">
 <figure>
-<img src="https://github.com/user-attachments/assets/cd5dd0de-4643-4999-a4eb-be6a48e551fb" style="height:5in" alt="Figure 14: Overview of Pix2Poly Architecture" />
-<figcaption aria-hidden="true"><span>Figure 14:</span> Overview of Pix2Poly Architecture</figcaption>
+<img src="https://github.com/user-attachments/assets/cd5dd0de-4643-4999-a4eb-be6a48e551fb" style="height:5in" alt="Figure 15: Overview of Pix2Poly Architecture" />
+<figcaption aria-hidden="true"><span>Figure 15:</span> Overview of Pix2Poly Architecture</figcaption>
 </figure>
 </div>
 <p>Because the transformer’s self-attention can attend globally to the image, Pix2Poly can, in theory, capture the global shape of the building while placing each vertex. The authors highlight that it avoids certain bottlenecks of earlier methods: for example, it doesn’t require a non-maxima suppression step to select vertices (which was non-differentiable in many prior pipelines), nor does it need a separate graph matching module, since the sequence inherently encodes the connectivity.</p>
@@ -320,8 +326,8 @@ Methods like Cui’s required a clear dominance of two perpendicular directions;
 <p>Essentially, Pix2Poly represents the convergence of transformer-based detection with graph learning: it uses a transformer as a “vertex sequence detector” and still incorporates an optimal matching network (similar to PolyWorld’s assignment module) to ensure the predicted sequence forms closed polygons. This model claimed to be less complex as compared to FLL , PolyWorld as it has total parameter count of (31.9M) <span class="citation" data-cites="18Upmkr67">[<a href="#ref-18Upmkr67" role="doc-biblioref">13</a>]</span></p>
 <div id="fig:pix2poly-arch" class="fignos">
 <figure>
-<img src="https://github.com/user-attachments/assets/b268f9b1-3a30-441d-981b-af58336805bc" style="height:3in" alt="Figure 15: Example of Pix2poly output" />
-<figcaption aria-hidden="true"><span>Figure 15:</span> Example of Pix2poly output</figcaption>
+<img src="https://github.com/user-attachments/assets/b268f9b1-3a30-441d-981b-af58336805bc" style="height:3in" alt="Figure 16: Example of Pix2poly output" />
+<figcaption aria-hidden="true"><span>Figure 16:</span> Example of Pix2poly output</figcaption>
 </figure>
 </div>
 <p><strong>Source Code</strong> : <a href="https://github.com/yeshwanth95/Pix2Poly?tab=readme-ov-file">Github</a></p>

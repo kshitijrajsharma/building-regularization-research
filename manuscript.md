@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2025-06-06'
+date-meta: '2025-06-07'
 author-meta:
 - Kshitij Raj Sharma
 header-includes: |
@@ -19,11 +19,11 @@ header-includes: |
   <meta name="citation_title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
   <meta property="og:title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
   <meta property="twitter:title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
-  <meta name="dc.date" content="2025-06-06" />
-  <meta name="citation_publication_date" content="2025-06-06" />
-  <meta property="article:published_time" content="2025-06-06" />
-  <meta name="dc.modified" content="2025-06-06T12:28:14+00:00" />
-  <meta property="article:modified_time" content="2025-06-06T12:28:14+00:00" />
+  <meta name="dc.date" content="2025-06-07" />
+  <meta name="citation_publication_date" content="2025-06-07" />
+  <meta property="article:published_time" content="2025-06-07" />
+  <meta name="dc.modified" content="2025-06-07T08:47:29+00:00" />
+  <meta property="article:modified_time" content="2025-06-07T08:47:29+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/acc0e5220f31762aff97445b14d4876e551796ae/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/acc0e5220f31762aff97445b14d4876e551796ae/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/acc0e5220f31762aff97445b14d4876e551796ae/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/20682fc0009e95f067a94d8d5fe91683b45531ab/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/20682fc0009e95f067a94d8d5fe91683b45531ab/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/20682fc0009e95f067a94d8d5fe91683b45531ab/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,10 +65,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/acc0e5220f31762aff97445b14d4876e551796ae/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/20682fc0009e95f067a94d8d5fe91683b45531ab/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@acc0e52](https://github.com/kshitijrajsharma/building-regularization-research/tree/acc0e5220f31762aff97445b14d4876e551796ae)
-on June 6, 2025.
+from [kshitijrajsharma/building-regularization-research@20682fc](https://github.com/kshitijrajsharma/building-regularization-research/tree/20682fc0009e95f067a94d8d5fe91683b45531ab)
+on June 7, 2025.
 </em></small>
 
 
@@ -156,6 +156,10 @@ However, these approaches struggled as building shapes grew more complex or data
 In summary, the pre-2010s state-of-the-art could produce “regular” building outlines under favorable conditions, but lacked the robustness and generality needed for broad, automated mapping tasks. These limitations set the stage for machine learning, which promised to learn building shape patterns directly from data and reduce the need for ad hoc rules.
 
 ![A comparison of traditional regularization algorithms on a noisy polygon in terms of node reduction, shape simplification, and edge smoothness ](https://github.com/user-attachments/assets/bac6a47d-79a6-48ec-8c34-4cf4b3c3e556){#fig:comparison-of-traditional-technique width="3in"} [@doi:10.1007/978-3-031-34612-5_13]
+
+
+![A comparison of traditional regularization algorithms on a noisy polygon in terms of node reduction, shape simplification, and edge smoothness [source](#) ](https://github.com/user-attachments/assets/bac6a47d-79a6-48ec-8c34-4cf4b3c3e556){#fig:comparison-of-traditional-techniques width="3in"}
+
 
 
 ## Learning-Based Methods (2010s)
