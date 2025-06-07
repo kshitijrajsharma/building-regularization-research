@@ -16,7 +16,7 @@ Castrejon
 CNNs
 collinear
 Comaprison
-convolutional
+Convolutional
 CrowdAI
 Cui
 Cui’s
