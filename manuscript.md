@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-06-07" />
   <meta name="citation_publication_date" content="2025-06-07" />
   <meta property="article:published_time" content="2025-06-07" />
-  <meta name="dc.modified" content="2025-06-07T08:55:45+00:00" />
-  <meta property="article:modified_time" content="2025-06-07T08:55:45+00:00" />
+  <meta name="dc.modified" content="2025-06-07T09:16:23+00:00" />
+  <meta property="article:modified_time" content="2025-06-07T09:16:23+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/aa6e1508ae28ed7be0e6aac471ed9db23fbf3530/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/aa6e1508ae28ed7be0e6aac471ed9db23fbf3530/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/aa6e1508ae28ed7be0e6aac471ed9db23fbf3530/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/6d3fb3c10d06affa7657774f35fa574b0c5d72b4/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/6d3fb3c10d06affa7657774f35fa574b0c5d72b4/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/6d3fb3c10d06affa7657774f35fa574b0c5d72b4/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/aa6e1508ae28ed7be0e6aac471ed9db23fbf3530/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/6d3fb3c10d06affa7657774f35fa574b0c5d72b4/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@aa6e150](https://github.com/kshitijrajsharma/building-regularization-research/tree/aa6e1508ae28ed7be0e6aac471ed9db23fbf3530)
+from [kshitijrajsharma/building-regularization-research@6d3fb3c](https://github.com/kshitijrajsharma/building-regularization-research/tree/6d3fb3c10d06affa7657774f35fa574b0c5d72b4)
 on June 7, 2025.
 </em></small>
 
@@ -102,10 +102,11 @@ on June 7, 2025.
 
 
 
-Geographic information systems (GIS) and cartographic applications typically require building footprints as precise vector polygons, rather than raster masks [@url:https://openaccess.thecvf.com/content/CVPR2022/html/Zorzi_PolyWorld_Polygonal_Building_Extraction_With_Graph_Neural_Networks_in_Satellite_CVPR_2022_paper.html]. Building footprint regularization refers to the process of refining raw building outlines (e.g. from remotely sensed imagery or LiDAR) into clean polygon shapes that conform to expected geometric constraints (such as orthogonal corners or aligned edges). The goal is to eliminate irregular artifacts (noisy jags, misalignments) while preserving the true shape, so that the footprints are cartographically suitable for maps.
-A robust approach to obtain buildings in vector format is to first predict raster buildings using a neural network and then applying postprocessing that outputs polygons. The results achieved by conventional methods are either limited in terms of generalization
-capacity  or are not restricted sufficiently to prior knowledge of regularity [@doi:10.5194/isprs-annals-X-2-2024-217-2024].This review traces the evolution of footprint regularization methods from early vectorization algorithms in the 1990s through modern deep learning approaches in the 2020s.
-We focus on 2D footprint outline techniques (planimetric building outlines) and exclude full 3D building reconstruction or roof modeling. Key developments and representative methods are discussed for each era, highlighting their algorithms, use cases, strengths, and limitations. We then compare traditional versus deep learning-based methods in terms of performance, flexibility, accuracy, and integration into GIS workflows. The review draws on peer-reviewed research and real-world implementations (including open-source tools and commercial pipelines) to provide a comprehensive perspective for remote sensing and GIS professionals.
+Many cartographic and GIS applications require building footprints as clean vector polygons—not just raw raster masks—so that they can be used directly in maps and spatial analysis workflows [@url:https://openaccess.thecvf.com/content/CVPR2022/html/Zorzi_PolyWorld_Polygonal_Building_Extraction_With_Graph_Neural_Networks_in_Satellite_CVPR_2022_paper.html]. However, outputs from automated methods, including those based on satellite imagery or LiDAR, often produce noisy or overly complex polygons with too many vertices. OpenStreetMap (OSM), which is often used as a reference, contains features represents that are not always natural and more human-alike interpretation, which is not the case especially when mapped automatically. Human mappers typically apply cartographic judgment favoring orthogonality, symmetry, and geometric simplicity while digitizing buildings.
+
+Our goal is to generate building footprints that better mimic this human-cartographic quality. We focus on building footprint regularization: the process of converting rough or noisy outlines into clean vector shapes that follow expected geometric constraints (e.g., straight edges, right angles). This process improves both the visual and analytical quality of building data. A common approach is to first use deep learning to generate building masks and then convert those to vector polygons through a postprocessing step. However, many existing methods either do not generalize well across geographies or fail to enforce sufficient regularity [@doi:10.5194/isprs-annals-X-2-2024-217-2024].
+
+This review traces the evolution of 2D building footprint regularization techniques—from early rule-based vectorization in the 1990s to recent deep learning models in the 2020s. We focus specifically on planimetric (2D) building outlines, excluding full 3D reconstruction and roof modeling. For each generation of methods, we highlight core ideas, algorithms, and their suitability for integration into GIS workflows. We compare classical and deep learning-based methods in terms of accuracy, flexibility, cartographic quality, and real-world applicability. Where relevant, we emphasize how these methods can be used to improve or augment OSM-style datasets, aligning outputs more closely with the standards of human made map features.
 
 ## Geometric and Heuristic Methods ( 1990s - 2000s )
  

@@ -12,7 +12,6 @@ ARL
 ARS
 attentional
 Beyong
-cartographically
 Castrejon
 CNNs
 collinear
@@ -29,7 +28,7 @@ discretizes
 DL
 DSAC
 Duda
-explaination
+Explaination
 Fazan
 FFL
 FLL
@@ -59,7 +58,6 @@ Lodron
 LSTM
 Maggiori
 Marmanis
-misalignments
 Nevatia
 NLP
 Noticable
@@ -67,6 +65,7 @@ oon
 OpenCV
 OpenStreetMap
 orthogonalize
+OSM
 Peucker
 planimetric
 PolyBuilding
