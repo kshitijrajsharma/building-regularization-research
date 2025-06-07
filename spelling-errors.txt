@@ -29,7 +29,7 @@ discretizes
 DL
 DSAC
 Duda
-Explaination
+explaination
 Fazan
 FFL
 FLL
@@ -46,7 +46,6 @@ GNN
 Guercke
 Gur
 Hatamizadeh
-Hatamizadehet
 Hatamizadeh’s
 Hough
 Huertas
@@ -72,7 +71,7 @@ Peucker
 planimetric
 PolyBuilding
 polygonization
-Polymapper
+PolyMapper
 Poly’s
 PolyWold
 PolyWorld
@@ -107,6 +106,5 @@ vectorization
 zag
 zags
 Zebedin
-Zhao
 zig
 Zorzi

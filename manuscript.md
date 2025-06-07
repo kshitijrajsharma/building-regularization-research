@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-06-07" />
   <meta name="citation_publication_date" content="2025-06-07" />
   <meta property="article:published_time" content="2025-06-07" />
-  <meta name="dc.modified" content="2025-06-07T08:47:29+00:00" />
-  <meta property="article:modified_time" content="2025-06-07T08:47:29+00:00" />
+  <meta name="dc.modified" content="2025-06-07T08:55:45+00:00" />
+  <meta property="article:modified_time" content="2025-06-07T08:55:45+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/20682fc0009e95f067a94d8d5fe91683b45531ab/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/20682fc0009e95f067a94d8d5fe91683b45531ab/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/20682fc0009e95f067a94d8d5fe91683b45531ab/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/aa6e1508ae28ed7be0e6aac471ed9db23fbf3530/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/aa6e1508ae28ed7be0e6aac471ed9db23fbf3530/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/aa6e1508ae28ed7be0e6aac471ed9db23fbf3530/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/20682fc0009e95f067a94d8d5fe91683b45531ab/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/aa6e1508ae28ed7be0e6aac471ed9db23fbf3530/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@20682fc](https://github.com/kshitijrajsharma/building-regularization-research/tree/20682fc0009e95f067a94d8d5fe91683b45531ab)
+from [kshitijrajsharma/building-regularization-research@aa6e150](https://github.com/kshitijrajsharma/building-regularization-research/tree/aa6e1508ae28ed7be0e6aac471ed9db23fbf3530)
 on June 7, 2025.
 </em></small>
 
@@ -104,12 +104,12 @@ on June 7, 2025.
 
 Geographic information systems (GIS) and cartographic applications typically require building footprints as precise vector polygons, rather than raster masks [@url:https://openaccess.thecvf.com/content/CVPR2022/html/Zorzi_PolyWorld_Polygonal_Building_Extraction_With_Graph_Neural_Networks_in_Satellite_CVPR_2022_paper.html]. Building footprint regularization refers to the process of refining raw building outlines (e.g. from remotely sensed imagery or LiDAR) into clean polygon shapes that conform to expected geometric constraints (such as orthogonal corners or aligned edges). The goal is to eliminate irregular artifacts (noisy jags, misalignments) while preserving the true shape, so that the footprints are cartographically suitable for maps.
 A robust approach to obtain buildings in vector format is to first predict raster buildings using a neural network and then applying postprocessing that outputs polygons. The results achieved by conventional methods are either limited in terms of generalization
-capacity (Zebedin et al., 2008; Cui et al., 2012; Tian and Reinartz, 2013) or are not restricted sufficiently to prior knowledge of regularity (Marcos et al., 2018; Gur et al., 2019; Hatamizadehet al., 2020; Zhao et al., 2021; Zorzi and Fraundorfer, 2023)[@doi:10.5194/isprs-annals-X-2-2024-217-2024].This review traces the evolution of footprint regularization methods from early vectorization algorithms in the 1990s through modern deep learning approaches in the 2020s.
+capacity  or are not restricted sufficiently to prior knowledge of regularity [@doi:10.5194/isprs-annals-X-2-2024-217-2024].This review traces the evolution of footprint regularization methods from early vectorization algorithms in the 1990s through modern deep learning approaches in the 2020s.
 We focus on 2D footprint outline techniques (planimetric building outlines) and exclude full 3D building reconstruction or roof modeling. Key developments and representative methods are discussed for each era, highlighting their algorithms, use cases, strengths, and limitations. We then compare traditional versus deep learning-based methods in terms of performance, flexibility, accuracy, and integration into GIS workflows. The review draws on peer-reviewed research and real-world implementations (including open-source tools and commercial pipelines) to provide a comprehensive perspective for remote sensing and GIS professionals.
 
 ## Geometric and Heuristic Methods ( 1990s - 2000s )
  
-**Edge Detection and Line Fitting**: Early building extraction in the 1990s relied on low-level image processing and geometric heuristics. For example, Huertas and Nevatia (1988) developed a system to detect buildings in aerial images by finding rectangular clusters of edges (lines) and using shadow cues to distinguish buildings from other structures [@doi:10.3390/ijgi8040191] . Building polygons often consist of jagged lines. Guercke and Sester [@guercke2011] use Hough-Transformation ( Mathematically formalized by Duda, R.O., & Hart, P.E. (1972)) to refine such polygons.
+**Edge Detection and Line Fitting**: Early building extraction in the 1990s relied on low-level image processing and geometric heuristics. For example, Huertas and Nevatia (1988) developed a system to detect buildings in aerial images by finding rectangular clusters of edges (lines) and using shadow cues to distinguish buildings from other structures [@doi:10.3390/ijgi8040191] . Building polygons often consist of jagged lines. Guercke and Sester [@guercke2011] use Hough-Transformation ( Mathematically formalized by Duda, R.O., & Hart, P.E. (1972)[@doi:10.1145/361237.361242] ) to refine such polygons.
 
 Those approach and similar ones could identify simple rectangular building footprints, but often produced polygons with jagged (bearing in mind they don't take into account the building shape itself rather the outline), noisy outlines. To clean such outlines, researchers applied line simplification algorithms from cartography, notably the Ramer–Douglas–Peucker algorithm : to remove small zig-zags and reduce vertex count while approximating the shape (which is still used to the date) [@url:https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/].
 
@@ -120,7 +120,7 @@ The Douglas–Peucker algorithm (originally from 1973) [@douglas1973] became a c
 Overall, early methods were largely rule-based: edges and corners were detected via image filters, and building shapes were assembled by connecting these primitives under geometric constraints defined by human experts.
 
 **Regularization via Hough Transform**: By the 2000s, more sophisticated heuristics were introduced to enforce regularity in building outlines. A prominent tool was the Hough Transform for line detection. Hough transform is a feature extraction method used in image analysis. Hough transform can be used to isolate features of any regular curve like lines, circles, ellipses, etc. Hough transform in its simplest from can be used to detect straight lines in an image.[@url:https://medium.com/st1739/hough-transform-287b2dac0c70/]
-For instance, Guercke and Sester (2011) proposed a footprint simplification method that takes an initial digitized outline (which might be jagged) and uses a Hough Transform to identify the dominant line orientations; close-to-collinear segments are merged and adjusted by least-squares to align with those dominant directions [@doi:10.3390/ijgi8040191].
+For instance, Guercke and Sester (2011) [@doi:10.1016/j.isprsjprs.2010.10.006] proposed a footprint simplification method that takes an initial digitized outline (which might be jagged) and uses a Hough Transform to identify the dominant line orientations; close-to-collinear segments are merged and adjusted by least-squares to align with those dominant directions [@doi:10.3390/ijgi8040191].
 
 ![Initial hough transofrmation line segment explained by Guercke and Sester (2011)](https://github.com/user-attachments/assets/505773d4-2f24-4c82-8a09-7a87297e5d06?sanitize=true){#fig:hough-transformation-line height="2in"}
 
@@ -155,10 +155,8 @@ However, these approaches struggled as building shapes grew more complex or data
 
 In summary, the pre-2010s state-of-the-art could produce “regular” building outlines under favorable conditions, but lacked the robustness and generality needed for broad, automated mapping tasks. These limitations set the stage for machine learning, which promised to learn building shape patterns directly from data and reduce the need for ad hoc rules.
 
-![A comparison of traditional regularization algorithms on a noisy polygon in terms of node reduction, shape simplification, and edge smoothness ](https://github.com/user-attachments/assets/bac6a47d-79a6-48ec-8c34-4cf4b3c3e556){#fig:comparison-of-traditional-technique width="3in"} [@doi:10.1007/978-3-031-34612-5_13]
+![A comparison of traditional regularization algorithms on a noisy polygon in terms of node reduction, shape simplification, and edge smoothness [@doi:10.1007/978-3-031-34612-5_13] ](https://github.com/user-attachments/assets/bac6a47d-79a6-48ec-8c34-4cf4b3c3e556){#fig:comparison-of-traditional-techniques width="3in"}
 
-
-![A comparison of traditional regularization algorithms on a noisy polygon in terms of node reduction, shape simplification, and edge smoothness [source](#) ](https://github.com/user-attachments/assets/bac6a47d-79a6-48ec-8c34-4cf4b3c3e556){#fig:comparison-of-traditional-techniques width="3in"}
 
 
 
