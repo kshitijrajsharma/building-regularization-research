@@ -30,7 +30,7 @@ discretizes
 DL
 DSAC
 Duda
-Explaination
+explaination
 Fazan
 FFL
 FLL

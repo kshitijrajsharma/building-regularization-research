@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-06-11" />
   <meta name="citation_publication_date" content="2025-06-11" />
   <meta property="article:published_time" content="2025-06-11" />
-  <meta name="dc.modified" content="2025-06-11T08:18:03+00:00" />
-  <meta property="article:modified_time" content="2025-06-11T08:18:03+00:00" />
+  <meta name="dc.modified" content="2025-06-11T09:23:35+00:00" />
+  <meta property="article:modified_time" content="2025-06-11T09:23:35+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/145074c77eb1ac29a12f0a30ff16a00dd535ce00/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/145074c77eb1ac29a12f0a30ff16a00dd535ce00/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/145074c77eb1ac29a12f0a30ff16a00dd535ce00/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/9edf45f1fcd0b1b9c3098bd2378cdd96ee5ba068/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/9edf45f1fcd0b1b9c3098bd2378cdd96ee5ba068/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/9edf45f1fcd0b1b9c3098bd2378cdd96ee5ba068/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/145074c77eb1ac29a12f0a30ff16a00dd535ce00/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/9edf45f1fcd0b1b9c3098bd2378cdd96ee5ba068/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@145074c](https://github.com/kshitijrajsharma/building-regularization-research/tree/145074c77eb1ac29a12f0a30ff16a00dd535ce00)
+from [kshitijrajsharma/building-regularization-research@9edf45f](https://github.com/kshitijrajsharma/building-regularization-research/tree/9edf45f1fcd0b1b9c3098bd2378cdd96ee5ba068)
 on June 11, 2025.
 </em></small>
 
@@ -359,6 +359,8 @@ The transition from traditional methods to deep learning marks a major step forw
 Although traditional methods remain valuable for strict cartographic constraints, deep learning has become the default for global-scale mapping. These tools now support highly automated workflows, reducing manual effort and enabling rapid, consistent extraction of building footprints worldwide.
 
 The fusion of geometric logic with learning-based systems has established a new standard: fast, precise, and regularized footprints at scale, not just for research, but for operational, production-ready geospatial data pipelines.
+
+..... to be completed .......
 
 
 
