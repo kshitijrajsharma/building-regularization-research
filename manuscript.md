@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-06-11" />
   <meta name="citation_publication_date" content="2025-06-11" />
   <meta property="article:published_time" content="2025-06-11" />
-  <meta name="dc.modified" content="2025-06-11T07:48:28+00:00" />
-  <meta property="article:modified_time" content="2025-06-11T07:48:28+00:00" />
+  <meta name="dc.modified" content="2025-06-11T08:07:48+00:00" />
+  <meta property="article:modified_time" content="2025-06-11T08:07:48+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/a6010177736323007dc412945d6142f2199a2e33/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/a6010177736323007dc412945d6142f2199a2e33/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/a6010177736323007dc412945d6142f2199a2e33/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/aa879d71d06eb83fe816f0e13f8a5c2b43b3ed37/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/aa879d71d06eb83fe816f0e13f8a5c2b43b3ed37/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/aa879d71d06eb83fe816f0e13f8a5c2b43b3ed37/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/a6010177736323007dc412945d6142f2199a2e33/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/aa879d71d06eb83fe816f0e13f8a5c2b43b3ed37/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@a601017](https://github.com/kshitijrajsharma/building-regularization-research/tree/a6010177736323007dc412945d6142f2199a2e33)
+from [kshitijrajsharma/building-regularization-research@aa879d7](https://github.com/kshitijrajsharma/building-regularization-research/tree/aa879d71d06eb83fe816f0e13f8a5c2b43b3ed37)
 on June 11, 2025.
 </em></small>
 
@@ -174,11 +174,15 @@ Once a clean building mask was obtained, off-the-shelf polygonization (e.g., mar
 
 ## Deep Structured Models (Active Contours)
 
-A significant development in bridging classical regularization and deep learning was the integration of active contour models into neural networks. Marcos et al. (2018) introduced Deep Structured Active Contours (DSAC), a hybrid approach where a CNN learns to predict the parameters of an active contour that locks onto building edges . In their framework, the network output is not a raster, but rather coefficients that define the shape and tension of an active contour (snake) which then deforms to fit the building boundary. 
+A significant development in bridging classical regularization and deep learning was the integration of active contour models into neural networks. Marcos et al. (2018)[@doi:10.1109/cvpr.2018.00925] introduced Deep Structured Active Contours (DSAC), a hybrid approach where a CNN learns to predict the parameters of an active contour that locks onto building edges . In their framework, the network output is not a raster, but rather coefficients that define the shape and tension of an active contour (snake) which then deforms to fit the building boundary. 
 
-Gur et al. (2019) extended this concept by iteratively updating a polygon outline in an end-to-end trainable manner. Their pipeline starts with an approximate polygon (like a coarse outline of the building) and uses a neural network to repeatedly adjust the vertices, analogous to how one would iteratively relax an active contour. While effective, the polygons produced by Gur et al. were not explicitly enforced to be rectilinear the focus was on aligning to image evidence, not necessarily making right angles [@doi:10.5194/isprs-annals-x-2-2024-217-2024].
+Gur et al. (2019) [@doi:10.48550/arXiv.1912.00367] extended this concept by iteratively updating a polygon outline in an end-to-end trainable manner. Their pipeline starts with an approximate polygon (like a coarse outline of the building) and uses a neural network to repeatedly adjust the vertices, analogous to how one would iteratively relax an active contour. While effective, the polygons produced by Gur et al. were not explicitly enforced to be rectilinear the focus was on aligning to image evidence, not necessarily making right angles.
 
-Hatamizadeh et al. (2020) proposed a multi-building active contour model: a CNN first predicts initial contours for many buildings in a scene, and then a learned energy function refines all of them simultaneously [@doi:10.5194/isprs-annals-x-2-2024-217-2024]. This allowed processing dense urban scenes with many buildings at once, something earlier active-contour methods (which often assumed one building at a time) didn’t handle. Hatamizadeh’s model was end-to-end (it directly outputs vector polygons from an image), but like its predecessors, its regularization was implicit it preferred smooth, compact shapes but did not guarantee, say, all angles = 90°.
+Hatamizadeh et al. (2020) [@doi:10.1007/978-3-030-58610-2_43] proposed a multi-building active contour model: a CNN first predicts initial contours for many buildings in a scene, and then a learned energy function refines all of them simultaneously. This allowed processing dense urban scenes with many buildings at once, something earlier active-contour methods (which often assumed one building at a time) didn’t handle. Hatamizadeh’s model was end-to-end (it directly outputs vector polygons from an image), but like its predecessors, its regularization was implicit it preferred smooth, compact shapes but did not guarantee, say, all angles = 90°.
+
+
+![Comparative visualization of the labeled image and the outputs of DSAC, DarNet, and our TDAC for the Vaihingen (top) and Bing Huts (bottom) datasets. (a) Image labeled with (green) ground truth segmentation. (b) DSAC output. (c) DarNet output. (d) TDAC output. (e) TDAC’s learned initialization map and parameter maps (f) and (g)](https://github.com/user-attachments/assets/226c1584-aedb-40c9-b1ea-95423943e14c){#fig:active-countour-output height="3in"} [@doi:10.1007/978-3-030-58610-2_43]
+
 
 **Source Code** : [DSAC](https://github.com/dmarcosg/DSAC) , [ACDRNet](https://github.com/shirgur/ACDRNet), [DALS](https://github.com/ahatamiz/dals)
 
