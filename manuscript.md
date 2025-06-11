@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2025-06-07'
+date-meta: '2025-06-11'
 author-meta:
 - Kshitij Raj Sharma
 header-includes: |
@@ -19,11 +19,11 @@ header-includes: |
   <meta name="citation_title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
   <meta property="og:title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
   <meta property="twitter:title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
-  <meta name="dc.date" content="2025-06-07" />
-  <meta name="citation_publication_date" content="2025-06-07" />
-  <meta property="article:published_time" content="2025-06-07" />
-  <meta name="dc.modified" content="2025-06-07T09:26:07+00:00" />
-  <meta property="article:modified_time" content="2025-06-07T09:26:07+00:00" />
+  <meta name="dc.date" content="2025-06-11" />
+  <meta name="citation_publication_date" content="2025-06-11" />
+  <meta property="article:published_time" content="2025-06-11" />
+  <meta name="dc.modified" content="2025-06-11T07:24:53+00:00" />
+  <meta property="article:modified_time" content="2025-06-11T07:24:53+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/150ecb331755a2be77cf184660fbb338f03c0bc1/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/150ecb331755a2be77cf184660fbb338f03c0bc1/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/150ecb331755a2be77cf184660fbb338f03c0bc1/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/54ac666f51993cef646a1c2acd222f50c5947987/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/54ac666f51993cef646a1c2acd222f50c5947987/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/54ac666f51993cef646a1c2acd222f50c5947987/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,10 +65,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/150ecb331755a2be77cf184660fbb338f03c0bc1/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/54ac666f51993cef646a1c2acd222f50c5947987/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@150ecb3](https://github.com/kshitijrajsharma/building-regularization-research/tree/150ecb331755a2be77cf184660fbb338f03c0bc1)
-on June 7, 2025.
+from [kshitijrajsharma/building-regularization-research@54ac666](https://github.com/kshitijrajsharma/building-regularization-research/tree/54ac666f51993cef646a1c2acd222f50c5947987)
+on June 11, 2025.
 </em></small>
 
 
