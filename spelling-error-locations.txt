@@ -102,7 +102,7 @@ content/02.journal.md:87:convolutional
 content/02.journal.md:87:LSTM
 content/02.journal.md:87:PolyMapper
 content/02.journal.md:89:polymapper
-content/02.journal.md:89:Polymapper
+content/02.journal.md:89:PolyMapper
 content/02.journal.md:91:PolyMapper
 content/02.journal.md:91:RNN
 content/02.journal.md:93:RNN
