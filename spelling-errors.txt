@@ -16,7 +16,7 @@ Castrejon
 CNNs
 collinear
 Comaprison
-convolutional
+Convolutional
 CrowdAI
 Cui
 Cui’s
@@ -28,7 +28,7 @@ discretizes
 DL
 DSAC
 Duda
-explaination
+Explaination
 Fazan
 FFL
 FLL
@@ -46,7 +46,7 @@ Guercke
 Gur
 Hatamizadeh
 Hatamizadeh’s
-hough
+Hough
 Huertas
 interpretable
 iteratively
