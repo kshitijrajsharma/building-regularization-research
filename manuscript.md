@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-06-11" />
   <meta name="citation_publication_date" content="2025-06-11" />
   <meta property="article:published_time" content="2025-06-11" />
-  <meta name="dc.modified" content="2025-06-11T08:07:48+00:00" />
-  <meta property="article:modified_time" content="2025-06-11T08:07:48+00:00" />
+  <meta name="dc.modified" content="2025-06-11T08:18:03+00:00" />
+  <meta property="article:modified_time" content="2025-06-11T08:18:03+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/aa879d71d06eb83fe816f0e13f8a5c2b43b3ed37/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/aa879d71d06eb83fe816f0e13f8a5c2b43b3ed37/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/aa879d71d06eb83fe816f0e13f8a5c2b43b3ed37/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/145074c77eb1ac29a12f0a30ff16a00dd535ce00/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/145074c77eb1ac29a12f0a30ff16a00dd535ce00/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/145074c77eb1ac29a12f0a30ff16a00dd535ce00/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/aa879d71d06eb83fe816f0e13f8a5c2b43b3ed37/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/145074c77eb1ac29a12f0a30ff16a00dd535ce00/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@aa879d7](https://github.com/kshitijrajsharma/building-regularization-research/tree/aa879d71d06eb83fe816f0e13f8a5c2b43b3ed37)
+from [kshitijrajsharma/building-regularization-research@145074c](https://github.com/kshitijrajsharma/building-regularization-research/tree/145074c77eb1ac29a12f0a30ff16a00dd535ce00)
 on June 11, 2025.
 </em></small>
 
@@ -180,9 +180,7 @@ Gur et al. (2019) [@doi:10.48550/arXiv.1912.00367] extended this concept by iter
 
 Hatamizadeh et al. (2020) [@doi:10.1007/978-3-030-58610-2_43] proposed a multi-building active contour model: a CNN first predicts initial contours for many buildings in a scene, and then a learned energy function refines all of them simultaneously. This allowed processing dense urban scenes with many buildings at once, something earlier active-contour methods (which often assumed one building at a time) didn’t handle. Hatamizadeh’s model was end-to-end (it directly outputs vector polygons from an image), but like its predecessors, its regularization was implicit it preferred smooth, compact shapes but did not guarantee, say, all angles = 90°.
 
-
-![Comparative visualization of the labeled image and the outputs of DSAC, DarNet, and our TDAC for the Vaihingen (top) and Bing Huts (bottom) datasets. (a) Image labeled with (green) ground truth segmentation. (b) DSAC output. (c) DarNet output. (d) TDAC output. (e) TDAC’s learned initialization map and parameter maps (f) and (g)](https://github.com/user-attachments/assets/226c1584-aedb-40c9-b1ea-95423943e14c){#fig:active-countour-output height="3in"} [@doi:10.1007/978-3-030-58610-2_43]
-
+![Comparative visualization of the labeled image and the outputs of DSAC, DarNet, and our TDAC for the Vaihingen (top) and Bing Huts (bottom) datasets. (a) Image labeled with (green) ground truth segmentation. (b) DSAC output. (c) DarNet output. (d) TDAC output. (e) TDAC’s learned initialization map and parameter maps (f) and (g)](https://github.com/user-attachments/assets/226c1584-aedb-40c9-b1ea-95423943e14c){#fig:active-countour-output height="3in"}
 
 **Source Code** : [DSAC](https://github.com/dmarcosg/DSAC) , [ACDRNet](https://github.com/shirgur/ACDRNet), [DALS](https://github.com/ahatamiz/dals)
 
