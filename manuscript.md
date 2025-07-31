@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-07-31" />
   <meta name="citation_publication_date" content="2025-07-31" />
   <meta property="article:published_time" content="2025-07-31" />
-  <meta name="dc.modified" content="2025-07-31T19:36:40+00:00" />
-  <meta property="article:modified_time" content="2025-07-31T19:36:40+00:00" />
+  <meta name="dc.modified" content="2025-07-31T19:40:15+00:00" />
+  <meta property="article:modified_time" content="2025-07-31T19:40:15+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/8159820763f68b5c7996efc797d997d0946e0eaf/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/8159820763f68b5c7996efc797d997d0946e0eaf/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/8159820763f68b5c7996efc797d997d0946e0eaf/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/6bfe0e69a95b0a47427a485633f01f7ef821d52a/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/6bfe0e69a95b0a47427a485633f01f7ef821d52a/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/6bfe0e69a95b0a47427a485633f01f7ef821d52a/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/8159820763f68b5c7996efc797d997d0946e0eaf/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/6bfe0e69a95b0a47427a485633f01f7ef821d52a/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@8159820](https://github.com/kshitijrajsharma/building-regularization-research/tree/8159820763f68b5c7996efc797d997d0946e0eaf)
+from [kshitijrajsharma/building-regularization-research@6bfe0e6](https://github.com/kshitijrajsharma/building-regularization-research/tree/6bfe0e69a95b0a47427a485633f01f7ef821d52a)
 on July 31, 2025.
 </em></small>
 
@@ -102,19 +102,17 @@ on July 31, 2025.
 
 
 
-Many cartographic and Geographic Information System (GIS) applications require building footprints in the form of clean vector polygons, rather than raw raster masks, to facilitate direct use in maps and spatial analysis workflows [@url:https://openaccess.thecvf.com/content/CVPR2022/html/Zorzi_PolyWorld_Polygonal_Building_Extraction_With_Graph_Neural_Networks_in_Satellite_CVPR_2022_paper.html]. However, outputs from automated methods, including those based on satellite imagery or LiDAR, often produce noisy or overly complex polygons with an excessive number of vertices. OpenStreetMap (OSM), frequently used as a reference, contains features that are not always naturally occurring and often reflect a more human-like interpretation, which is not the case when mapped automatically. Human mappers typically apply cartographic judgment, favoring orthogonality, symmetry, and geometric simplicity while digitizing buildings.
+It often believed that many cartographic and Geographic Information System (GIS) applications require building footprints in the form of clean vector polygons, rather than raw raster masks, to facilitate direct use in maps and spatial analysis workflows [@url:https://openaccess.thecvf.com/content/CVPR2022/html/Zorzi_PolyWorld_Polygonal_Building_Extraction_With_Graph_Neural_Networks_in_Satellite_CVPR_2022_paper.html]. However, outputs from automated methods, including those based on satellite imagery or LiDAR, often produce noisy or overly complex polygons with an excessive number of vertices. OpenStreetMap (OSM), frequently used as a reference, contains features that are not always naturally occurring and often reflect a more human-like interpretation, which is not the case when mapped automatically. Human mappers typically apply cartographic judgment, favoring orthogonality, symmetry, and geometric simplicity while digitizing buildings.
 
-The primary objective of this study is to generate building footprints that better mimic human-cartographic quality. We focus on building footprint regularization, defined as the process of converting rough or noisy outlines into clean vector shapes that adhere to expected geometric constraints (e.g., straight edges, right angles). This process enhances both the visual and analytical quality of building data. A common approach involves using deep learning to generate building masks, followed by a postprocessing step to convert these masks into vector polygons. However, many existing methods either lack generalization across different geographies or fail to enforce sufficient regularity [@doi:10.5194/isprs-annals-X-2-2024-217-2024].
+The primary objective of this study is to review the existing efforts to generate building footprints that tries to mimic human-cartographic quality. We focus on building footprint regularization, defined as the process of converting rough or noisy outlines into clean vector shapes that adhere to expected geometric constraints (e.g., straight edges, right angles). This process enhances both the visual and analytical quality of building data. A common approach involves using deep learning to generate building masks, followed by a postprocessing step to convert these masks into vector polygons. However, many existing methods either lack generalization across different geographies or fail to enforce sufficient regularity [@doi:10.5194/isprs-annals-X-2-2024-217-2024].
 
 This review traces the evolution of 2D building footprint regularization techniques from early rule-based vectorization in the 1990s to recent deep learning models in the 2020s. The focus is specifically on planimetric (2D) building outlines, excluding full 3D reconstruction and roof modeling. For each generation of methods, we highlight core ideas, algorithms, and their suitability for integration into GIS workflows. We compare classical and deep learning-based methods in terms of accuracy, flexibility, cartographic quality, and real-world applicability. Where relevant, we emphasize how these methods can be used to improve or augment OpenStreetMap-style datasets, aligning outputs more closely with the standards of human-made map features.
 
 ## Introduction 
 
-Building footprints are essential data for urban planning, disaster response, and Geographic Information Systems (GIS). These footprints need to be clean vector polygons rather than rough outlines to be useful for cartographic mapping and analysis. However, automatically extracting buildings from satellite images or aerial photographs often produces noisy, irregular shapes with too many vertices or jagged edges.
-
 Manual mapping by humans typically creates clean, regular building shapes with straight walls and right angles. This is because human mappers naturally apply cartographic principles like symmetry and geometric simplicity when drawing buildings. In contrast, automated methods often struggle to produce such clean, map-ready outputs.The challenge of converting rough building outlines into clean vector shapes is known as building footprint regularization. This process has evolved significantly over the past three decades, from simple geometric rules in the 1990s to sophisticated deep learning models today. Early methods relied on mathematical techniques like the Hough Transform to detect straight lines and enforce right angles. Modern approaches use neural networks to learn building patterns directly from training data.
 
-This paper reviews the development of building footprint regularization techniques, comparing traditional geometric methods with current deep learning approaches. We examine how these methods perform in terms of accuracy, visual quality, and practical usability for mapping projects. Our goal is to understand the strengths and limitations of different approaches and provide guidance for practitioners working on building extraction projects.The question remains: what makes a "good" building footprint? Should it have perfect right angles, accurately represent the real building shape, or simply look aesthetically pleasing on a map? Through this review, we explore how different methods address these competing requirements and discuss the ongoing challenges in automated building footprint extraction.
+Our goal is to understand the strengths and limitations of different approaches and provide guidance for practitioners working on building extraction projects.The question remains: what makes a "good" building footprint? Should it have perfect right angles, accurately represent the real building shape, or simply look aesthetically pleasing on a map? Through this review, we explore how different methods address these competing requirements and discuss the ongoing challenges in automated building footprint extraction.
 
 ## Literature Review 
 

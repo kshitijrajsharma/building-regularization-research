@@ -29,7 +29,7 @@ discretizes
 DL
 DSAC
 Duda
-explaination
+Explaination
 FFL
 FLL
 framefield
@@ -45,7 +45,7 @@ Guercke
 Gur
 Hatamizadeh
 Hatamizadeh’s
-Hough
+hough
 Huertas
 interpretable
 intial
