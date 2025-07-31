@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-07-31" />
   <meta name="citation_publication_date" content="2025-07-31" />
   <meta property="article:published_time" content="2025-07-31" />
-  <meta name="dc.modified" content="2025-07-31T19:50:12+00:00" />
-  <meta property="article:modified_time" content="2025-07-31T19:50:12+00:00" />
+  <meta name="dc.modified" content="2025-07-31T19:51:58+00:00" />
+  <meta property="article:modified_time" content="2025-07-31T19:51:58+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/75b28a0b825e3f9226ea4659d26ab9cb15f130a1/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/75b28a0b825e3f9226ea4659d26ab9cb15f130a1/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/75b28a0b825e3f9226ea4659d26ab9cb15f130a1/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/7d5dedeabc0de0fbbb04b72c725dc851416a88f8/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/7d5dedeabc0de0fbbb04b72c725dc851416a88f8/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/7d5dedeabc0de0fbbb04b72c725dc851416a88f8/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/75b28a0b825e3f9226ea4659d26ab9cb15f130a1/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/7d5dedeabc0de0fbbb04b72c725dc851416a88f8/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@75b28a0](https://github.com/kshitijrajsharma/building-regularization-research/tree/75b28a0b825e3f9226ea4659d26ab9cb15f130a1)
+from [kshitijrajsharma/building-regularization-research@7d5dede](https://github.com/kshitijrajsharma/building-regularization-research/tree/7d5dedeabc0de0fbbb04b72c725dc851416a88f8)
 on July 31, 2025.
 </em></small>
 
@@ -175,9 +175,9 @@ In summary, the pre-2010s state-of-the-art could produce “regular” building 
 
 By the mid-2010s, the rise of deep learning fundamentally changed how building footprints were extracted. Instead of manually defining edges and shape rules, researchers began training convolutional neural networks (CNNs) to recognize buildings and output them in raster or vector form. The typical pipeline circa 2015–2017 was to use a semantic segmentation network (such as U-Net or DeepLab) to produce a binary mask of building pixels, then apply a vectorization algorithm to convert that mask into polygons [@url:https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures].
 
-This two-step approach : **CNN segmentation followed by geometric post-processing**  was a direct evolution of earlier workflows, swapping out hand-coded image filters for learned CNN features. For example, Philipp et al. (2019) [@doi:10.3390/ijgi8040191], mentioned that fully convolutional networks could outperform traditional techniques in detecting building regions from aerial images.
+This two-step approach : CNN segmentation followed by geometric post-processing  was a direct evolution of earlier workflows, swapping out hand-coded image filters for learned CNN features. For example, Philipp et al. (2019) [@doi:10.3390/ijgi8040191], mentioned that fully convolutional networks could outperform traditional techniques in detecting building regions from aerial images.
 
-Once a clean building mask was obtained, off-the-shelf polygonization (e.g., marching squares to trace outlines) and Douglas–Peucker simplification would yield a polygon vector. A problem with this approach is that semantic segmentation models are unable to delineate the boundaries between objects of the same class. This means that a single polygon will be drawn around a group of buildings that share walls, such as a block of rowhouses. To handle this case, the semantic segmentation model can be replaced with an instance segmentation model such as **Mask R-CNN**. This model generates a separate raster mask for each instance of a class that is detected [@url:https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures]. Beyong which additional smoothing or regularization was needed, and many practitioners continued to apply tolerance-based simplification or mild “squaring” adjustments to make the polygons map-ready.
+Once a clean building mask was obtained, off-the-shelf polygonization (e.g., marching squares to trace outlines) and Douglas–Peucker simplification would yield a polygon vector. A problem with this approach is that semantic segmentation models are unable to delineate the boundaries between objects of the same class. This means that a single polygon will be drawn around a group of buildings that share walls, such as a block of rowhouses. To handle this case, the semantic segmentation model can be replaced with an instance segmentation model such as Mask R-CNN. This model generates a separate raster mask for each instance of a class that is detected [@url:https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures]. Beyong which additional smoothing or regularization was needed, and many practitioners continued to apply tolerance-based simplification or mild “squaring” adjustments to make the polygons map-ready.
 
 
 ![Semantic Segmentation to Instance Segmentation Aprooaches , [source](https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/) ](https://github.com/user-attachments/assets/8036b15c-4532-4f5d-a863-ce077a379580){#fig:segmentation-approaches height="3in"}
@@ -192,7 +192,7 @@ Hatamizadeh et al. (2020) [@doi:10.1007/978-3-030-58610-2_43] proposed a multi-b
 
 ![Comparative visualization of the labeled image and the outputs of DSAC, DarNet, and our TDAC for the Vaihingen (top) and Bing Huts (bottom) datasets. (a) Image labeled with (green) ground truth segmentation. (b) DSAC output. (c) DarNet output. (d) TDAC output. (e) TDAC’s learned initialization map and parameter maps (f) and (g)](https://github.com/user-attachments/assets/226c1584-aedb-40c9-b1ea-95423943e14c){#fig:active-countour-output height="6in"}
 
-**Source Code** : [DSAC](https://github.com/dmarcosg/DSAC) , [ACDRNet](https://github.com/shirgur/ACDRNet), [DALS](https://github.com/ahatamiz/dals)
+Source Code : [DSAC](https://github.com/dmarcosg/DSAC) , [ACDRNet](https://github.com/shirgur/ACDRNet), [DALS](https://github.com/ahatamiz/dals)
 
 #### Recurrent Vertex Prediction (Polygon RNNs) : PolyMapper
 
@@ -212,15 +212,15 @@ However, this modeling approach brings complexity. The network must learn when t
 
 By the end of the 2010s, two main deep learning approaches emerged for extracting building footprints from imagery:
 
-1. **Segmentation-based methods** focused on generating accurate masks of buildings and then used advanced post-processing techniques such as learned active contours ("snakes") to clean and regularize the shapes.
+1. Segmentation-based methods focused on generating accurate masks of buildings and then used advanced post-processing techniques such as learned active contours ("snakes") to clean and regularize the shapes.
 
-2. **Direct polygon prediction methods** aimed to output building outlines directly as sequences of vertices and edges, using models like recurrent neural networks (RNNs) or parameterized shape representations.
+2. Direct polygon prediction methods aimed to output building outlines directly as sequences of vertices and edges, using models like recurrent neural networks (RNNs) or parameterized shape representations.
 
 These approaches marked a significant improvement over older heuristic techniques. Convolutional neural networks (CNNs) could generalize better across diverse geographies and imaging conditions. For instance, a model trained on buildings in one city could often perform reasonably well in another, whereas hand-tuned algorithms often failed when conditions changed.
 
 Despite this progress, early deep learning models still had limitations. The building shapes they produced were often *almost* clean but not perfectly geometric for example, a nearly straight wall might still have a slight jitter in the predicted vertices. This lack of geometric precision posed challenges for GIS applications that require clean vector shapes.
 
-**Source Code** :  NA
+Source Code :  NA
 
 ### Modern Deep Learning Approaches (2020s) 
 
@@ -228,7 +228,7 @@ Despite this progress, early deep learning models still had limitations. The bui
 
 In addition to direct polygon prediction, researchers also explored ways to inject geometric structure into the deep learning process. One notable approach by Girard et al. (2021) [@doi:10.1109/cvpr46437.2021.00583] involved predicting not only a segmentation mask for buildings, but also a frame field : a set of orthogonal vectors at each pixel along the boundary indicating local edge directions.
 
-A frame field acts like a directional map around a building's edges: it shows which way walls run and where corners should be. Using this directional information, the method first extracts a rough outline from the mask and then **snaps and refines it** by aligning it with the frame field and detected corner points. The post-processing pipeline includes multiple geometric steps such as skeletonization, corner detection, and line simplification each algorithmically defined rather than learned.
+A frame field acts like a directional map around a building's edges: it shows which way walls run and where corners should be. Using this directional information, the method first extracts a rough outline from the mask and then snaps and refines it by aligning it with the frame field and detected corner points. The post-processing pipeline includes multiple geometric steps such as skeletonization, corner detection, and line simplification each algorithmically defined rather than learned.
 
 ![Explaination of framefield : [Source](https://github.com/Lydorn/Polygonization-by-Frame-Field-Learning?tab=readme-ov-file)](https://github.com/user-attachments/assets/f70113fd-0d21-48dd-b1c8-535b1bfabe83){#fig:frame-field width="5in"}
 
@@ -236,7 +236,7 @@ This method is able to handle buildings that are touching and buildings with cou
 
 In the last few years, deep learning models for building footprint regularization have reached new levels of maturity. These models are characterized by end-to-end training (the network learns to output a final polygon with minimal post-processing) and by the integration of architectural elements that explicitly handle the polygon’s structure (such as graph neural networks, transformers, or differentiable geometric algorithms). Below we highlight several state-of-the-art approaches, including CNN/RNN hybrids, graph-based models, and transformer-based models, and discuss how they improve upon prior methods.
 
-**Source Code** : [GitHub](https://github.com/Lydorn/Polygonization-by-Frame-Field-Learning)
+Source Code : [GitHub](https://github.com/Lydorn/Polygonization-by-Frame-Field-Learning)
 
 #### PolyWorld: End-to-End Polygon Extraction via CNN and GNN
 
@@ -244,11 +244,11 @@ PolyWorld [@doi:10.1109/cvpr52688.2022.00189] introduces a novel end-to-end deep
 
 The pipeline involves three main stages:
 
-1. **Vertex Detection**: A fully convolutional neural network outputs a vertex confidence map from which likely building corners are identified. Each vertex is paired with a learned visual descriptor encoding local image features.
+1. Vertex Detection: A fully convolutional neural network outputs a vertex confidence map from which likely building corners are identified. Each vertex is paired with a learned visual descriptor encoding local image features.
 
-2. **Graph-Based Learning**: Detected vertices are embedded in a fully connected graph. An attentional Graph Neural Network (GNN) evaluates pairwise relationships between vertices to learn "connection strengths" i.e., the likelihood that a pair of vertices should be connected by an edge.
+2. Graph-Based Learning: Detected vertices are embedded in a fully connected graph. An attentional Graph Neural Network (GNN) evaluates pairwise relationships between vertices to learn "connection strengths" i.e., the likelihood that a pair of vertices should be connected by an edge.
 
-3. **Polygon Assembly via Differentiable Matching**: The final polygon structure is determined by solving a graph matching problem, formulated as an optimal cycle through the vertices. This is achieved using a differentiable relaxation of the Hungarian algorithm (Sinkhorn algorithm), enabling gradient-based learning.
+3. Polygon Assembly via Differentiable Matching: The final polygon structure is determined by solving a graph matching problem, formulated as an optimal cycle through the vertices. This is achieved using a differentiable relaxation of the Hungarian algorithm (Sinkhorn algorithm), enabling gradient-based learning.
 
 ![Explanation of how PolyWorld works: [source](https://github.com/zorzi-s/PolyWorldPretrainedNetwork) ](https://github.com/user-attachments/assets/158fcb33-5707-4edf-ac92-df2f4ddf4749){#fig:poly-world height="3in"}
 
@@ -270,7 +270,7 @@ Figure represents MS COCO results on the CrowdAI test dataset for all the buildi
 | AR50 / AR75      | AR at IoU thresholds 0.5 and 0.75.                                                             |
 | ARS / ARM / ARL  | AR for small, medium, and large objects, respectively.                                        |
 
-**Source Code** :  [GitHub](https://github.com/zorzi-s/PolyWorldPretrainedNetwork)
+Source Code :  [GitHub](https://github.com/zorzi-s/PolyWorldPretrainedNetwork)
 
 #### Improved version , Re:PolyWorld (2023)
 
@@ -301,7 +301,7 @@ Essentially, Pix2Poly represents the convergence of transformer-based detection 
 
 ![Example of Pix2poly output](https://github.com/user-attachments/assets/b268f9b1-3a30-441d-981b-af58336805bc){#fig:pix2poly-arch height="3in"}
 
-**Source Code** :  [Github](https://github.com/yeshwanth95/Pix2Poly?tab=readme-ov-file)
+Source Code :  [Github](https://github.com/yeshwanth95/Pix2Poly?tab=readme-ov-file)
 
 #### Other Noticable Advances
 
