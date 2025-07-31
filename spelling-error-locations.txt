@@ -222,5 +222,5 @@ content/02.journal.md:254:orthogonalize
 content/02.journal.md:254:pickler
 content/02.journal.md:264:openaerialmap
 content/02.journal.md:264:OpenAerialMap
-content/02.journal.md:266:Peucker
-content/02.journal.md:276:OpenStreetMap
+content/02.journal.md:270:Peucker
+content/02.journal.md:280:OpenStreetMap

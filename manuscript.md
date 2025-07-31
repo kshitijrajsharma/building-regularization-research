@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-07-31" />
   <meta name="citation_publication_date" content="2025-07-31" />
   <meta property="article:published_time" content="2025-07-31" />
-  <meta name="dc.modified" content="2025-07-31T15:50:28+00:00" />
-  <meta property="article:modified_time" content="2025-07-31T15:50:28+00:00" />
+  <meta name="dc.modified" content="2025-07-31T17:38:20+00:00" />
+  <meta property="article:modified_time" content="2025-07-31T17:38:20+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/f0328a2f4469ec7a64e39aaaed423eb39909d4d5/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/f0328a2f4469ec7a64e39aaaed423eb39909d4d5/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/f0328a2f4469ec7a64e39aaaed423eb39909d4d5/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/301a7cb9490efdfccf89f9a3a48d1b23c2f6c965/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/301a7cb9490efdfccf89f9a3a48d1b23c2f6c965/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/301a7cb9490efdfccf89f9a3a48d1b23c2f6c965/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/f0328a2f4469ec7a64e39aaaed423eb39909d4d5/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/301a7cb9490efdfccf89f9a3a48d1b23c2f6c965/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@f0328a2](https://github.com/kshitijrajsharma/building-regularization-research/tree/f0328a2f4469ec7a64e39aaaed423eb39909d4d5)
+from [kshitijrajsharma/building-regularization-research@301a7cb](https://github.com/kshitijrajsharma/building-regularization-research/tree/301a7cb9490efdfccf89f9a3a48d1b23c2f6c965)
 on July 31, 2025.
 </em></small>
 
@@ -366,6 +366,10 @@ I picked three different areas, On algorithms : one is douglas pickler theorem a
 ![Malawi](https://github.com/user-attachments/assets/85173957-fc3e-47c2-83d8-45c256c71b0f){#fig:test_area_malawi height="3in"}
 
 Here I am not focused on how good the deep learning model to detect building is more on the footprints. I used [RAMP](https://rampml.global/) for this experiment & Images from [OpenAerialMap](https://openaerialmap.org/) . 
+
+
+![Methodology Utilized For the Comparison](https://github.com/user-attachments/assets/7d57fff5-105f-46f0-99dc-35e31fa23360){#fig:comparison height="5in"}
+
 
 Right angle optimization methods seem to work slightly better in those areas; however, Douglas-Peucker still remains relevant and is used across multiple projects to date. So the main discussion point would be: do we really need another deep learning model just for a better shape, or would only the features be enough? I think it really depends on the use case and how complex you make your algorithm. There is no really easy-to-go solution.
 
