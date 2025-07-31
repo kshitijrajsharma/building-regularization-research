@@ -18,7 +18,7 @@ CNNs
 collinear
 Comaprison
 comparision
-comparitive
+Comparitive
 convolutional
 CrowdAI
 Cui’s
@@ -30,7 +30,7 @@ discretizes
 DL
 DSAC
 Duda
-explaination
+Explaination
 FFL
 FLL
 framefield

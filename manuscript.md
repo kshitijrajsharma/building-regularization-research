@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-07-31" />
   <meta name="citation_publication_date" content="2025-07-31" />
   <meta property="article:published_time" content="2025-07-31" />
-  <meta name="dc.modified" content="2025-07-31T19:47:53+00:00" />
-  <meta property="article:modified_time" content="2025-07-31T19:47:53+00:00" />
+  <meta name="dc.modified" content="2025-07-31T19:50:12+00:00" />
+  <meta property="article:modified_time" content="2025-07-31T19:50:12+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/2e48dd45d1d7fee0cdbf9fa64d752e5f41cb3868/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/2e48dd45d1d7fee0cdbf9fa64d752e5f41cb3868/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/2e48dd45d1d7fee0cdbf9fa64d752e5f41cb3868/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/75b28a0b825e3f9226ea4659d26ab9cb15f130a1/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/75b28a0b825e3f9226ea4659d26ab9cb15f130a1/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/75b28a0b825e3f9226ea4659d26ab9cb15f130a1/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/2e48dd45d1d7fee0cdbf9fa64d752e5f41cb3868/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/75b28a0b825e3f9226ea4659d26ab9cb15f130a1/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@2e48dd4](https://github.com/kshitijrajsharma/building-regularization-research/tree/2e48dd45d1d7fee0cdbf9fa64d752e5f41cb3868)
+from [kshitijrajsharma/building-regularization-research@75b28a0](https://github.com/kshitijrajsharma/building-regularization-research/tree/75b28a0b825e3f9226ea4659d26ab9cb15f130a1)
 on July 31, 2025.
 </em></small>
 
@@ -228,7 +228,7 @@ Despite this progress, early deep learning models still had limitations. The bui
 
 In addition to direct polygon prediction, researchers also explored ways to inject geometric structure into the deep learning process. One notable approach by Girard et al. (2021) [@doi:10.1109/cvpr46437.2021.00583] involved predicting not only a segmentation mask for buildings, but also a frame field : a set of orthogonal vectors at each pixel along the boundary indicating local edge directions.
 
-A **frame field** acts like a directional map around a building's edges: it shows which way walls run and where corners should be. Using this directional information, the method first extracts a rough outline from the mask and then **snaps and refines it** by aligning it with the frame field and detected corner points. The post-processing pipeline includes multiple geometric steps such as skeletonization, corner detection, and line simplification each algorithmically defined rather than learned.
+A frame field acts like a directional map around a building's edges: it shows which way walls run and where corners should be. Using this directional information, the method first extracts a rough outline from the mask and then **snaps and refines it** by aligning it with the frame field and detected corner points. The post-processing pipeline includes multiple geometric steps such as skeletonization, corner detection, and line simplification each algorithmically defined rather than learned.
 
 ![Explaination of framefield : [Source](https://github.com/Lydorn/Polygonization-by-Frame-Field-Learning?tab=readme-ov-file)](https://github.com/user-attachments/assets/f70113fd-0d21-48dd-b1c8-535b1bfabe83){#fig:frame-field width="5in"}
 
@@ -240,7 +240,7 @@ In the last few years, deep learning models for building footprint regularizatio
 
 #### PolyWorld: End-to-End Polygon Extraction via CNN and GNN
 
-**PolyWorld** [@doi:10.1109/cvpr52688.2022.00189] introduces a novel end-to-end deep learning architecture for extracting vector building footprints directly from satellite imagery. Unlike earlier methods such as Polygon-RNN  or PolyMapper, which rely on sequential vertex prediction or post-processing of segmentation masks, PolyWorld formulates the problem as a graph-based polygon matching task.
+PolyWorld [@doi:10.1109/cvpr52688.2022.00189] introduces a novel end-to-end deep learning architecture for extracting vector building footprints directly from satellite imagery. Unlike earlier methods such as Polygon-RNN  or PolyMapper, which rely on sequential vertex prediction or post-processing of segmentation masks, PolyWorld formulates the problem as a graph-based polygon matching task.
 
 The pipeline involves three main stages:
 
