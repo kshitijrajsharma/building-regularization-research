@@ -40,7 +40,6 @@ GAN
 GANs
 Geoinformatics
 GeoJSON
-geospatial
 Girard
 GIS
 GNN

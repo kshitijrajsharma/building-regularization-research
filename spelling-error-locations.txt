@@ -223,7 +223,4 @@ content/02.journal.md:254:pickler
 content/02.journal.md:264:openaerialmap
 content/02.journal.md:264:OpenAerialMap
 content/02.journal.md:266:Peucker
-content/02.journal.md:272:GIS
-content/02.journal.md:272:interpretable
-content/02.journal.md:272:PolyWorld
-content/02.journal.md:276:geospatial
+content/02.journal.md:276:OpenStreetMap
