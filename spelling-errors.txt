@@ -1,6 +1,5 @@
 ACDRNet
 ACM
-Acuna
 Albers
 algorithmically
 APL
@@ -11,17 +10,15 @@ ArcGIS
 ARL
 ARS
 attentional
+Bastian
 Beyong
 Bing
-Castrejon
 CNNs
 collinear
 Comaprison
 convolutional
 CrowdAI
-Cui
 Cui’s
-Dal
 DALS
 DarNet
 DeepLab
@@ -30,8 +27,7 @@ discretizes
 DL
 DSAC
 Duda
-Explaination
-Fazan
+explaination
 FFL
 FLL
 framefield
@@ -47,9 +43,10 @@ Guercke
 Gur
 Hatamizadeh
 Hatamizadeh’s
-hough
+Hough
 Huertas
 interpretable
+intial
 iteratively
 jitter
 Kshitij
@@ -57,8 +54,6 @@ kshitijrajsharma
 LiDAR
 Lodron
 LSTM
-Maggiori
-Marmanis
 Nevatia
 NLP
 Noticable
@@ -69,6 +64,7 @@ OpenStreetMap
 orthogonalize
 OSM
 Peucker
+Philipp
 pickler
 planimetric
 PolyBuilding
@@ -79,13 +75,13 @@ PolyWold
 PolyWorld
 PolyWorld’s
 postprocessing
-Poz
 pre
 QGIS
 Raj
 Ramer
 RegGAN
 Reinartz
+repositioned
 Retrainable
 retuning
 RNN
@@ -95,7 +91,6 @@ Salzburg
 Sester
 Shapefiles
 Sharma
-Shiyong
 Sinkhorn
 skeletonization
 subwords
@@ -111,5 +106,6 @@ vectorization
 zag
 zags
 Zebedin
+Zhang
 zig
 Zorzi
