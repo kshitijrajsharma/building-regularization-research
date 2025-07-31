@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-07-31" />
   <meta name="citation_publication_date" content="2025-07-31" />
   <meta property="article:published_time" content="2025-07-31" />
-  <meta name="dc.modified" content="2025-07-31T19:40:15+00:00" />
-  <meta property="article:modified_time" content="2025-07-31T19:40:15+00:00" />
+  <meta name="dc.modified" content="2025-07-31T19:45:21+00:00" />
+  <meta property="article:modified_time" content="2025-07-31T19:45:21+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/6bfe0e69a95b0a47427a485633f01f7ef821d52a/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/6bfe0e69a95b0a47427a485633f01f7ef821d52a/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/6bfe0e69a95b0a47427a485633f01f7ef821d52a/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/042d793c207a5c53d8b256fef24b210b4a53df45/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/042d793c207a5c53d8b256fef24b210b4a53df45/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/042d793c207a5c53d8b256fef24b210b4a53df45/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/6bfe0e69a95b0a47427a485633f01f7ef821d52a/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/042d793c207a5c53d8b256fef24b210b4a53df45/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@6bfe0e6](https://github.com/kshitijrajsharma/building-regularization-research/tree/6bfe0e69a95b0a47427a485633f01f7ef821d52a)
+from [kshitijrajsharma/building-regularization-research@042d793](https://github.com/kshitijrajsharma/building-regularization-research/tree/042d793c207a5c53d8b256fef24b210b4a53df45)
 on July 31, 2025.
 </em></small>
 
@@ -396,9 +396,9 @@ The measurement of quality in this context is subjective and challenging. For so
 
 ## Conclusion
 
-This review traces the evolution of building footprint regularization over the past three decades, from simple geometric rules to complex deep learning models. However, tracking this technical progress has revealed a more profound issue: the criteria for a "good" building footprint remain elusive. A comparative analysis of different methods across three areas yielded more questions than answers. Should the priority be perfect right angles, accurate representation of real building shapes, or aesthetic appeal on a map? Traditional methods excel at producing clean geometric shapes, while deep learning models are better at detecting complex buildings. Deep learning might potentially solve the problem by applying different algorithms or cases per building, rotating them to fit the context. However, neither approach fully addresses what humans actually want from these tools. While deep learning shows promise, it is not yet mature enough to provide a definitive solution.
+This review traces the evolution of building footprint regularization over the past three decades, from simple geometric rules to complex deep learning models. However, tracking this technical progress has revealed a more profound issue: the criteria for a "good" building footprint remain elusive. Even in OpenStreetmap itself people have different opinion which is good quality mapping and bad quality mapping interms of cartographic accuracy. A comparative analysis of different methods across three areas yielded more questions than answers. Should the priority be perfect right angles, accurate representation of real building shapes, or aesthetic appeal on a map? Traditional methods excel at producing clean geometric shapes, while deep learning models are better at detecting complex buildings & slightly going towards understanding the context specially with the transformer based models. Deep learning might potentially solve the problem by applying different algorithms or cases per building rather than applying to the whole scene ; they can work on objects & rotating them to fit the context. However, neither approach fully addresses what humans actually want from these tools. While deep learning shows promise, it is not yet mature enough to provide a definitive solution.
 
-It is important to acknowledge the limitations of this study. The computational resources required by different methods, training times, and runtime speeds were not evaluated. Additionally, large-scale accuracy tests on standard datasets were not conducted. These omissions are not accidental; comprehensive testing would require significant computational resources and may not provide insights into what matters most in real-world applications. Current metrics of success, such as intersection over union scores, overlook critical factors like whether a building polygon appears correct to human eyes. The field is still grappling with how to meaningfully measure cartographic quality.
+It is important to acknowledge the limitations of this study. The computational resources required by different methods, training times, and runtime speeds were not evaluated. Comparitive analysis with deep learning model based approches can be taken forward on future research. Additionally, large-scale accuracy tests on standard datasets were not conducted. These omissions are not accidental; comprehensive testing would require significant computational resources and may not provide insights into what matters most in real-world applications. Current metrics of success, such as intersection over union scores used by some of the methods, overlook critical factors like whether a building polygon appears correct to human eyes. The field is still trying to justify with how to meaningfully measure cartographic quality.
 
 While the field has made significant strides in automatically detecting buildings and handling complex shapes, this does not necessarily translate to better outputs for practical mapping work. For practitioners involved in projects like OpenStreetMap, the choice of method often depends on available tools, familiarity with the technology, and specific project goals. Building footprint regularization is as much about human judgment and aesthetics as it is about algorithms. Rather than seeking a one-size-fits-all solution, the focus should be on understanding the strengths and limitations of different approaches and providing users with the tools to make informed choices tailored to their specific needs.
 

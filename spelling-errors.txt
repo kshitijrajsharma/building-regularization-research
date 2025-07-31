@@ -4,6 +4,7 @@ Albers
 algorithmically
 APL
 APM
+approches
 Aprooaches
 APS
 ArcGIS
@@ -18,7 +19,7 @@ collinear
 Comaprison
 comparision
 comparitive
-convolutional
+Convolutional
 CrowdAI
 Cui’s
 DALS
@@ -29,7 +30,7 @@ discretizes
 DL
 DSAC
 Duda
-Explaination
+explaination
 FFL
 FLL
 framefield
@@ -45,8 +46,9 @@ Guercke
 Gur
 Hatamizadeh
 Hatamizadeh’s
-hough
+Hough
 Huertas
+interms
 interpretable
 intial
 iteratively
