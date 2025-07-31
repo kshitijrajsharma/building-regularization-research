@@ -19,7 +19,7 @@ collinear
 Comaprison
 comparision
 comparitive
-Convolutional
+convolutional
 CrowdAI
 Cui’s
 DALS
@@ -67,7 +67,7 @@ Noticable
 oon
 OpenAerialMap
 OpenCV
-OpenStreetMap
+OpenStreetmap
 orthogonalize
 OSM
 Peucker

@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-07-31" />
   <meta name="citation_publication_date" content="2025-07-31" />
   <meta property="article:published_time" content="2025-07-31" />
-  <meta name="dc.modified" content="2025-07-31T19:45:21+00:00" />
-  <meta property="article:modified_time" content="2025-07-31T19:45:21+00:00" />
+  <meta name="dc.modified" content="2025-07-31T19:47:53+00:00" />
+  <meta property="article:modified_time" content="2025-07-31T19:47:53+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/042d793c207a5c53d8b256fef24b210b4a53df45/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/042d793c207a5c53d8b256fef24b210b4a53df45/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/042d793c207a5c53d8b256fef24b210b4a53df45/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/2e48dd45d1d7fee0cdbf9fa64d752e5f41cb3868/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/2e48dd45d1d7fee0cdbf9fa64d752e5f41cb3868/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/2e48dd45d1d7fee0cdbf9fa64d752e5f41cb3868/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/042d793c207a5c53d8b256fef24b210b4a53df45/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/2e48dd45d1d7fee0cdbf9fa64d752e5f41cb3868/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@042d793](https://github.com/kshitijrajsharma/building-regularization-research/tree/042d793c207a5c53d8b256fef24b210b4a53df45)
+from [kshitijrajsharma/building-regularization-research@2e48dd4](https://github.com/kshitijrajsharma/building-regularization-research/tree/2e48dd45d1d7fee0cdbf9fa64d752e5f41cb3868)
 on July 31, 2025.
 </em></small>
 
@@ -384,9 +384,6 @@ I picked three different areas, On algorithms : one is douglas pickler theorem a
 
 ![Malawi](https://github.com/user-attachments/assets/85173957-fc3e-47c2-83d8-45c256c71b0f){#fig:test_area_malawi height="5in"}
 
-
-
-This study focuses on the extraction of building footprints rather than the performance of the deep learning model used for detection. The experiment utilized the [RAMP](https://rampml.global/) framework and images sourced from [OpenAerialMap](https://openaerialmap.org/).
 
 Right-angle optimization methods have shown slight superiority in certain contexts; however, the Douglas-Peucker algorithm remains widely relevant and is employed in numerous projects to date. The primary discussion point is whether an additional deep learning model is necessary for improved shape accuracy, or if feature extraction alone is sufficient. This determination is contingent upon the specific use case and the complexity of the algorithm employed. There is no straightforward solution to this problem.
 
