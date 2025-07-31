@@ -17,7 +17,7 @@ Castrejon
 CNNs
 collinear
 Comaprison
-Convolutional
+convolutional
 CrowdAI
 Cui
 Cui’s
@@ -47,7 +47,7 @@ Guercke
 Gur
 Hatamizadeh
 Hatamizadeh’s
-Hough
+hough
 Huertas
 interpretable
 iteratively

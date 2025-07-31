@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-07-31" />
   <meta name="citation_publication_date" content="2025-07-31" />
   <meta property="article:published_time" content="2025-07-31" />
-  <meta name="dc.modified" content="2025-07-31T17:38:20+00:00" />
-  <meta property="article:modified_time" content="2025-07-31T17:38:20+00:00" />
+  <meta name="dc.modified" content="2025-07-31T17:45:32+00:00" />
+  <meta property="article:modified_time" content="2025-07-31T17:45:32+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/301a7cb9490efdfccf89f9a3a48d1b23c2f6c965/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/301a7cb9490efdfccf89f9a3a48d1b23c2f6c965/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/301a7cb9490efdfccf89f9a3a48d1b23c2f6c965/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/ec47a3b2dda132372c1bfc44eb969c8ccac5be91/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/ec47a3b2dda132372c1bfc44eb969c8ccac5be91/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/ec47a3b2dda132372c1bfc44eb969c8ccac5be91/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/301a7cb9490efdfccf89f9a3a48d1b23c2f6c965/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/ec47a3b2dda132372c1bfc44eb969c8ccac5be91/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@301a7cb](https://github.com/kshitijrajsharma/building-regularization-research/tree/301a7cb9490efdfccf89f9a3a48d1b23c2f6c965)
+from [kshitijrajsharma/building-regularization-research@ec47a3b](https://github.com/kshitijrajsharma/building-regularization-research/tree/ec47a3b2dda132372c1bfc44eb969c8ccac5be91)
 on July 31, 2025.
 </em></small>
 
@@ -108,7 +108,13 @@ Our goal is to generate building footprints that better mimic this human-cartogr
 
 This review traces the evolution of 2D building footprint regularization techniques from early rule-based vectorization in the 1990s to recent deep learning models in the 2020s. We focus specifically on planimetric (2D) building outlines, excluding full 3D reconstruction and roof modeling. For each generation of methods, we highlight core ideas, algorithms, and their suitability for integration into GIS workflows. We compare classical and deep learning-based methods in terms of accuracy, flexibility, cartographic quality, and real-world applicability. Where relevant, we emphasize how these methods can be used to improve or augment OSM-style datasets, aligning outputs more closely with the standards of human made map features.
 
-## Geometric and Heuristic Methods ( 1990s - 2000s )
+## Introduction 
+
+... Need to write introduction here ... 
+
+## Literature Review 
+
+### Geometric and Heuristic Methods ( 1990s - 2000s )
  
 **Edge Detection and Line Fitting**: Early building extraction in the 1990s relied on low-level image processing and geometric heuristics. For example, Huertas and Nevatia (1988) developed a system to detect buildings in aerial images by finding rectangular clusters of edges (lines) and using shadow cues to distinguish buildings from other structures [@doi:10.3390/ijgi8040191] . Building polygons often consist of jagged lines. Guercke and Sester [@guercke2011] use Hough-Transformation ( Mathematically formalized by Duda, R.O., & Hart, P.E. (1972)[@doi:10.1145/361237.361242] ) to refine such polygons.
 
@@ -161,7 +167,7 @@ In summary, the pre-2010s state-of-the-art could produce “regular” building 
 
 
 
-## Learning-Based Methods (2010s)
+### Learning-Based Methods (2010s)
 
 By the mid-2010s, the rise of deep learning fundamentally changed how building footprints were extracted. Instead of manually defining edges and shape rules, researchers began training convolutional neural networks (CNNs) to recognize buildings and output them in raster or vector form. The typical pipeline circa 2015–2017 was to use a semantic segmentation network (such as U-Net or DeepLab) to produce a binary mask of building pixels, then apply a vectorization algorithm to convert that mask into polygons [@url:https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures].
 
@@ -172,7 +178,7 @@ Once a clean building mask was obtained, off-the-shelf polygonization (e.g., mar
 
 ![Semantic Segmentation to Instance Segmentation Aprooaches , [source](https://element84.com/software-engineering/automated-building-footprint-extraction-part-3-model-architectures/) ](https://github.com/user-attachments/assets/8036b15c-4532-4f5d-a863-ce077a379580){#fig:segmentation-approaches height="3in"}
 
-## Deep Structured Models (Active Contours)
+### Deep Structured Models (Active Contours)
 
 A significant development in bridging classical regularization and deep learning was the integration of active contour models into neural networks. Marcos et al. (2018)[@doi:10.1109/cvpr.2018.00925] introduced Deep Structured Active Contours (DSAC), a hybrid approach where a CNN learns to predict the parameters of an active contour that locks onto building edges . In their framework, the network output is not a raster, but rather coefficients that define the shape and tension of an active contour (snake) which then deforms to fit the building boundary. 
 
@@ -184,7 +190,7 @@ Hatamizadeh et al. (2020) [@doi:10.1007/978-3-030-58610-2_43] proposed a multi-b
 
 **Source Code** : [DSAC](https://github.com/dmarcosg/DSAC) , [ACDRNet](https://github.com/shirgur/ACDRNet), [DALS](https://github.com/ahatamiz/dals)
 
-### Recurrent Vertex Prediction (Polygon RNNs) : PolyMapper
+#### Recurrent Vertex Prediction (Polygon RNNs) : PolyMapper
 
 Instead of converting segmentation masks into polygons as a post-processing step, Recurrent Vertex Prediction models approach polygon extraction as a sequence prediction problem. In this framework, the model outputs a series of vertices one at a time, similar to writing out coordinate lists.
 
@@ -212,9 +218,9 @@ Despite this progress, early deep learning models still had limitations. The bui
 
 **Source Code** :  NA
 
-## Modern Deep Learning Approaches (2020s) 
+### Modern Deep Learning Approaches (2020s) 
 
-### Polygonal Building Segmentation by Frame Field Learning
+#### Polygonal Building Segmentation by Frame Field Learning
 
 In addition to direct polygon prediction, researchers also explored ways to inject geometric structure into the deep learning process. One notable approach by Girard et al. (2021) [@doi:10.1109/cvpr46437.2021.00583] involved predicting not only a segmentation mask for buildings, but also a frame field : a set of orthogonal vectors at each pixel along the boundary indicating local edge directions.
 
@@ -228,7 +234,7 @@ In the last few years, deep learning models for building footprint regularizatio
 
 **Source Code** : [GitHub](https://github.com/Lydorn/Polygonization-by-Frame-Field-Learning)
 
-### PolyWorld: End-to-End Polygon Extraction via CNN and GNN
+#### PolyWorld: End-to-End Polygon Extraction via CNN and GNN
 
 **PolyWorld** [@doi:10.1109/cvpr52688.2022.00189] introduces a novel end-to-end deep learning architecture for extracting vector building footprints directly from satellite imagery. Unlike earlier methods such as Polygon-RNN  or PolyMapper, which rely on sequential vertex prediction or post-processing of segmentation masks, PolyWorld formulates the problem as a graph-based polygon matching task.
 
@@ -262,7 +268,7 @@ Figure represents MS COCO results on the CrowdAI test dataset for all the buildi
 
 **Source Code** :  [GitHub](https://github.com/zorzi-s/PolyWorldPretrainedNetwork)
 
-## Improved version , Re:PolyWorld (2023)
+#### Improved version , Re:PolyWorld (2023)
 
 Following PolyWorld, Zorzi and Fraundorfer (2023)[@doi:10.1109/iccv51070.2023.01537] introduced Re:PolyWorld, which is claimed to be an improved multi-stage version of the framework . Re:PolyWorld added a second refinement stage where an initial polygon prediction is further optimized and made even more regular by an additional GNN module. 
 
@@ -274,7 +280,7 @@ With these enhancements, Re:PolyWorld achieved new state-of-the-art scores on th
 
 he continued success of these GNN-based methods demonstrates the value of treating polygon formation as a graph problem (where deep networks ensure the graph forms nice cycles with desired properties) rather than a pixel-by-pixel segmentation problem
 
-### Transformer-Based Sequence Models : Pix2Poly
+#### Transformer-Based Sequence Models : Pix2Poly
 
 Very recently, researchers have applied transformers the sequence modeling architecture behind advances in NLP to polygon extraction. Pix2Poly [@url:https://arxiv.org/html/2412.07899v1] is an attention-based model that casts building footprint delineation as a sequence prediction problem, handled entirely by a transformer encoder-decoder.
 
@@ -293,7 +299,7 @@ Essentially, Pix2Poly represents the convergence of transformer-based detection 
 
 **Source Code** :  [Github](https://github.com/yeshwanth95/Pix2Poly?tab=readme-ov-file)
 
-### Other Noticable Advances
+#### Other Noticable Advances
 
 Alongside the above, there have been other notable modern approaches. PolyBuilding (2022) [@url:https://openaccess.thecvf.com/content/CVPR2022/html/Zorzi_PolyWorld_Polygonal_Building_Extraction_With_Graph_Neural_Networks_in_Satellite_CVPR_2022_paper.html] introduced a similar concept of a “polygon transformer” that directly predicts vector representations of buildings. It emphasizes fully end-to-end training and shows that a transformer can outperform CNN+RNN hybrids on benchmark aerial image datasets.
 
@@ -305,9 +311,19 @@ Similarly, another study proposed Poly-GAN (2023) to post-process OpenStreetMap 
 model training phase to the (predicted) building regularization phase [@doi:10.1007/978-3-031-34612-5_13] ](https://github.com/user-attachments/assets/a73dbd91-7fd0-430a-ba7e-f4877295a459){#fig:Poly-GAN-method height="3in"}
 
 
-## Comparison: Traditional vs. Deep Learning Methods
 
-### Accuracy and Performance
+## Methodology 
+
+![Methodology Utilized For the Comparison](https://github.com/user-attachments/assets/7d57fff5-105f-46f0-99dc-35e31fa23360){#fig:comparison height="5in"}
+
+... write some thingies about methodology ... 
+
+
+## Discussion
+
+### Comparison: Traditional vs. Deep Learning Methods
+
+#### Accuracy and Performance
 
 | Aspect            | Traditional Methods                                  | Deep Learning Methods                                                                 |
 |-------------------|------------------------------------------------------|----------------------------------------------------------------------------------------|
@@ -316,7 +332,7 @@ model training phase to the (predicted) building regularization phase [@doi:10.1
 | Scalability       | Needs tuning for new regions                         | Scales to large areas                               |
 | Example           | Hough Transform, DP simplification                   | PolyWorld, Pix2Poly, Frame Field Learning                                              |
 
-### Flexibility and Generalization
+#### Flexibility and Generalization
 
 | Aspect            | Traditional Methods                                  | Deep Learning Methods                                                                 |
 |-------------------|------------------------------------------------------|----------------------------------------------------------------------------------------|
@@ -325,7 +341,7 @@ model training phase to the (predicted) building regularization phase [@doi:10.1
 | Data Sensitivity  | Edge-based; poor in low contrast                     | Learns semantic cues (shadows, context)                                                |
 | Example           | Thresholding, edge detectors                         | CNNs, Transformers trained on diverse imagery                                          |
 
-### Cartographic Quality
+#### Cartographic Quality
 
 | Aspect            | Traditional Methods                                  | Deep Learning Methods                                                                 |
 |-------------------|------------------------------------------------------|----------------------------------------------------------------------------------------|
@@ -334,7 +350,7 @@ model training phase to the (predicted) building regularization phase [@doi:10.1
 | Limitations       | May snap overly aggressively                         | May allow some deviation; occasional noise                                           |
 | Example           | Regularize Footprint tool                     | PolyWorld, Pix2Poly with angle loss, GAN refinement                                                    |
 
-### GIS Integration
+#### GIS Integration
 
 | Aspect            | Traditional Methods                                  | Deep Learning Methods                                                                 |
 |-------------------|------------------------------------------------------|----------------------------------------------------------------------------------------|
@@ -343,7 +359,7 @@ model training phase to the (predicted) building regularization phase [@doi:10.1
 | Post-Processing   | Quite sophisticated                                              | Often Minimal with latest pipelines                                                          |
 | Example           | Manual digitization, vector tools                    | Microsoft’s global footprint pipeline, Google Open Buildings                           |
 
-### Quality Control
+#### Quality Control
 
 | Aspect            | Traditional Methods                                  | Deep Learning Methods                                                                 |
 |-------------------|------------------------------------------------------|----------------------------------------------------------------------------------------|
@@ -351,8 +367,6 @@ model training phase to the (predicted) building regularization phase [@doi:10.1
 | Correction        | Manual re-runs or inspection                         | Hybrid review: DL + regularization + optional human validation                         |
 | Robustness        | Deterministic but brittle , Easy to explain                           | Robust to noise, generalizes well across geographies, Hard to explain                                   |
 
-
-## Discussion
 
 Quality is really subjective and it is hard to do qualitative analysis for this kind of project ! For sample comparison I picked few areas and compare two of the traditional methods.
 I picked three different areas, On algorithms : one is douglas pickler theorem another one is right angle optimization theorem which is defined [here](https://github.com/kshitijrajsharma/geoml-toolkits/blob/master/src/geomltoolkits/regularizer/orthogonalize.py) Both traditional approach to see how they perform practically on following datasets. 
@@ -368,12 +382,10 @@ I picked three different areas, On algorithms : one is douglas pickler theorem a
 Here I am not focused on how good the deep learning model to detect building is more on the footprints. I used [RAMP](https://rampml.global/) for this experiment & Images from [OpenAerialMap](https://openaerialmap.org/) . 
 
 
-![Methodology Utilized For the Comparison](https://github.com/user-attachments/assets/7d57fff5-105f-46f0-99dc-35e31fa23360){#fig:comparison height="5in"}
-
-
 Right angle optimization methods seem to work slightly better in those areas; however, Douglas-Peucker still remains relevant and is used across multiple projects to date. So the main discussion point would be: do we really need another deep learning model just for a better shape, or would only the features be enough? I think it really depends on the use case and how complex you make your algorithm. There is no really easy-to-go solution.
 
 How would we measure quality? For some, a good right-angled shape is a win, while for others, a better match to the background shape is preferred. It's a really subjective and harder topic to determine accuracy! This is because when we talk about cartographic quality, sometimes the alignment of features with each other also comes into play. Even though a feature is correctly traced as per the imagery, the placement might not make sense. For example, a building closer to a road or a tall building might not be mapped as per its rooftop; it could be slightly shifted, or we might shift it deliberately to better align it with other features.
+
 
 ## Conclusion
 
