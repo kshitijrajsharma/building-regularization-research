@@ -22,8 +22,8 @@ header-includes: |
   <meta name="dc.date" content="2025-07-31" />
   <meta name="citation_publication_date" content="2025-07-31" />
   <meta property="article:published_time" content="2025-07-31" />
-  <meta name="dc.modified" content="2025-07-31T18:56:44+00:00" />
-  <meta property="article:modified_time" content="2025-07-31T18:56:44+00:00" />
+  <meta name="dc.modified" content="2025-07-31T19:32:13+00:00" />
+  <meta property="article:modified_time" content="2025-07-31T19:32:13+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/8a6a558c3d2e64452760c197cbdcb3814d5ca1bb/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/8a6a558c3d2e64452760c197cbdcb3814d5ca1bb/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/8a6a558c3d2e64452760c197cbdcb3814d5ca1bb/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/f6de4f1d1c510ebf6cc363d6e4e2bfdd44532ffc/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/f6de4f1d1c510ebf6cc363d6e4e2bfdd44532ffc/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/f6de4f1d1c510ebf6cc363d6e4e2bfdd44532ffc/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,9 +65,9 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/8a6a558c3d2e64452760c197cbdcb3814d5ca1bb/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/f6de4f1d1c510ebf6cc363d6e4e2bfdd44532ffc/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@8a6a558](https://github.com/kshitijrajsharma/building-regularization-research/tree/8a6a558c3d2e64452760c197cbdcb3814d5ca1bb)
+from [kshitijrajsharma/building-regularization-research@f6de4f1](https://github.com/kshitijrajsharma/building-regularization-research/tree/f6de4f1d1c510ebf6cc363d6e4e2bfdd44532ffc)
 on July 31, 2025.
 </em></small>
 
@@ -167,8 +167,6 @@ However, these approaches struggled as building shapes grew more complex or data
 In summary, the pre-2010s state-of-the-art could produce “regular” building outlines under favorable conditions, but lacked the robustness and generality needed for broad, automated mapping tasks. These limitations set the stage for machine learning, which promised to learn building shape patterns directly from data and reduce the need for ad hoc rules.
 
 ![A comparison of traditional regularization algorithms on a noisy polygon in terms of node reduction, shape simplification, and edge smoothness [@doi:10.1007/978-3-031-34612-5_13] ](https://github.com/user-attachments/assets/bac6a47d-79a6-48ec-8c34-4cf4b3c3e556){#fig:comparison-of-traditional-techniques width="6in"}
-
-
 
 
 ### Learning-Based Methods (2010s)
@@ -320,11 +318,11 @@ model training phase to the (predicted) building regularization phase [@doi:10.1
 
 ![Methodology Utilized For the Comparison](https://github.com/user-attachments/assets/7d57fff5-105f-46f0-99dc-35e31fa23360){#fig:comparison height="5in"}
 
-... write some thingies about methodology ... 
-
+In this study , Literature review was done by reading papers , going through their pros and cons and trying out the methhodologies discussed on the paper . For visual analysis two of the methods were picked up and only traditional methods were analyzed as part of the first initial research . In this comparision, the goal was to extract building footprints shape geometry from aerial imagery rather than evaluate the performance of the deep learning model. The workflow began by gathering high-resolution aerial images from OpenAerialMap, covering three different locations. These images were then divided into smaller tiles of 256×256 pixels to make them suitable for processing. A lightweight building segmentation model from the RAMP (Replicable AI for Microplanning), running on TensorFlow Lite, was used to predict the locations of buildings in these tiles. The output of the model was binary masks, where buildings were represented by white (1) pixels and background by black (0). These masks were then converted into vector outlines using the rasterio library. & this is where multiple algorithm was applied generate the building shapes,& finally building footprints were exported in GeoJSON format for visualization. Later on proposal is to do comparitive study with modern deep learning frameworks on the same area. 
 
 ## Discussion
-......comment: add text here before jumping to comparison.....
+
+While doing the literation review between traditional and deep learning methods following things were observed . This table is generated solely based on the interpretation from different papers and blogs cited on the references. 
 
 ### Comparison: Traditional vs. Deep Learning Methods
 

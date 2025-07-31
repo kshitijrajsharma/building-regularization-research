@@ -16,7 +16,9 @@ Bing
 CNNs
 collinear
 Comaprison
-convolutional
+comparision
+comparitive
+Convolutional
 CrowdAI
 Cui’s
 DALS
@@ -27,7 +29,7 @@ discretizes
 DL
 DSAC
 Duda
-explaination
+Explaination
 FFL
 FLL
 framefield
@@ -52,8 +54,11 @@ jitter
 Kshitij
 kshitijrajsharma
 LiDAR
+literation
 Lodron
 LSTM
+methhodologies
+Microplanning
 Nevatia
 NLP
 Noticable
@@ -79,8 +84,10 @@ pre
 QGIS
 Raj
 Ramer
+rasterio
 RegGAN
 Reinartz
+Replicable
 repositioned
 Retrainable
 retuning
