@@ -64,11 +64,13 @@ Nevatia
 NLP
 Noticable
 oon
+OpenAerialMap
 OpenCV
 OpenStreetMap
 orthogonalize
 OSM
 Peucker
+pickler
 planimetric
 PolyBuilding
 polygonization

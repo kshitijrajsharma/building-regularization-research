@@ -5,7 +5,7 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-date-meta: '2025-06-11'
+date-meta: '2025-07-31'
 author-meta:
 - Kshitij Raj Sharma
 header-includes: |
@@ -19,11 +19,11 @@ header-includes: |
   <meta name="citation_title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
   <meta property="og:title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
   <meta property="twitter:title" content="Building Footprint Regularization : From Vectorization to Deep Learning" />
-  <meta name="dc.date" content="2025-06-11" />
-  <meta name="citation_publication_date" content="2025-06-11" />
-  <meta property="article:published_time" content="2025-06-11" />
-  <meta name="dc.modified" content="2025-06-11T09:23:35+00:00" />
-  <meta property="article:modified_time" content="2025-06-11T09:23:35+00:00" />
+  <meta name="dc.date" content="2025-07-31" />
+  <meta name="citation_publication_date" content="2025-07-31" />
+  <meta property="article:published_time" content="2025-07-31" />
+  <meta name="dc.modified" content="2025-07-31T15:16:27+00:00" />
+  <meta property="article:modified_time" content="2025-07-31T15:16:27+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -39,9 +39,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://kshitijrajsharma.github.io/building-regularization-research/" />
   <meta name="citation_pdf_url" content="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://kshitijrajsharma.github.io/building-regularization-research/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/9edf45f1fcd0b1b9c3098bd2378cdd96ee5ba068/" />
-  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/9edf45f1fcd0b1b9c3098bd2378cdd96ee5ba068/" />
-  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/9edf45f1fcd0b1b9c3098bd2378cdd96ee5ba068/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://kshitijrajsharma.github.io/building-regularization-research/v/5d7096bd4fdee27e43db0e46e582e750b31af25f/" />
+  <meta name="manubot_html_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/5d7096bd4fdee27e43db0e46e582e750b31af25f/" />
+  <meta name="manubot_pdf_url_versioned" content="https://kshitijrajsharma.github.io/building-regularization-research/v/5d7096bd4fdee27e43db0e46e582e750b31af25f/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="og:image" content="https://kshitijrajsharma.com.np/avatar.jpg" />
@@ -65,10 +65,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/9edf45f1fcd0b1b9c3098bd2378cdd96ee5ba068/))
+([permalink](https://kshitijrajsharma.github.io/building-regularization-research/v/5d7096bd4fdee27e43db0e46e582e750b31af25f/))
 was automatically generated
-from [kshitijrajsharma/building-regularization-research@9edf45f](https://github.com/kshitijrajsharma/building-regularization-research/tree/9edf45f1fcd0b1b9c3098bd2378cdd96ee5ba068)
-on June 11, 2025.
+from [kshitijrajsharma/building-regularization-research@5d7096b](https://github.com/kshitijrajsharma/building-regularization-research/tree/5d7096bd4fdee27e43db0e46e582e750b31af25f)
+on July 31, 2025.
 </em></small>
 
 
@@ -305,7 +305,6 @@ Similarly, another study proposed Poly-GAN (2023) to post-process OpenStreetMap 
 model training phase to the (predicted) building regularization phase [@doi:10.1007/978-3-031-34612-5_13] ](https://github.com/user-attachments/assets/a73dbd91-7fd0-430a-ba7e-f4877295a459){#fig:Poly-GAN-method height="3in"}
 
 
-
 ## Comparison: Traditional vs. Deep Learning Methods
 
 ### Accuracy and Performance
@@ -351,6 +350,26 @@ model training phase to the (predicted) building regularization phase [@doi:10.1
 | Failure Visibility| Obvious errors, easy to flag                         | May generate plausible but wrong results                                              |
 | Correction        | Manual re-runs or inspection                         | Hybrid review: DL + regularization + optional human validation                         |
 | Robustness        | Deterministic but brittle , Easy to explain                           | Robust to noise, generalizes well across geographies, Hard to explain                                   |
+
+
+## Discussion
+
+Quality is really subjective and it is hard to do qualitative analysis for this kind of project ! For sample comparison I picked few areas and compare two of the traditional methods.
+I picked three different areas, On algorithms : one is douglas pickler theorem another one is right angle optimization theorem which is defined [here](https://github.com/kshitijrajsharma/geoml-toolkits/blob/master/src/geomltoolkits/regularizer/orthogonalize.py) Both traditional approach to see how they perform practically on following datasets. 
+
+![Example test areas](https://github.com/user-attachments/assets/214b403d-9623-4440-94c7-c9d8b154d876){#fig:test_areas height="3in"}
+
+![Cameroon](https://github.com/user-attachments/assets/4a8e1c41-a08b-4563-9e49-2a50c74d019f){#fig:test_area_cameroon height="3in"}
+
+![Bangladesh](https://github.com/user-attachments/assets/cbe233ae-ef94-4b1e-9e4a-9c8172ac122d){#fig:test_area_bangladesh height="3in"}
+
+![Malawi](https://github.com/user-attachments/assets/85173957-fc3e-47c2-83d8-45c256c71b0f){#fig:test_area_malawi height="3in"}
+
+Here I am not focused on how good the deep learning model to detect building is more on the footprints. I used [RAMP](https://rampml.global/) for this experiment & Images from [OpenAerialMap](https://openaerialmap.org/) . 
+
+Right angle optimization methods seem to work slightly better in those areas; however, Douglas-Peucker still remains relevant and is used across multiple projects to date. So the main discussion point would be: do we really need another deep learning model just for a better shape, or would only the features be enough? I think it really depends on the use case and how complex you make your algorithm. There is no really easy-to-go solution.
+
+How would we measure quality? For some, a good right-angled shape is a win, while for others, a better match to the background shape is preferred. It's a really subjective and harder topic to determine accuracy! This is because when we talk about cartographic quality, sometimes the alignment of features with each other also comes into play. Even though a feature is correctly traced as per the imagery, the placement might not make sense. For example, a building closer to a road or a tall building might not be mapped as per its rooftop; it could be slightly shifted, or we might shift it deliberately to better align it with other features.
 
 ## Conclusion
 
